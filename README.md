@@ -13,7 +13,7 @@ Bu repo, `Genezin Kepekci` icin hazirlanmis statik bir GitHub Pages sitesidir.
 Asagidaki yerleri duzenle:
 
 - `index.html` icindeki uygulama kartlarinin basliklari, aciklamalari ve linkleri
-- `hello@genezin.dev` adresini kendi mailin ile degistir
+- `genezinsalig@gmail.com` adresini gerekirse yeni mailin ile degistir
 - GitHub ve LinkedIn linklerini kendi profillerin ile guncelle
 
 ## GitHub Pages ile yayinlama
