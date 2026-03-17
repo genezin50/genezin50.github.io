@@ -244,7 +244,9 @@ h1 span {
 
 .intro-grid,
 .app-grid,
-.about-grid {
+.about-grid,
+.featured-app,
+.gallery-grid {
   display: grid;
   gap: 18px;
 }
@@ -276,6 +278,89 @@ h1 span {
 
 .app-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.featured-app {
+  grid-template-columns: 0.92fr 1.08fr;
+  align-items: start;
+  margin-bottom: 18px;
+}
+
+.featured-copy,
+.featured-gallery {
+  border: 1px solid var(--line);
+  border-radius: 30px;
+  box-shadow: var(--shadow);
+  background: var(--surface);
+  backdrop-filter: blur(18px);
+}
+
+.featured-copy {
+  padding: 30px;
+}
+
+.app-title-row {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.app-icon {
+  width: 88px;
+  height: 88px;
+  border-radius: 22px;
+  object-fit: cover;
+  box-shadow: 0 18px 40px rgba(43, 24, 12, 0.18);
+}
+
+.featured-copy h3 {
+  margin-top: 10px;
+  font-size: 2rem;
+}
+
+.featured-copy p,
+.app-points li {
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+.app-points {
+  margin: 20px 0 0;
+  padding-left: 20px;
+}
+
+.featured-gallery {
+  padding: 16px;
+}
+
+.featured-gallery img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+.gallery-hero,
+.gallery-grid img {
+  border-radius: 22px;
+  border: 1px solid var(--line);
+  background: var(--surface-strong);
+}
+
+.gallery-hero {
+  aspect-ratio: 16 / 10;
+  margin-bottom: 14px;
+}
+
+.gallery-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.gallery-grid img {
+  aspect-ratio: 9 / 16;
+}
+
+.future-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .app-card {
@@ -352,6 +437,8 @@ h1 span {
   .intro-grid,
   .app-grid,
   .about-grid,
+  .featured-app,
+  .gallery-grid,
   .split,
   .contact-card {
     grid-template-columns: 1fr;
