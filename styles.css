@@ -120,6 +120,10 @@ img {
   gap: 24px;
 }
 
+.developer-stage {
+  grid-template-columns: 1.08fr 0.92fr;
+}
+
 .hero-stage {
   grid-template-columns: 1.05fr 0.95fr;
   align-items: center;
@@ -134,6 +138,35 @@ img {
 
 .hero-copy {
   padding: 24px;
+}
+
+.developer-panel {
+  display: grid;
+  gap: 16px;
+  padding: 24px;
+}
+
+.panel-block,
+.app-link-card {
+  padding: 24px;
+  border-radius: 28px;
+  background: rgba(255, 250, 246, 0.64);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(18px);
+}
+
+.panel-block strong {
+  display: block;
+  margin-top: 8px;
+  font-size: 1.2rem;
+}
+
+.panel-block p,
+.app-link-card p {
+  margin: 10px 0 0;
+  color: var(--muted);
+  line-height: 1.75;
 }
 
 .eyebrow,
@@ -339,6 +372,11 @@ h1 span {
   align-items: stretch;
 }
 
+.app-directory {
+  display: grid;
+  grid-template-columns: minmax(0, 760px);
+}
+
 .product-summary,
 .product-preview,
 .feature-card,
@@ -464,6 +502,10 @@ h1 span {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.compact-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .screen-grid {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
@@ -565,9 +607,11 @@ h1 span {
 
 @media (max-width: 1040px) {
   .hero-stage,
+  .developer-stage,
   .product-card,
   .about-card,
   .feature-grid,
+  .compact-grid,
   .screen-grid {
     grid-template-columns: 1fr;
   }
@@ -587,6 +631,10 @@ h1 span {
   .hero-device {
     min-height: auto;
     padding: 30px 0 12px;
+  }
+
+  .app-directory {
+    grid-template-columns: 1fr;
   }
 
   .note-top,
@@ -626,6 +674,7 @@ h1 span {
   }
 
   .hero-copy,
+  .developer-panel,
   .product-summary,
   .about-card,
   .contact-card {
