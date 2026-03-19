@@ -162,6 +162,16 @@ img {
   font-size: 1.2rem;
 }
 
+.app-icon-soft {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #8f5d59;
+  background: linear-gradient(180deg, #fff7f6, #f4d8d2);
+}
+
 .panel-block p,
 .app-link-card p {
   margin: 10px 0 0;
@@ -309,10 +319,86 @@ h1 span {
   transform: rotate(-6deg);
 }
 
+.soft-frame {
+  background: linear-gradient(180deg, #553733, #a67c74);
+}
+
 .device-frame img {
   display: block;
   width: 100%;
   border-radius: 34px;
+}
+
+.mockup-screen {
+  min-height: 580px;
+  padding: 22px;
+  border-radius: 34px;
+  background:
+    linear-gradient(180deg, #fff9f8 0%, #f8ece9 100%);
+  display: flex;
+  flex-direction: column;
+}
+
+.mockup-top strong {
+  display: block;
+  margin-top: 8px;
+  font-size: 1.35rem;
+}
+
+.mockup-badge,
+.mockup-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: #ffffff;
+  border: 1px solid rgba(34, 24, 20, 0.08);
+  color: var(--muted);
+}
+
+.mockup-badge {
+  min-height: 34px;
+  padding: 0 12px;
+  font-size: 0.8rem;
+}
+
+.mockup-list {
+  display: grid;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.mockup-item {
+  padding: 16px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(34, 24, 20, 0.08);
+}
+
+.mockup-item span {
+  display: block;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.mockup-item strong {
+  display: block;
+  margin-top: 6px;
+  font-size: 1rem;
+}
+
+.mockup-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: auto;
+  padding-top: 18px;
+}
+
+.mockup-pill {
+  min-height: 38px;
+  padding: 0 14px;
+  font-size: 0.84rem;
 }
 
 .floating-note {
@@ -571,6 +657,30 @@ h1 span {
   align-items: center;
   background: rgba(255, 255, 255, 0.56);
   border: 1px solid var(--line);
+}
+
+.faq-list {
+  display: grid;
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.faq-item {
+  padding: 18px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.56);
+  border: 1px solid var(--line);
+}
+
+.faq-item strong {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.faq-item p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
 }
 
 .policy-page {
