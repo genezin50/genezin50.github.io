@@ -5,6 +5,7 @@ export default {
     "./hanimcilik/index.html",
     "./dugun-ajandasi/index.html",
     "./pitpit-gebelik/index.html",
+    "./pispis-bebek/index.html",
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
