@@ -19,6 +19,9 @@ export const apps = {
       appAsset("hanimcilik", "screenshot-03.png"),
       appAsset("hanimcilik", "screenshot-04.png"),
       appAsset("hanimcilik", "screenshot-05.png"),
+      appAsset("hanimcilik", "screenshot-06.png"),
+      appAsset("hanimcilik", "screenshot-07.png"),
+      appAsset("hanimcilik", "screenshot-08.png"),
     ],
     chips: ["SwiftUI", "Lifestyle", "Çift Planlama", "App Store'a Hazır"],
     features: [
@@ -46,9 +49,14 @@ export const apps = {
     heroScreen: appAsset("dugun-ajandasi", "screenshot-01.png"),
     gallery: [
       appAsset("dugun-ajandasi", "screenshot-02.png"),
+      appAsset("dugun-ajandasi", "screenshot-03.png"),
       appAsset("dugun-ajandasi", "screenshot-04.png"),
+      appAsset("dugun-ajandasi", "screenshot-05.png"),
       appAsset("dugun-ajandasi", "screenshot-06.png"),
+      appAsset("dugun-ajandasi", "screenshot-07.png"),
       appAsset("dugun-ajandasi", "screenshot-08.png"),
+      appAsset("dugun-ajandasi", "screenshot-09.png"),
+      appAsset("dugun-ajandasi", "screenshot-10.png"),
     ],
     chips: ["Türkçe", "iPhone", "Google AdMob", "Planlama"],
     features: [
@@ -75,10 +83,14 @@ export const apps = {
     icon: appAsset("pitpit-gebelik", "icon.png"),
     heroScreen: appAsset("pitpit-gebelik", "screenshot-01.png"),
     gallery: [
+      appAsset("pitpit-gebelik", "screenshot-02.png"),
       appAsset("pitpit-gebelik", "screenshot-03.png"),
       appAsset("pitpit-gebelik", "screenshot-04.png"),
+      appAsset("pitpit-gebelik", "screenshot-05.png"),
       appAsset("pitpit-gebelik", "screenshot-06.png"),
+      appAsset("pitpit-gebelik", "screenshot-07.png"),
       appAsset("pitpit-gebelik", "screenshot-08.png"),
+      appAsset("pitpit-gebelik", "screenshot-09.png"),
     ],
     chips: ["Sağlık Kaydı", "Google AdMob", "ATT", "PDF Rapor"],
     features: [
@@ -107,9 +119,15 @@ export const apps = {
     heroScreen: `${base}pispis-bebek/site/Simulator%20Screenshot%20-%20iPhone%2011%20Pro%20Max%20-%202026-03-03%20at%2022.39.36.png`,
     gallery: [
       `${base}pispis-bebek/site/Simulator%20Screenshot%20-%20iPhone%2011%20Pro%20Max%20-%202026-03-03%20at%2022.44.06.png`,
+      `${base}pispis-bebek/site/Simulator%20Screenshot%20-%20iPhone%2011%20Pro%20Max%20-%202026-03-03%20at%2022.44.14.png`,
       `${base}pispis-bebek/site/Simulator%20Screenshot%20-%20iPhone%2011%20Pro%20Max%20-%202026-03-03%20at%2022.46.27.png`,
+      `${base}pispis-bebek/site/Simulator%20Screenshot%20-%20iPhone%2011%20Pro%20Max%20-%202026-03-03%20at%2022.46.32.png`,
+      `${base}pispis-bebek/site/Simulator%20Screenshot%20-%20iPhone%2011%20Pro%20Max%20-%202026-03-03%20at%2022.46.37.png`,
+      `${base}pispis-bebek/site/Simulator%20Screenshot%20-%20iPhone%2011%20Pro%20Max%20-%202026-03-03%20at%2022.46.44.png`,
+      `${base}pispis-bebek/site/Simulator%20Screenshot%20-%20iPhone%2011%20Pro%20Max%20-%202026-03-03%20at%2022.46.52.png`,
       `${base}pispis-bebek/site/Simulator%20Screenshot%20-%20iPhone%2011%20Pro%20Max%20-%202026-03-03%20at%2022.46.58.png`,
       `${base}pispis-bebek/site/Simulator%20Screenshot%20-%20iPhone%2011%20Pro%20Max%20-%202026-03-03%20at%2022.47.14.png`,
+      `${base}pispis-bebek/site/Simulator%20Screenshot%20-%20iPhone%2011%20Pro%20Max%20-%202026-03-03%20at%2022.47.07.png`,
     ],
     chips: ["Local-first", "Bebek Takibi", "İstatistik", "iPhone"],
     features: [
