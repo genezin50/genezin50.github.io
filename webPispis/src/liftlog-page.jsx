@@ -167,8 +167,8 @@ function SectionHeader({ eyebrow, title, body, align = "left" }) {
   return (
     <div className={alignClass}>
       <p className="text-xs font-black uppercase tracking-[0.22em] text-[#FF8A3D]">{eyebrow}</p>
-      <h2 className="mt-3 text-3xl font-black tracking-[-0.03em] text-white md:text-5xl">{title}</h2>
-      {body ? <p className="mt-4 text-base leading-8 text-slate-300 md:text-lg">{body}</p> : null}
+      <h2 className="mt-3 text-3xl font-black tracking-[-0.03em] text-ink md:text-5xl">{title}</h2>
+      {body ? <p className="mt-4 text-base leading-8 text-ink/70 md:text-lg">{body}</p> : null}
     </div>
   );
 }
@@ -176,9 +176,9 @@ function SectionHeader({ eyebrow, title, body, align = "left" }) {
 function MockPhone() {
   return (
     <div className="relative mx-auto w-full max-w-[360px]">
-      <div className="absolute inset-x-10 top-8 h-56 rounded-full bg-[#FF5A28]/35 blur-3xl" />
-      <div className="relative rounded-[42px] border border-white/10 bg-[#090B0E] p-3 shadow-[0_35px_120px_rgba(0,0,0,0.45)]">
-        <div className="rounded-[34px] border border-white/10 bg-[#11151B] p-5">
+      <div className="absolute inset-x-10 top-8 h-56 rounded-full bg-[#FF8A3D]/30 blur-3xl" />
+      <div className="relative rounded-[42px] border border-white/80 bg-[#11151c] p-3 shadow-soft">
+        <div className="rounded-[34px] border border-white/10 bg-[#171b22] p-5">
           <div className="flex items-center justify-between">
             <div>
               <p className="text-xs font-bold uppercase tracking-[0.18em] text-slate-500">Today</p>
@@ -224,8 +224,8 @@ function MockPhone() {
 export function LiftLogPage() {
   return (
     <SiteFrame>
-      <div className="min-h-screen bg-[#0A0C0F] text-white">
-        <div className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(circle_at_top,rgba(255,90,40,0.16),transparent_30%),linear-gradient(180deg,#101216_0%,#090B0E_100%)]" />
+      <div className="min-h-screen text-ink">
+        <div className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(circle_at_top,rgba(255,138,61,0.16),transparent_26%),radial-gradient(circle_at_85%_12%,rgba(255,220,203,0.7),transparent_18%)]" />
         <Header
           title="Lift Log Pro"
           links={[
@@ -235,7 +235,7 @@ export function LiftLogPage() {
             { href: "#faq", label: "FAQ" },
           ]}
           action={
-            <a href="#download" className="rounded-full bg-[#FF5A28] px-5 py-2 text-sm font-bold text-white shadow-[0_12px_30px_rgba(255,90,40,0.25)] transition hover:bg-[#FF6B3F]">
+            <a href="#download" className="rounded-full bg-ink px-5 py-2 text-sm font-bold text-white shadow-card transition hover:bg-[#1f2634]">
               App Store Soon
             </a>
           }
@@ -244,14 +244,14 @@ export function LiftLogPage() {
         <main>
           <section className="mx-auto grid w-full max-w-7xl gap-14 px-5 pb-20 pt-10 md:px-8 md:pb-28 md:pt-16 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
             <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.65, ease: "easeOut" }}>
-              <div className="inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-slate-300">
+              <div className="inline-flex items-center gap-3 rounded-full border border-peach/70 bg-white/80 px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-ink/75 shadow-card">
                 <span className="h-2 w-2 rounded-full bg-[#FF5A28]" />
                 Strength training app for focused lifters
               </div>
-              <h1 className="mt-6 max-w-3xl text-5xl font-black tracking-[-0.05em] text-white md:text-7xl">
+              <h1 className="mt-6 max-w-3xl text-5xl font-black tracking-[-0.05em] text-ink md:text-7xl">
                 Follow your 5x5 progression with less friction and more signal.
               </h1>
-              <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300 md:text-xl">
+              <p className="mt-6 max-w-2xl text-lg leading-8 text-ink/70 md:text-xl">
                 Lift Log Pro is a strength training app built for lifters who want to follow 5x5-style progression,
                 track workouts, monitor performance and stay consistent without unnecessary complexity.
               </p>
@@ -259,13 +259,13 @@ export function LiftLogPage() {
               <div className="mt-8 flex flex-wrap gap-3">
                 <a
                   href="#download"
-                  className="inline-flex items-center rounded-2xl bg-[#FF5A28] px-7 py-4 text-base font-black text-white shadow-[0_18px_40px_rgba(255,90,40,0.25)] transition hover:-translate-y-0.5 hover:bg-[#FF6B3F]"
+                  className="inline-flex items-center rounded-2xl bg-ink px-7 py-4 text-base font-black text-white shadow-soft transition hover:-translate-y-0.5"
                 >
                   App Store Launch Soon
                 </a>
                 <a
                   href="#features"
-                  className="inline-flex items-center rounded-2xl border border-white/10 bg-white/5 px-7 py-4 text-base font-bold text-white transition hover:bg-white/10"
+                  className="inline-flex items-center rounded-2xl border border-white/80 bg-white/80 px-7 py-4 text-base font-bold text-ink shadow-card transition hover:bg-white"
                 >
                   Explore Features
                 </a>
@@ -273,7 +273,7 @@ export function LiftLogPage() {
 
               <div className="mt-8 flex flex-wrap gap-3">
                 {["Free", "No account required", "Local-first", "Ad-supported"].map((chip) => (
-                  <span key={chip} className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold text-slate-200">
+                  <span key={chip} className="rounded-full border border-peach/70 bg-white/75 px-4 py-2 text-sm font-semibold text-ink/75 shadow-card">
                     {chip}
                   </span>
                 ))}
@@ -281,9 +281,9 @@ export function LiftLogPage() {
 
               <div className="mt-10 grid gap-4 sm:grid-cols-3">
                 {heroStats.map((item) => (
-                  <div key={item.label} className="rounded-[26px] border border-white/10 bg-white/5 p-5 backdrop-blur-sm">
-                    <p className="text-xs font-bold uppercase tracking-[0.18em] text-slate-500">{item.label}</p>
-                    <p className="mt-3 text-2xl font-black text-white">{item.value}</p>
+                  <div key={item.label} className="rounded-[26px] border border-white/85 bg-white/75 p-5 shadow-card backdrop-blur-sm">
+                    <p className="text-xs font-bold uppercase tracking-[0.18em] text-ink/45">{item.label}</p>
+                    <p className="mt-3 text-2xl font-black text-ink">{item.value}</p>
                   </div>
                 ))}
               </div>
@@ -293,20 +293,20 @@ export function LiftLogPage() {
               <div className="grid gap-4 lg:grid-cols-[1fr_180px]">
                 <MockPhone />
                 <div className="grid gap-4">
-                  <div className="rounded-[28px] border border-white/10 bg-white/5 p-5">
-                    <p className="text-xs font-bold uppercase tracking-[0.18em] text-slate-500">Built-in programs</p>
+                  <div className="rounded-[28px] border border-white/85 bg-white/75 p-5 shadow-card">
+                    <p className="text-xs font-bold uppercase tracking-[0.18em] text-ink/45">Built-in programs</p>
                     <div className="mt-4 space-y-3">
                       {builtInPrograms.map((program) => (
-                        <div key={program} className="rounded-2xl border border-white/8 bg-black/20 px-4 py-3 text-sm font-bold text-slate-100">
+                        <div key={program} className="rounded-2xl border border-peach/60 bg-[#fff5ef] px-4 py-3 text-sm font-bold text-ink">
                           {program}
                         </div>
                       ))}
                     </div>
                   </div>
-                  <div className="rounded-[28px] border border-white/10 bg-white/5 p-5">
-                    <p className="text-xs font-bold uppercase tracking-[0.18em] text-slate-500">Progress signals</p>
-                    <p className="mt-4 text-3xl font-black text-white">1RM, volume, weekly trends</p>
-                    <p className="mt-3 text-sm leading-7 text-slate-300">See strength progression, body-fat changes and session quality without clutter.</p>
+                  <div className="rounded-[28px] border border-white/85 bg-gradient-to-br from-[#fff6ee] via-white to-[#fff0e6] p-5 shadow-card">
+                    <p className="text-xs font-bold uppercase tracking-[0.18em] text-ink/45">Progress signals</p>
+                    <p className="mt-4 text-3xl font-black text-ink">1RM, volume, weekly trends</p>
+                    <p className="mt-3 text-sm leading-7 text-ink/70">See strength progression, body-fat changes and session quality without clutter.</p>
                   </div>
                 </div>
               </div>
@@ -322,10 +322,10 @@ export function LiftLogPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.25 }}
                   transition={{ duration: 0.5, delay: index * 0.04 }}
-                  className="rounded-[30px] border border-white/10 bg-white/[0.04] p-6"
+                  className="rounded-[30px] border border-white/85 bg-white/75 p-6 shadow-card"
                 >
-                  <h2 className="text-2xl font-black tracking-[-0.03em] text-white">{card.title}</h2>
-                  <p className="mt-4 text-base leading-8 text-slate-300">{card.body}</p>
+                  <h2 className="text-2xl font-black tracking-[-0.03em] text-ink">{card.title}</h2>
+                  <p className="mt-4 text-base leading-8 text-ink/70">{card.body}</p>
                 </motion.article>
               ))}
             </div>
@@ -345,12 +345,12 @@ export function LiftLogPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.18 }}
                   transition={{ duration: 0.45, delay: index * 0.03 }}
-                  className="rounded-[30px] border border-white/10 bg-white/[0.04] p-3"
+                  className="rounded-[30px] border border-white/80 bg-white/90 p-3 shadow-card"
                 >
                   <img
                     src={screen}
                     alt={`Lift Log Pro screenshot ${index + 1}`}
-                    className="h-auto w-full rounded-[24px] border border-white/10 bg-[#0F1217]"
+                    className="h-auto w-full rounded-[24px] border border-white/70 bg-[#0F1217]"
                     loading="lazy"
                   />
                 </motion.figure>
@@ -373,16 +373,16 @@ export function LiftLogPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.2 }}
                   transition={{ duration: 0.55, delay: index * 0.05 }}
-                  className="rounded-[34px] border border-white/10 bg-white/[0.04] p-7 md:p-8"
+                  className="rounded-[34px] border border-white/85 bg-white/78 p-7 shadow-soft md:p-8"
                 >
                   <p className="text-xs font-black uppercase tracking-[0.2em] text-[#FF8A3D]">{group.eyebrow}</p>
-                  <h3 className="mt-3 text-3xl font-black tracking-[-0.03em] text-white">{group.title}</h3>
-                  <p className="mt-4 text-base leading-8 text-slate-300">{group.copy}</p>
+                  <h3 className="mt-3 text-3xl font-black tracking-[-0.03em] text-ink">{group.title}</h3>
+                  <p className="mt-4 text-base leading-8 text-ink/70">{group.copy}</p>
                   <div className="mt-6 space-y-3">
                     {group.bullets.map((bullet) => (
-                      <div key={bullet} className="flex gap-3 rounded-2xl border border-white/8 bg-black/10 px-4 py-4">
+                      <div key={bullet} className="flex gap-3 rounded-2xl border border-peach/60 bg-[#fff7f0] px-4 py-4">
                         <span className="mt-1 h-2.5 w-2.5 flex-none rounded-full bg-[#FF5A28]" />
-                        <p className="text-sm leading-7 text-slate-200">{bullet}</p>
+                        <p className="text-sm leading-7 text-ink/80">{bullet}</p>
                       </div>
                     ))}
                   </div>
@@ -400,10 +400,10 @@ export function LiftLogPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.2 }}
                   transition={{ duration: 0.48, delay: index * 0.03 }}
-                  className="rounded-[30px] border border-white/10 bg-[#11151B] p-6"
+                  className="rounded-[30px] border border-white/85 bg-white/75 p-6 shadow-card"
                 >
-                  <h3 className="text-2xl font-black tracking-[-0.03em] text-white">{card.title}</h3>
-                  <p className="mt-4 text-base leading-8 text-slate-300">{card.body}</p>
+                  <h3 className="text-2xl font-black tracking-[-0.03em] text-ink">{card.title}</h3>
+                  <p className="mt-4 text-base leading-8 text-ink/70">{card.body}</p>
                 </motion.article>
               ))}
             </div>
@@ -420,7 +420,7 @@ export function LiftLogPage() {
               </div>
               <div className="grid gap-4 sm:grid-cols-2">
                 {philosophyPoints.map((point) => (
-                  <div key={point} className="rounded-[28px] border border-white/10 bg-white/[0.04] px-5 py-5 text-lg font-bold text-white">
+                  <div key={point} className="rounded-[28px] border border-white/85 bg-white/75 px-5 py-5 text-lg font-bold text-ink shadow-card">
                     {point}
                   </div>
                 ))}
@@ -429,7 +429,7 @@ export function LiftLogPage() {
           </section>
 
           <section className="mx-auto w-full max-w-7xl px-5 py-4 md:px-8">
-            <div className="rounded-[38px] border border-white/10 bg-[linear-gradient(135deg,rgba(255,90,40,0.12),rgba(255,255,255,0.05))] p-8 md:p-10">
+            <div className="rounded-[38px] border border-white/85 bg-[linear-gradient(135deg,rgba(255,138,61,0.12),rgba(255,255,255,0.7))] p-8 shadow-soft md:p-10">
               <SectionHeader
                 eyebrow="Free App"
                 title="Start training without account setup or unnecessary friction"
@@ -441,7 +441,7 @@ export function LiftLogPage() {
                   "Free to use",
                   "Focused on training, not complexity",
                 ].map((item) => (
-                  <div key={item} className="rounded-[24px] border border-white/10 bg-black/20 px-5 py-5 text-base font-bold text-white">
+                  <div key={item} className="rounded-[24px] border border-peach/60 bg-[#fff6ee] px-5 py-5 text-base font-bold text-ink">
                     {item}
                   </div>
                 ))}
@@ -459,34 +459,34 @@ export function LiftLogPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.2 }}
                   transition={{ duration: 0.45, delay: index * 0.03 }}
-                  className="rounded-[28px] border border-white/10 bg-white/[0.04] p-6"
+                  className="rounded-[28px] border border-white/85 bg-white/78 p-6 shadow-card"
                 >
-                  <h3 className="text-xl font-black tracking-[-0.02em] text-white">{item.q}</h3>
-                  <p className="mt-3 text-base leading-8 text-slate-300">{item.a}</p>
+                  <h3 className="text-xl font-black tracking-[-0.02em] text-ink">{item.q}</h3>
+                  <p className="mt-3 text-base leading-8 text-ink/70">{item.a}</p>
                 </motion.article>
               ))}
             </div>
           </section>
 
           <section id="download" className="mx-auto w-full max-w-7xl px-5 pb-24 pt-4 md:px-8 md:pb-32">
-            <div className="rounded-[42px] border border-white/10 bg-[#12161D] p-8 text-center md:p-12">
+            <div className="rounded-[42px] border border-white/85 bg-gradient-to-r from-white via-[#fff6ef] to-[#fff0e7] p-8 text-center shadow-soft md:p-12">
               <p className="text-xs font-black uppercase tracking-[0.22em] text-[#FF8A3D]">Final CTA</p>
-              <h2 className="mx-auto mt-4 max-w-4xl text-4xl font-black tracking-[-0.04em] text-white md:text-6xl">
+              <h2 className="mx-auto mt-4 max-w-4xl text-4xl font-black tracking-[-0.04em] text-ink md:text-6xl">
                 Lift with structure. Log with clarity. Keep progressing.
               </h2>
-              <p className="mx-auto mt-5 max-w-2xl text-base leading-8 text-slate-300 md:text-lg">
+              <p className="mx-auto mt-5 max-w-2xl text-base leading-8 text-ink/70 md:text-lg">
                 Lift Log Pro is built for lifters who want a straightforward way to train, review progress and stay consistent week after week.
               </p>
               <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
                 <a
                   href="#download"
-                  className="inline-flex items-center rounded-2xl bg-[#FF5A28] px-7 py-4 text-base font-black text-white shadow-[0_18px_40px_rgba(255,90,40,0.25)] transition hover:-translate-y-0.5 hover:bg-[#FF6B3F]"
+                  className="inline-flex items-center rounded-2xl bg-ink px-7 py-4 text-base font-black text-white shadow-soft transition hover:-translate-y-0.5"
                 >
                   Download on the App Store Soon
                 </a>
                 <a
                   href="#features"
-                  className="inline-flex items-center rounded-2xl border border-white/10 bg-white/5 px-7 py-4 text-base font-bold text-white transition hover:bg-white/10"
+                  className="inline-flex items-center rounded-2xl border border-white/80 bg-white/80 px-7 py-4 text-base font-bold text-ink shadow-card transition hover:bg-white"
                 >
                   Review Every Feature
                 </a>
