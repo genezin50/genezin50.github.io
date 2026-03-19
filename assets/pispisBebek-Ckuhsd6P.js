@@ -1,0 +1,1 @@
+import{R as a,j as e,a as t,A as s}from"./styles-DL1ZipeS.js";import{a as o}from"./siteData-BaWNcMJM.js";a.createRoot(document.getElementById("root")).render(e.jsx(t.StrictMode,{children:e.jsx(s,{app:o["pispis-bebek"]})}));

@@ -155,9 +155,9 @@ export const apps = {
       appAsset("lift-log-pro", "screenshot-01.png"),
       appAsset("lift-log-pro", "screenshot-02.png"),
     ],
-    secondaryLabel: "Overview",
-    secondaryUrl: `${base}lift-log-pro/`,
-    privacyUrl: `${base}lift-log-pro/`,
+    secondaryLabel: "Privacy",
+    secondaryUrl: `${base}lift-log-pro/privacy.html`,
+    privacyUrl: `${base}lift-log-pro/privacy.html`,
   },
 };
 

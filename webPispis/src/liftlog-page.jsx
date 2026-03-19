@@ -230,6 +230,7 @@ export function LiftLogPage() {
           title="Lift Log Pro"
           links={[
             { href: "#features", label: "Features" },
+            { href: "/lift-log-pro/privacy.html", label: "Privacy" },
             { href: "#philosophy", label: "Why It Works" },
             { href: "#faq", label: "FAQ" },
           ]}
