@@ -144,6 +144,21 @@ export const apps = {
     storeUrl: "https://apps.apple.com/tr/app/p%C4%B1%C5%9Fp%C4%B1%C5%9F-bebek/id6759955301?l=tr",
     medicalNote: null,
   },
+  "lift-log-pro": {
+    slug: "lift-log-pro",
+    eyebrow: "Strength Training App",
+    title: "Lift Log Pro",
+    description:
+      "A focused strength training app for lifters who want built-in 5x5-style programs, fast logging, progress analytics and zero account friction.",
+    icon: appAsset("lift-log-pro", "icon.svg"),
+    gallery: [
+      appAsset("lift-log-pro", "screenshot-01.png"),
+      appAsset("lift-log-pro", "screenshot-02.png"),
+    ],
+    secondaryLabel: "Overview",
+    secondaryUrl: `${base}lift-log-pro/`,
+    privacyUrl: `${base}lift-log-pro/`,
+  },
 };
 
 export const developerApps = [
@@ -151,4 +166,5 @@ export const developerApps = [
   apps["dugun-ajandasi"],
   apps["pitpit-gebelik"],
   apps["pispis-bebek"],
+  apps["lift-log-pro"],
 ];

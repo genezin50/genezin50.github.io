@@ -1,0 +1,1 @@
+import{R as e,j as a,a as t,A as o}from"./styles-DL1ZipeS.js";import{a as r}from"./siteData-Bu0eVWFg.js";e.createRoot(document.getElementById("root")).render(a.jsx(t.StrictMode,{children:a.jsx(o,{app:r["dugun-ajandasi"]})}));

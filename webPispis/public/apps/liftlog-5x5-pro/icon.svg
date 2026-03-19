@@ -1,0 +1,21 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="180" y1="120" x2="844" y2="904" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#15181D"/>
+      <stop offset="1" stop-color="#0A0C0F"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="256" y1="240" x2="768" y2="784" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FF7A18"/>
+      <stop offset="1" stop-color="#FF3D1F"/>
+    </linearGradient>
+  </defs>
+  <rect width="1024" height="1024" rx="224" fill="url(#bg)"/>
+  <rect x="180" y="448" width="664" height="128" rx="64" fill="url(#accent)"/>
+  <rect x="112" y="392" width="92" height="240" rx="34" fill="#F4F0E8"/>
+  <rect x="820" y="392" width="92" height="240" rx="34" fill="#F4F0E8"/>
+  <rect x="248" y="304" width="104" height="416" rx="40" fill="#F4F0E8"/>
+  <rect x="672" y="304" width="104" height="416" rx="40" fill="#F4F0E8"/>
+  <rect x="414" y="300" width="196" height="424" rx="56" fill="#111418" stroke="#2A2F37" stroke-width="14"/>
+  <path d="M476 586V438H522V548H610V586H476Z" fill="#F4F0E8"/>
+  <path d="M560 438H606V586H560V438Z" fill="#F4F0E8"/>
+</svg>

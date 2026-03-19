@@ -13,6 +13,7 @@ export default defineConfig({
         dugunAjandasi: resolve(__dirname, "dugun-ajandasi/index.html"),
         pitpitGebelik: resolve(__dirname, "pitpit-gebelik/index.html"),
         pispisBebek: resolve(__dirname, "pispis-bebek/index.html"),
+        liftLogPro: resolve(__dirname, "lift-log-pro/index.html"),
       },
     },
   },

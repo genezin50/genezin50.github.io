@@ -260,8 +260,11 @@ export function HomePage({ apps }) {
                   <a href={`${base}${app.slug}/`} className="rounded-2xl bg-ink px-5 py-3 text-sm font-extrabold text-white shadow-card">
                     Uygulama Sayfası
                   </a>
-                  <a href={app.privacyUrl} className="rounded-2xl border border-white/80 bg-white px-5 py-3 text-sm font-bold text-ink shadow-card">
-                    Gizlilik
+                  <a
+                    href={app.secondaryUrl || app.privacyUrl}
+                    className="rounded-2xl border border-white/80 bg-white px-5 py-3 text-sm font-bold text-ink shadow-card"
+                  >
+                    {app.secondaryLabel || "Gizlilik"}
                   </a>
                 </div>
               </motion.article>

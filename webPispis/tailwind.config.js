@@ -6,6 +6,7 @@ export default {
     "./dugun-ajandasi/index.html",
     "./pitpit-gebelik/index.html",
     "./pispis-bebek/index.html",
+    "./lift-log-pro/index.html",
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
