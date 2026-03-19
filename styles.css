@@ -439,7 +439,8 @@ h1 span {
 
 .info-grid,
 .feature-grid,
-.screen-grid {
+.screen-grid,
+.screen-showcase {
   display: grid;
   gap: 18px;
 }
@@ -520,6 +521,15 @@ h1 span {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
+.screen-showcase {
+  grid-template-columns: 1.18fr 0.82fr;
+  align-items: start;
+}
+
+.curated-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .screen-card {
   padding: 14px;
 }
@@ -528,6 +538,18 @@ h1 span {
   display: block;
   width: 100%;
   border-radius: 22px;
+}
+
+.featured-screen {
+  padding: 18px;
+  background:
+    radial-gradient(circle at top, rgba(255, 230, 236, 0.62), transparent 40%),
+    var(--surface);
+}
+
+.wide-screen img {
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
 }
 
 .about-card {
@@ -646,6 +668,7 @@ h1 span {
   .about-card,
   .feature-grid,
   .compact-grid,
+  .screen-showcase,
   .screen-grid {
     grid-template-columns: 1fr;
   }
