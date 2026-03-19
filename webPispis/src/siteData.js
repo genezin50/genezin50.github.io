@@ -22,6 +22,8 @@ export const apps = {
       appAsset("hanimcilik", "screenshot-06.png"),
       appAsset("hanimcilik", "screenshot-07.png"),
       appAsset("hanimcilik", "screenshot-08.png"),
+      appAsset("hanimcilik", "screenshot-09.png"),
+      appAsset("hanimcilik", "screenshot-10.png"),
     ],
     chips: ["SwiftUI", "Lifestyle", "Çift Planlama", "App Store'a Hazır"],
     features: [
