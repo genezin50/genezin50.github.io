@@ -52,6 +52,8 @@ export function PhoneShot({ file, alt }) {
 }
 
 export function AppLandingPage({ app }) {
+  const screens = [app.heroScreen, ...app.gallery];
+
   return (
     <SiteFrame>
       <Header
@@ -143,32 +145,28 @@ export function AppLandingPage({ app }) {
         <section className="mt-20">
           <div className="mb-8">
             <p className="text-sm font-bold uppercase tracking-[0.14em] text-ink/55">Real Screens</p>
-            <h2 className="mt-2 text-3xl font-extrabold md:text-4xl">Seçili ekranlarla daha premium bir ürün vitrini</h2>
+            <h2 className="mt-2 text-3xl font-extrabold md:text-4xl">Yüklenen tüm ekranları tek bir bütünlüklü galeride inceleyin</h2>
           </div>
-          <div className="grid items-start gap-5 lg:grid-cols-[1.15fr_0.85fr]">
-            <motion.figure
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.45 }}
-              className="rounded-[34px] border border-white/80 bg-white p-3 shadow-soft"
-            >
-              <img src={app.gallery[0]} alt={`${app.title} öne çıkan ekran`} className="h-auto w-full rounded-[28px]" loading="lazy" />
-            </motion.figure>
-            <div className="grid grid-cols-2 gap-4">
-              {app.gallery.slice(1).map((screen, i) => (
-                <motion.figure
-                  key={screen}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, amount: 0.2 }}
-                  transition={{ duration: 0.45, delay: i * 0.04 }}
-                  className="rounded-[28px] border border-white/80 bg-white p-2 shadow-card"
-                >
-                  <img src={screen} alt={`${app.title} ekran görüntüsü ${i + 2}`} className="h-auto w-full rounded-[22px]" loading="lazy" />
-                </motion.figure>
-              ))}
-            </div>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            {screens.map((screen, i) => (
+              <motion.figure
+                key={screen}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.15 }}
+                transition={{ duration: 0.45, delay: i * 0.03 }}
+                className="rounded-[30px] border border-white/80 bg-white/90 p-3 shadow-card"
+              >
+                <div className="rounded-[28px] border border-white/70 bg-[#11151c] p-2 shadow-soft">
+                  <img
+                    src={screen}
+                    alt={`${app.title} ekran görüntüsü ${i + 1}`}
+                    className="h-auto w-full rounded-[22px] bg-[#ebe8e2] object-cover"
+                    loading="lazy"
+                  />
+                </div>
+              </motion.figure>
+            ))}
           </div>
         </section>
       </main>
