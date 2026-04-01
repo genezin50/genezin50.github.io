@@ -236,7 +236,7 @@ export function LiftLogPage() {
           ]}
           action={
             <a
-              href="https://apps.apple.com/us/app/lift-log-pro/id6760855317"
+              href="https://apps.apple.com/tr/app/liftlog5x5pro/id6760855317?l=tr"
               className="rounded-full bg-ink px-5 py-2 text-sm font-bold text-white shadow-card transition hover:bg-[#1f2634]"
             >
               Download on the App Store
@@ -261,7 +261,7 @@ export function LiftLogPage() {
 
               <div className="mt-8 flex flex-wrap gap-3">
                 <a
-                  href="https://apps.apple.com/us/app/lift-log-pro/id6760855317"
+                  href="https://apps.apple.com/tr/app/liftlog5x5pro/id6760855317?l=tr"
                   className="inline-flex items-center rounded-2xl bg-ink px-7 py-4 text-base font-black text-white shadow-soft transition hover:-translate-y-0.5"
                 >
                   Download on the App Store
@@ -482,7 +482,7 @@ export function LiftLogPage() {
               </p>
               <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
                 <a
-                  href="https://apps.apple.com/us/app/lift-log-pro/id6760855317"
+                  href="https://apps.apple.com/tr/app/liftlog5x5pro/id6760855317?l=tr"
                   className="inline-flex items-center rounded-2xl bg-ink px-7 py-4 text-base font-black text-white shadow-soft transition hover:-translate-y-0.5"
                 >
                   Download on the App Store
