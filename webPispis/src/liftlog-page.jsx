@@ -235,8 +235,11 @@ export function LiftLogPage() {
             { href: "#faq", label: "FAQ" },
           ]}
           action={
-            <a href="#download" className="rounded-full bg-ink px-5 py-2 text-sm font-bold text-white shadow-card transition hover:bg-[#1f2634]">
-              App Store Soon
+            <a
+              href="https://apps.apple.com/us/app/lift-log-pro/id6760855317"
+              className="rounded-full bg-ink px-5 py-2 text-sm font-bold text-white shadow-card transition hover:bg-[#1f2634]"
+            >
+              Download on the App Store
             </a>
           }
         />
@@ -258,10 +261,10 @@ export function LiftLogPage() {
 
               <div className="mt-8 flex flex-wrap gap-3">
                 <a
-                  href="#download"
+                  href="https://apps.apple.com/us/app/lift-log-pro/id6760855317"
                   className="inline-flex items-center rounded-2xl bg-ink px-7 py-4 text-base font-black text-white shadow-soft transition hover:-translate-y-0.5"
                 >
-                  App Store Launch Soon
+                  Download on the App Store
                 </a>
                 <a
                   href="#features"
@@ -479,10 +482,10 @@ export function LiftLogPage() {
               </p>
               <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
                 <a
-                  href="#download"
+                  href="https://apps.apple.com/us/app/lift-log-pro/id6760855317"
                   className="inline-flex items-center rounded-2xl bg-ink px-7 py-4 text-base font-black text-white shadow-soft transition hover:-translate-y-0.5"
                 >
-                  Download on the App Store Soon
+                  Download on the App Store
                 </a>
                 <a
                   href="#features"

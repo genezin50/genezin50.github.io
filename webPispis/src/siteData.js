@@ -34,8 +34,8 @@ export const apps = {
     ],
     privacyUrl: `${base}hanimcilik/privacy.html`,
     supportUrl: "mailto:genezinsalih@gmail.com",
-    ctaLabel: "App Store Linki Yakında",
-    storeUrl: "mailto:genezinsalih@gmail.com",
+    ctaLabel: "App Store'dan İndir",
+    storeUrl: "https://apps.apple.com/us/app/han%C4%B1mc%C4%B1l%C4%B1k/id6760728408",
     medicalNote: null,
   },
   "dugun-ajandasi": {
@@ -69,8 +69,8 @@ export const apps = {
     ],
     privacyUrl: `${base}dugun-ajandasi/privacy.html`,
     supportUrl: `${base}dugun-ajandasi/support.html`,
-    ctaLabel: "App Store'da Yakında",
-    storeUrl: `${base}dugun-ajandasi/support.html`,
+    ctaLabel: "App Store'dan İndir",
+    storeUrl: "https://apps.apple.com/us/app/d%C3%BC%C4%9F%C3%BCn-ajandas%C4%B1/id6760776421",
     medicalNote: null,
   },
   "pitpit-gebelik": {
@@ -103,8 +103,8 @@ export const apps = {
     ],
     privacyUrl: `${base}pitpit-gebelik/privacy.html`,
     supportUrl: `${base}pitpit-gebelik/support.html`,
-    ctaLabel: "App Store'da Yakında",
-    storeUrl: `${base}pitpit-gebelik/support.html`,
+    ctaLabel: "App Store'dan İndir",
+    storeUrl: "https://apps.apple.com/us/app/pitpit-gebelik/id6760829989",
     medicalNote:
       "PıtPıt Gebelik tıbbi tanı veya tedavi amacı taşımaz. Sağlıkla ilgili kararlar için doktorunuza danışmanız gerekir.",
   },
@@ -140,8 +140,8 @@ export const apps = {
     ],
     privacyUrl: `${base}pispis-bebek/site/privacy.html`,
     supportUrl: `${base}pispis-bebek/site/terms.html`,
-    ctaLabel: "App Store'a Git",
-    storeUrl: "https://apps.apple.com/tr/app/p%C4%B1%C5%9Fp%C4%B1%C5%9F-bebek/id6759955301?l=tr",
+    ctaLabel: "App Store'dan İndir",
+    storeUrl: "https://apps.apple.com/us/app/p%C4%B1%C5%9Fp%C4%B1%C5%9F-bebek/id6760834342",
     medicalNote: null,
   },
   "lift-log-pro": {
@@ -155,9 +155,11 @@ export const apps = {
       appAsset("lift-log-pro", "screenshot-01.png"),
       appAsset("lift-log-pro", "screenshot-02.png"),
     ],
+    ctaLabel: "Download on the App Store",
     secondaryLabel: "Privacy",
     secondaryUrl: `${base}lift-log-pro/privacy.html`,
     privacyUrl: `${base}lift-log-pro/privacy.html`,
+    storeUrl: "https://apps.apple.com/us/app/lift-log-pro/id6760855317",
   },
 };
 
