@@ -144,8 +144,8 @@ export const apps = {
     storeUrl: "https://apps.apple.com/tr/app/p%C4%B1%C5%9Fp%C4%B1%C5%9F-bebek/id6760834342?l=tr",
     medicalNote: null,
   },
-  "dualshot-recoder": {
-    slug: "dualshot-recoder",
+  "dualshot-recorder": {
+    slug: "dualshot-recorder",
     eyebrow: "Creator Camera App",
     title: "DualShot Recorder",
     heroTitle: "Record once. Publish everywhere.",
@@ -153,13 +153,13 @@ export const apps = {
       "Capture a single take and instantly create portrait and landscape outputs for TikTok, Instagram Reels, and YouTube.",
     description:
       "DualShot Recorder streamlines creator workflows with live framing guides, smart framing assist, quick trim tools, and a fast export pipeline for every major format.",
-    icon: appAsset("dualshot-recoder", "appicon.png"),
-    heroScreen: appAsset("dualshot-recoder", "01-post-everywhere.png"),
+    icon: appAsset("dualshot-recorder", "appicon.png"),
+    heroScreen: appAsset("dualshot-recorder", "01-post-everywhere.png"),
     gallery: [
-      appAsset("dualshot-recoder", "02-dual-framing.png"),
-      appAsset("dualshot-recoder", "03-single-framing.png"),
-      appAsset("dualshot-recoder", "04-settings-control.png"),
-      appAsset("dualshot-recoder", "05-create-faster.png"),
+      appAsset("dualshot-recorder", "02-dual-framing.png"),
+      appAsset("dualshot-recorder", "03-single-framing.png"),
+      appAsset("dualshot-recorder", "04-settings-control.png"),
+      appAsset("dualshot-recorder", "05-create-faster.png"),
     ],
     chips: ["Creator Workflow", "Dual Format", "Framing Assist", "iPhone"],
     features: [
@@ -172,8 +172,8 @@ export const apps = {
       "Built-in gallery for reopening past sessions",
       "Designed for speed across creator workflows",
     ],
-    privacyUrl: `${base}dualshot-recoder/privacy.html`,
-    supportUrl: `${base}dualshot-recoder/support.html`,
+    privacyUrl: `${base}dualshot-recorder/privacy.html`,
+    supportUrl: `${base}dualshot-recorder/support.html`,
     ctaLabel: "Download on the App Store",
     storeUrl: "https://apps.apple.com",
     medicalNote: null,
@@ -202,6 +202,6 @@ export const developerApps = [
   apps["dugun-ajandasi"],
   apps["pitpit-gebelik"],
   apps["pispis-bebek"],
-  apps["dualshot-recoder"],
+  apps["dualshot-recorder"],
   apps["lift-log-pro"],
 ];
