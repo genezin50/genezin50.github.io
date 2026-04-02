@@ -147,20 +147,19 @@ export const apps = {
   "dualshot-recoder": {
     slug: "dualshot-recoder",
     eyebrow: "Creator Camera App",
-    title: "DualShot Recoder",
+    title: "DualShot Recorder",
     heroTitle: "Record once. Publish everywhere.",
     heroSubtitle:
       "Capture a single take and instantly create portrait and landscape outputs for TikTok, Instagram Reels, and YouTube.",
     description:
-      "DualShot Recoder streamlines creator workflows with live framing guides, smart framing assist, quick trim tools, and a fast export pipeline for every major format.",
+      "DualShot Recorder streamlines creator workflows with live framing guides, smart framing assist, quick trim tools, and a fast export pipeline for every major format.",
     icon: appAsset("dualshot-recoder", "appicon.png"),
-    heroScreen: appAsset("dualshot-recoder", "screenshot-01.svg"),
+    heroScreen: appAsset("dualshot-recoder", "01-post-everywhere.png"),
     gallery: [
-      appAsset("dualshot-recoder", "screenshot-02.svg"),
-      appAsset("dualshot-recoder", "screenshot-03.svg"),
-      appAsset("dualshot-recoder", "screenshot-04.svg"),
-      appAsset("dualshot-recoder", "screenshot-05.svg"),
-      appAsset("dualshot-recoder", "screenshot-06.svg"),
+      appAsset("dualshot-recoder", "02-dual-framing.png"),
+      appAsset("dualshot-recoder", "03-single-framing.png"),
+      appAsset("dualshot-recoder", "04-settings-control.png"),
+      appAsset("dualshot-recoder", "05-create-faster.png"),
     ],
     chips: ["Creator Workflow", "Dual Format", "Framing Assist", "iPhone"],
     features: [
