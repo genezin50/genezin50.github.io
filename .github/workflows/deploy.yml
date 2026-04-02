@@ -27,13 +27,28 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+          cache-dependency-path: webPispis/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+        working-directory: webPispis
+
+      - name: Build site
+        run: npm run build
+        working-directory: webPispis
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: webPispis/dist
 
       - name: Deploy to GitHub Pages
         id: deployment
