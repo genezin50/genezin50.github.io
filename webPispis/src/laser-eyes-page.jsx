@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import React from "react";
+import { Header, SiteFrame } from "./components";
 import { useLanguage } from "./i18n";
 
 const base = import.meta.env.BASE_URL;
@@ -7,10 +8,11 @@ const base = import.meta.env.BASE_URL;
 const asset = (file) => `${base}apps/laser-eyes-ghost-rescue/${file}`;
 
 const gallery = [
-  asset("placeholder-hero.svg"),
-  asset("placeholder-1.svg"),
-  asset("placeholder-2.svg"),
-  asset("placeholder-3.svg"),
+  asset("01-laser-eyes-start.png"),
+  asset("02-ready-in-seconds.png"),
+  asset("03-live-run.png"),
+  asset("04-reward-loop.png"),
+  asset("05-share-the-chaos.png"),
 ];
 
 const copyByLang = {
@@ -20,14 +22,12 @@ const copyByLang = {
       features: "Features",
       bosses: "Bosses & Rewards",
       faq: "FAQ",
-      support: "Support",
-      privacy: "Privacy",
     },
     hero: {
       badge: "Arcade iPhone game · Front camera + eye aim",
       headline: "You play with your face.",
       subhead:
-        "Laser Eyes: Ghost Rescue turns your front camera into a neon arcade battlefield. Aim with your eyes, blink or tap to fire, blast ghosts, and keep the cats safe.",
+        "Laser Eyes: Ghost Rescue turns your front camera into a premium arcade loop. Aim with your eyes, blink or tap to fire, blast ghosts, and keep the cats safe.",
       ctaPrimary: "App Store — Coming Soon",
       ctaSecondary: "Watch How It Works",
       note: "Portrait-first · Fast sessions · Viral reactions",
@@ -117,7 +117,6 @@ const copyByLang = {
       secondary: "Contact Support",
     },
     footer: {
-      tagline: "Laser Eyes: Ghost Rescue",
       support: "Support",
       privacy: "Privacy",
       company: "[Company Name Placeholder]",
@@ -130,14 +129,12 @@ const copyByLang = {
       features: "Özellikler",
       bosses: "Bosslar & Ödüller",
       faq: "SSS",
-      support: "Destek",
-      privacy: "Gizlilik",
     },
     hero: {
       badge: "Arcade iPhone oyunu · Ön kamera + göz nişanı",
       headline: "Yüzünle oynarsın.",
       subhead:
-        "Laser Eyes: Ghost Rescue, ön kameranı neon bir arcade sahasına çevirir. Gözünle nişan al, blink veya dokunarak ateş et, ghost’ları vur, kedileri koru.",
+        "Laser Eyes: Ghost Rescue, ön kameranı premium bir arcade döngüsüne çevirir. Gözünle nişan al, blink veya dokunarak ateş et, ghost’ları vur, kedileri koru.",
       ctaPrimary: "App Store — Yakında",
       ctaSecondary: "Nasıl Çalışıyor",
       note: "Portrait-first · Hızlı seanslar · Viral tepki",
@@ -227,7 +224,6 @@ const copyByLang = {
       secondary: "Desteğe Yaz",
     },
     footer: {
-      tagline: "Laser Eyes: Ghost Rescue",
       support: "Destek",
       privacy: "Gizlilik",
       company: "[Şirket Adı Placeholder]",
@@ -236,139 +232,111 @@ const copyByLang = {
   },
 };
 
-function LaserHeader() {
-  const { lang, toggle } = useLanguage();
-  const copy = copyByLang[lang] || copyByLang.en;
-
-  return (
-    <header className="sticky top-0 z-30 border-b border-white/10 bg-[#05060a]/70 backdrop-blur-xl">
-      <div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-4 px-5 py-4 md:px-8">
-        <a href={`${base}laser-eyes-ghost-rescue/`} className="flex items-center gap-3">
-          <div className="grid h-10 w-10 place-items-center rounded-2xl bg-gradient-to-br from-[#6df4ff] via-[#8b5cff] to-[#ff4fd8] text-xs font-semibold text-black shadow-[0_12px_40px_rgba(109,244,255,0.35)]">
-            LE
-          </div>
-          <span className="text-base font-semibold text-white">Laser Eyes</span>
-        </a>
-        <nav className="hidden items-center gap-6 text-sm text-slate-300 md:flex">
-          <a href="#how" className="transition hover:text-white">{copy.nav.how}</a>
-          <a href="#features" className="transition hover:text-white">{copy.nav.features}</a>
-          <a href="#bosses" className="transition hover:text-white">{copy.nav.bosses}</a>
-          <a href="#faq" className="transition hover:text-white">{copy.nav.faq}</a>
-        </nav>
-        <div className="flex items-center gap-3">
-          <button
-            type="button"
-            onClick={toggle}
-            className="rounded-full border border-white/15 bg-white/10 px-3 py-1.5 text-xs font-semibold text-white transition hover:-translate-y-0.5"
-            aria-label={lang === "tr" ? "Switch to English" : "Türkçeye geç"}
-          >
-            {lang === "tr" ? "EN" : "TR"}
-          </button>
-          <a
-            href="#download"
-            className="hidden rounded-full bg-white px-4 py-2 text-xs font-semibold text-black shadow-[0_12px_30px_rgba(255,255,255,0.18)] transition hover:-translate-y-0.5 md:inline-flex"
-          >
-            App Store
-          </a>
-        </div>
-      </div>
-    </header>
-  );
-}
-
 export function LaserEyesPage() {
   const { lang } = useLanguage();
   const copy = copyByLang[lang] || copyByLang.en;
 
   return (
-    <div className="min-h-screen bg-[#05060a] text-white">
-      <div className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(circle_at_top,#1a1030,transparent_35%),radial-gradient(circle_at_85%_20%,rgba(109,244,255,0.25),transparent_38%),radial-gradient(circle_at_20%_80%,rgba(255,79,216,0.25),transparent_40%)]" />
-      <LaserHeader />
+    <SiteFrame>
+      <Header
+        title="Laser Eyes"
+        links={[
+          { href: "#how", label: copy.nav.how },
+          { href: "#features", label: copy.nav.features },
+          { href: "#bosses", label: copy.nav.bosses },
+          { href: "#faq", label: copy.nav.faq },
+        ]}
+        action={
+          <a
+            href="#download"
+            className="squircle rounded-full bg-ink px-5 py-2 text-sm font-semibold text-white shadow-card transition hover:translate-y-[-1px] hover:bg-[#1f2634]"
+          >
+            App Store
+          </a>
+        }
+      />
 
-      <main className="mx-auto w-full max-w-6xl px-5 pb-20 pt-10 md:px-8 md:pt-16">
-        <section className="grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr]">
+      <main className="mx-auto w-full max-w-6xl px-5 pb-16 pt-8 md:px-8 md:pt-14">
+        <section className="grid items-center gap-10 md:grid-cols-[1.05fr_0.95fr]">
           <motion.div
-            initial={{ opacity: 0, y: 24 }}
+            initial={{ opacity: 0, y: 22 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ type: "spring", stiffness: 120, damping: 18 }}
           >
-            <span className="inline-flex rounded-full border border-white/15 bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-slate-200">
+            <span className="squircle inline-flex rounded-full border border-sky/45 bg-white/70 px-4 py-1 text-xs font-semibold uppercase tracking-[0.12em] text-ink/75 dark:bg-white/10 dark:text-white/70">
               {copy.hero.badge}
             </span>
-            <h1 className="mt-6 text-4xl font-semibold leading-tight md:text-6xl">{copy.hero.headline}</h1>
-            <p className="mt-6 max-w-xl text-lg text-slate-300">{copy.hero.subhead}</p>
-            <div className="mt-8 flex flex-wrap gap-3">
+            <h1 className="mt-5 max-w-xl text-4xl font-semibold leading-tight md:text-6xl">{copy.hero.headline}</h1>
+            <p className="mt-5 max-w-xl text-lg text-ink/70">{copy.hero.subhead}</p>
+            <div className="mt-7 flex flex-wrap gap-3">
               <a
                 href="#download"
-                className="rounded-2xl bg-gradient-to-r from-[#6df4ff] via-[#8b5cff] to-[#ff4fd8] px-6 py-3 text-sm font-semibold text-black shadow-[0_20px_50px_rgba(109,244,255,0.28)] transition hover:-translate-y-0.5"
+                className="squircle inline-flex items-center gap-3 rounded-2xl bg-ink px-7 py-4 text-base font-semibold text-white shadow-soft transition hover:-translate-y-0.5"
               >
                 {copy.hero.ctaPrimary}
               </a>
               <a
                 href="#how"
-                className="rounded-2xl border border-white/20 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5"
+                className="surface-card squircle inline-flex items-center gap-3 rounded-2xl px-6 py-4 text-base font-semibold text-ink"
               >
                 {copy.hero.ctaSecondary}
               </a>
             </div>
-            <p className="mt-5 text-sm text-slate-400">{copy.hero.note}</p>
+            <p className="mt-5 text-sm text-ink/60">{copy.hero.note}</p>
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, scale: 0.98, y: 24 }}
+            initial={{ opacity: 0, scale: 0.97, y: 26 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ type: "spring", stiffness: 120, damping: 18, delay: 0.1 }}
             className="relative"
           >
-            <div className="absolute -inset-6 rounded-[32px] bg-gradient-to-br from-[#6df4ff]/20 via-transparent to-[#ff4fd8]/20 blur-2xl" />
-            <div className="relative rounded-[32px] border border-white/10 bg-[#0a0f1d] p-4 shadow-[0_40px_120px_rgba(0,0,0,0.6)]">
-              <img src={gallery[0]} alt="Laser Eyes hero screenshot" className="w-full rounded-[24px]" />
+            <div className="absolute inset-0 -z-10 rounded-[42px] bg-gradient-to-br from-lilac/40 via-peach/30 to-sky/40 blur-3xl" />
+            <div className="surface-card squircle rounded-[38px] p-4">
+              <img src={gallery[0]} alt="Laser Eyes hero screenshot" className="squircle w-full rounded-[28px]" />
             </div>
           </motion.div>
         </section>
 
-        <section className="mt-20 grid gap-10 lg:grid-cols-[0.95fr_1.05fr]">
+        <section className="mt-20 grid gap-8 md:grid-cols-[0.95fr_1.05fr]">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#6df4ff]">{copy.slogan.kicker}</p>
-            <h2 className="mt-4 text-3xl font-semibold md:text-4xl">{copy.slogan.title}</h2>
-            <p className="mt-4 text-lg text-slate-300">{copy.slogan.body}</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-ink/50">{copy.slogan.kicker}</p>
+            <h2 className="mt-3 text-3xl font-semibold md:text-4xl">{copy.slogan.title}</h2>
+            <p className="mt-4 text-lg text-ink/70">{copy.slogan.body}</p>
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
             {copy.how.steps.map((step) => (
-              <div key={step.title} className="rounded-3xl border border-white/10 bg-white/5 p-6">
-                <h3 className="text-lg font-semibold">{step.title}</h3>
-                <p className="mt-2 text-sm text-slate-300">{step.body}</p>
+              <div key={step.title} className="surface-card squircle rounded-[28px] p-6">
+                <h3 className="text-lg font-semibold text-ink">{step.title}</h3>
+                <p className="mt-2 text-sm text-ink/70">{step.body}</p>
               </div>
             ))}
           </div>
         </section>
 
         <section id="how" className="mt-20">
-          <div className="flex flex-wrap items-end justify-between gap-4">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#ff4fd8]">{copy.how.title}</p>
-              <h2 className="mt-3 text-3xl font-semibold md:text-4xl">{copy.hero.headline}</h2>
-            </div>
-            <p className="max-w-xl text-sm text-slate-400">{copy.hero.note}</p>
+          <div className="mb-6">
+            <p className="text-sm font-semibold uppercase tracking-[0.14em] text-ink/55">{copy.how.title}</p>
+            <h2 className="mt-2 text-3xl font-semibold md:text-4xl">{copy.hero.headline}</h2>
           </div>
-          <div className="mt-8 grid gap-4 md:grid-cols-3">
+          <div className="grid gap-4 md:grid-cols-3">
             {copy.how.steps.map((step) => (
-              <div key={step.title} className="rounded-3xl border border-white/10 bg-[#0b1224] p-6">
-                <h3 className="text-lg font-semibold">{step.title}</h3>
-                <p className="mt-2 text-sm text-slate-300">{step.body}</p>
+              <div key={step.title} className="surface-card squircle rounded-[28px] p-6">
+                <h3 className="text-lg font-semibold text-ink">{step.title}</h3>
+                <p className="mt-2 text-sm text-ink/70">{step.body}</p>
               </div>
             ))}
           </div>
         </section>
 
         <section id="features" className="mt-20">
-          <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#6df4ff]">{copy.features.title}</p>
-            <h2 className="mt-3 text-3xl font-semibold md:text-4xl">{copy.hero.headline}</h2>
+          <div className="mb-6">
+            <p className="text-sm font-semibold uppercase tracking-[0.14em] text-ink/55">{copy.features.title}</p>
+            <h2 className="mt-2 text-3xl font-semibold md:text-4xl">{copy.hero.headline}</h2>
           </div>
-          <div className="mt-8 grid gap-4 sm:grid-cols-2">
+          <div className="grid gap-4 sm:grid-cols-2">
             {copy.features.items.map((item) => (
-              <div key={item} className="rounded-3xl border border-white/10 bg-white/5 p-5 text-sm text-slate-200">
+              <div key={item} className="surface-card squircle rounded-[24px] p-5 text-sm text-ink/80">
                 {item}
               </div>
             ))}
@@ -376,17 +344,17 @@ export function LaserEyesPage() {
         </section>
 
         <section id="bosses" className="mt-20">
-          <div className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr]">
+          <div className="grid gap-8 md:grid-cols-[1.05fr_0.95fr]">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#ff4fd8]">{copy.bosses.title}</p>
-              <h2 className="mt-3 text-3xl font-semibold md:text-4xl">{copy.bosses.title}</h2>
-              <p className="mt-4 text-lg text-slate-300">{copy.bosses.body}</p>
+              <p className="text-sm font-semibold uppercase tracking-[0.14em] text-ink/55">{copy.bosses.title}</p>
+              <h2 className="mt-2 text-3xl font-semibold md:text-4xl">{copy.bosses.title}</h2>
+              <p className="mt-4 text-lg text-ink/70">{copy.bosses.body}</p>
             </div>
             <div className="grid gap-4">
               {copy.bosses.cards.map((card) => (
-                <div key={card.title} className="rounded-3xl border border-white/10 bg-[#0b1224] p-5">
-                  <h3 className="text-lg font-semibold">{card.title}</h3>
-                  <p className="mt-2 text-sm text-slate-300">{card.body}</p>
+                <div key={card.title} className="surface-card squircle rounded-[28px] p-6">
+                  <h3 className="text-lg font-semibold text-ink">{card.title}</h3>
+                  <p className="mt-2 text-sm text-ink/70">{card.body}</p>
                 </div>
               ))}
             </div>
@@ -396,50 +364,50 @@ export function LaserEyesPage() {
         <section className="mt-20">
           <div className="flex flex-wrap items-end justify-between gap-4">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#6df4ff]">{copy.showcase.title}</p>
-              <h2 className="mt-3 text-3xl font-semibold md:text-4xl">{copy.showcase.title}</h2>
+              <p className="text-sm font-semibold uppercase tracking-[0.14em] text-ink/55">{copy.showcase.title}</p>
+              <h2 className="mt-2 text-3xl font-semibold md:text-4xl">{copy.showcase.title}</h2>
             </div>
-            <p className="max-w-xl text-sm text-slate-400">{copy.showcase.body}</p>
+            <p className="max-w-xl text-sm text-ink/60">{copy.showcase.body}</p>
           </div>
           <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {gallery.map((shot) => (
-              <div key={shot} className="rounded-3xl border border-white/10 bg-[#0a0f1d] p-3">
-                <img src={shot} alt="Laser Eyes placeholder" className="w-full rounded-2xl" />
+              <div key={shot} className="surface-card squircle rounded-[28px] p-3">
+                <img src={shot} alt="Laser Eyes placeholder" className="squircle w-full rounded-[22px]" />
               </div>
             ))}
           </div>
         </section>
 
         <section id="faq" className="mt-20">
-          <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#ff4fd8]">{copy.faq.title}</p>
-            <h2 className="mt-3 text-3xl font-semibold md:text-4xl">{copy.faq.title}</h2>
+          <div className="mb-6">
+            <p className="text-sm font-semibold uppercase tracking-[0.14em] text-ink/55">{copy.faq.title}</p>
+            <h2 className="mt-2 text-3xl font-semibold md:text-4xl">{copy.faq.title}</h2>
           </div>
-          <div className="mt-8 grid gap-4">
+          <div className="grid gap-4">
             {copy.faq.items.map((item) => (
-              <div key={item.q} className="rounded-3xl border border-white/10 bg-white/5 p-6">
-                <h3 className="text-lg font-semibold">{item.q}</h3>
-                <p className="mt-2 text-sm text-slate-300">{item.a}</p>
+              <div key={item.q} className="surface-card squircle rounded-[28px] p-6">
+                <h3 className="text-lg font-semibold text-ink">{item.q}</h3>
+                <p className="mt-2 text-sm text-ink/70">{item.a}</p>
               </div>
             ))}
           </div>
         </section>
 
         <section id="download" className="mt-20">
-          <div className="rounded-[32px] border border-white/10 bg-gradient-to-r from-[#0b1224] via-[#120d22] to-[#0b0f1a] p-8 text-center">
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#6df4ff]">Laser Eyes</p>
+          <div className="surface-card squircle rounded-[32px] bg-gradient-to-r from-white/70 via-[#fff8f5]/80 to-[#f8f3ff]/75 p-8 text-center">
+            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-ink/50">Laser Eyes</p>
             <h2 className="mt-3 text-3xl font-semibold md:text-4xl">{copy.cta.title}</h2>
-            <p className="mt-3 text-sm text-slate-300">{copy.cta.body}</p>
+            <p className="mt-3 text-sm text-ink/70">{copy.cta.body}</p>
             <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
               <a
                 href="#"
-                className="rounded-2xl bg-gradient-to-r from-[#6df4ff] via-[#8b5cff] to-[#ff4fd8] px-6 py-3 text-sm font-semibold text-black shadow-[0_20px_50px_rgba(109,244,255,0.3)]"
+                className="squircle rounded-2xl bg-ink px-6 py-3 text-sm font-semibold text-white shadow-card"
               >
                 {copy.cta.primary}
               </a>
               <a
                 href={`${base}laser-eyes-ghost-rescue/support.html`}
-                className="rounded-2xl border border-white/20 bg-white/5 px-6 py-3 text-sm font-semibold text-white"
+                className="surface-card squircle rounded-2xl px-6 py-3 text-sm font-semibold text-ink"
               >
                 {copy.cta.secondary}
               </a>
@@ -448,23 +416,23 @@ export function LaserEyesPage() {
         </section>
       </main>
 
-      <footer className="border-t border-white/10 bg-[#05060a] py-10">
-        <div className="mx-auto flex w-full max-w-6xl flex-wrap items-center justify-between gap-4 px-5 md:px-8">
+      <footer className="border-t border-white/60 bg-white/40">
+        <div className="mx-auto flex w-full max-w-6xl flex-wrap items-center justify-between gap-4 px-5 py-8 md:px-8">
           <div>
-            <p className="text-sm font-semibold text-white">{copy.footer.tagline}</p>
-            <p className="text-xs text-slate-400">{copy.footer.company}</p>
-            <p className="text-xs text-slate-400">{copy.footer.email}</p>
+            <p className="text-sm font-semibold text-ink">Laser Eyes: Ghost Rescue</p>
+            <p className="text-xs text-ink/60">{copy.footer.company}</p>
+            <p className="text-xs text-ink/60">{copy.footer.email}</p>
           </div>
-          <div className="flex items-center gap-4 text-sm text-slate-300">
-            <a href={`${base}laser-eyes-ghost-rescue/support.html`} className="transition hover:text-white">
+          <div className="flex items-center gap-4 text-sm text-ink/70">
+            <a href={`${base}laser-eyes-ghost-rescue/support.html`} className="transition hover:text-ink">
               {copy.footer.support}
             </a>
-            <a href={`${base}laser-eyes-ghost-rescue/privacy.html`} className="transition hover:text-white">
+            <a href={`${base}laser-eyes-ghost-rescue/privacy.html`} className="transition hover:text-ink">
               {copy.footer.privacy}
             </a>
           </div>
         </div>
       </footer>
-    </div>
+    </SiteFrame>
   );
 }

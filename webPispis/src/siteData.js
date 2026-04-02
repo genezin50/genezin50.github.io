@@ -416,12 +416,13 @@ export const apps = {
         secondaryLabel: "Gizlilik",
       },
     },
-    icon: appAsset("laser-eyes-ghost-rescue", "app-icon.svg"),
-    heroScreen: appAsset("laser-eyes-ghost-rescue", "placeholder-hero.svg"),
+    icon: appAsset("laser-eyes-ghost-rescue", "app-icon.png"),
+    heroScreen: appAsset("laser-eyes-ghost-rescue", "01-laser-eyes-start.png"),
     gallery: [
-      appAsset("laser-eyes-ghost-rescue", "placeholder-1.svg"),
-      appAsset("laser-eyes-ghost-rescue", "placeholder-2.svg"),
-      appAsset("laser-eyes-ghost-rescue", "placeholder-3.svg"),
+      appAsset("laser-eyes-ghost-rescue", "02-ready-in-seconds.png"),
+      appAsset("laser-eyes-ghost-rescue", "03-live-run.png"),
+      appAsset("laser-eyes-ghost-rescue", "04-reward-loop.png"),
+      appAsset("laser-eyes-ghost-rescue", "05-share-the-chaos.png"),
     ],
     chips: ["iPhone", "Front Camera", "Arcade", "Portrait"],
     features: [
