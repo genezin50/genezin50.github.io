@@ -369,6 +369,75 @@ export const apps = {
     storeUrl: "https://apps.apple.com/tr/app/dualshot-recorder/id6761522885?l=tr",
     medicalNote: null,
   },
+  "laser-eyes-ghost-rescue": {
+    slug: "laser-eyes-ghost-rescue",
+    eyebrow: "Face-Tracked Arcade Game",
+    title: "Laser Eyes: Ghost Rescue",
+    heroTitle: "You play with your face.",
+    heroSubtitle:
+      "A neon iPhone arcade game that uses the front camera. Aim with your eyes, blink or tap to fire, blast ghosts, and keep the cats safe.",
+    description:
+      "Laser Eyes: Ghost Rescue is a fast, funny, portrait-first arcade loop built for instant replays, neon chaos, and viral reactions.",
+    locales: {
+      en: {
+        eyebrow: "Face-Tracked Arcade Game",
+        title: "Laser Eyes: Ghost Rescue",
+        heroTitle: "You play with your face.",
+        heroSubtitle:
+          "A neon iPhone arcade game that uses the front camera. Aim with your eyes, blink or tap to fire, blast ghosts, and keep the cats safe.",
+        description:
+          "Laser Eyes: Ghost Rescue is a fast, funny, portrait-first arcade loop built for instant replays, neon chaos, and viral reactions.",
+        chips: ["iPhone", "Front Camera", "Arcade", "Portrait"],
+        features: [
+          "Live face camera gameplay",
+          "Hybrid eye aim with blink or tap fire",
+          "Ghost waves and mini boss events",
+          "Power-ups, coins, and cosmetics",
+        ],
+        ctaLabel: "App Store — Coming Soon",
+        secondaryLabel: "Privacy",
+      },
+      tr: {
+        eyebrow: "Yüz Takipli Arcade Oyunu",
+        title: "Laser Eyes: Ghost Rescue",
+        heroTitle: "Yüzünle oynarsın.",
+        heroSubtitle:
+          "Ön kamerayı kullanan neon iPhone arcade oyunu. Gözünle nişan al, blink veya dokunarak ateş et, ghost’ları vur, kedileri koru.",
+        description:
+          "Laser Eyes: Ghost Rescue hızlı, komik ve portrait-first bir arcade döngüsü; neon kaos, viral tepki ve anında tekrar oynanma için tasarlandı.",
+        chips: ["iPhone", "Ön Kamera", "Arcade", "Portrait"],
+        features: [
+          "Canlı yüz kamera oyun akışı",
+          "Blink veya tap ile hibrit nişan",
+          "Ghost dalgaları ve mini boss event’leri",
+          "Power-up, coin ve cosmetic progression",
+        ],
+        ctaLabel: "App Store — Yakında",
+        secondaryLabel: "Gizlilik",
+      },
+    },
+    icon: appAsset("laser-eyes-ghost-rescue", "app-icon.svg"),
+    heroScreen: appAsset("laser-eyes-ghost-rescue", "placeholder-hero.svg"),
+    gallery: [
+      appAsset("laser-eyes-ghost-rescue", "placeholder-1.svg"),
+      appAsset("laser-eyes-ghost-rescue", "placeholder-2.svg"),
+      appAsset("laser-eyes-ghost-rescue", "placeholder-3.svg"),
+    ],
+    chips: ["iPhone", "Front Camera", "Arcade", "Portrait"],
+    features: [
+      "Live face camera gameplay",
+      "Hybrid eye aim with blink or tap fire",
+      "Ghost waves and mini boss events",
+      "Power-ups, coins, and cosmetics",
+    ],
+    privacyUrl: `${base}laser-eyes-ghost-rescue/privacy.html`,
+    supportUrl: `${base}laser-eyes-ghost-rescue/support.html`,
+    ctaLabel: "App Store — Coming Soon",
+    secondaryLabel: "Privacy",
+    secondaryUrl: `${base}laser-eyes-ghost-rescue/privacy.html`,
+    storeUrl: "#",
+    medicalNote: null,
+  },
   "lift-log-pro": {
     slug: "lift-log-pro",
     eyebrow: "Strength Training App",
@@ -412,5 +481,6 @@ export const developerApps = [
   apps["pitpit-gebelik"],
   apps["pispis-bebek"],
   apps["dualshot-recorder"],
+  apps["laser-eyes-ghost-rescue"],
   apps["lift-log-pro"],
 ];

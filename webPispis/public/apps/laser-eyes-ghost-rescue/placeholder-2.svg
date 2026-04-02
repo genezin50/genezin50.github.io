@@ -1,0 +1,7 @@
+<svg width="800" height="1100" viewBox="0 0 800 1100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="1100" rx="72" fill="#0a0f1d" />
+  <rect x="60" y="90" width="680" height="920" rx="54" stroke="#ff4fd8" stroke-width="3" opacity="0.7" />
+  <text x="80" y="560" fill="#E2E8F0" font-size="32" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', system-ui, sans-serif">
+    Screenshot Placeholder
+  </text>
+</svg>

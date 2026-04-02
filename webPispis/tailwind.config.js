@@ -8,6 +8,7 @@ export default {
     "./pitpit-gebelik/index.html",
     "./pispis-bebek/index.html",
     "./lift-log-pro/index.html",
+    "./laser-eyes-ghost-rescue/index.html",
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {

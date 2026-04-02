@@ -15,6 +15,7 @@ export default defineConfig({
         pispisBebek: resolve(__dirname, "pispis-bebek/index.html"),
         dualshotRecorder: resolve(__dirname, "dualshot-recorder/index.html"),
         liftLogPro: resolve(__dirname, "lift-log-pro/index.html"),
+        laserEyes: resolve(__dirname, "laser-eyes-ghost-rescue/index.html"),
       },
     },
   },
