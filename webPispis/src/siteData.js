@@ -436,7 +436,7 @@ export const apps = {
     ctaLabel: "App Store — Coming Soon",
     secondaryLabel: "Privacy",
     secondaryUrl: `${base}laser-eyes-ghost-rescue/privacy.html`,
-    storeUrl: "#",
+    storeUrl: "https://apps.apple.com/tr/app/id6761546813?l=tr",
     medicalNote: null,
   },
   "lift-log-pro": {

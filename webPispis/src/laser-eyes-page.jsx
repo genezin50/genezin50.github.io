@@ -7,13 +7,14 @@ const base = import.meta.env.BASE_URL;
 
 const asset = (file) => `${base}apps/laser-eyes-ghost-rescue/${file}`;
 
-const gallery = [
-  asset("01-laser-eyes-start.png"),
-  asset("02-ready-in-seconds.png"),
-  asset("03-live-run.png"),
-  asset("04-reward-loop.png"),
-  asset("05-share-the-chaos.png"),
-];
+  const gallery = [
+    asset("01-laser-eyes-start.png"),
+    asset("02-ready-in-seconds.png"),
+    asset("03-live-run.png"),
+    asset("04-reward-loop.png"),
+    asset("05-share-the-chaos.png"),
+  ];
+  const storeUrl = "https://apps.apple.com/tr/app/id6761546813?l=tr";
 
 const copyByLang = {
   en: {
@@ -248,7 +249,9 @@ export function LaserEyesPage() {
         ]}
         action={
           <a
-            href="#download"
+            href={storeUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             className="squircle rounded-full bg-ink px-5 py-2 text-sm font-semibold text-white shadow-card transition hover:translate-y-[-1px] hover:bg-[#1f2634]"
           >
             App Store
@@ -270,7 +273,9 @@ export function LaserEyesPage() {
             <p className="mt-5 max-w-xl text-lg text-ink/70">{copy.hero.subhead}</p>
             <div className="mt-7 flex flex-wrap gap-3">
               <a
-                href="#download"
+                href={storeUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="squircle inline-flex items-center gap-3 rounded-2xl bg-ink px-7 py-4 text-base font-semibold text-white shadow-soft transition hover:-translate-y-0.5"
               >
                 {copy.hero.ctaPrimary}
@@ -400,7 +405,9 @@ export function LaserEyesPage() {
             <p className="mt-3 text-sm text-ink/70">{copy.cta.body}</p>
             <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
               <a
-                href="#"
+                href={storeUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="squircle rounded-2xl bg-ink px-6 py-3 text-sm font-semibold text-white shadow-card"
               >
                 {copy.cta.primary}
