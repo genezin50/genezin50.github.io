@@ -175,7 +175,7 @@ export const apps = {
     privacyUrl: `${base}dualshot-recorder/privacy.html`,
     supportUrl: `${base}dualshot-recorder/support.html`,
     ctaLabel: "Download on the App Store",
-    storeUrl: "https://apps.apple.com",
+    storeUrl: "https://apps.apple.com/tr/app/dualshot-recorder/id6761522885?l=tr",
     medicalNote: null,
   },
   "lift-log-pro": {
