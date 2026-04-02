@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import React from "react";
 import { Header, SiteFrame } from "./components";
+import { useLanguage } from "./i18n";
 
 const screenshotAsset = (file) => `${import.meta.env.BASE_URL}apps/lift-log-pro/${file}`;
 
@@ -17,31 +18,6 @@ const screenshots = [
   "screenshot-10.png",
 ].map(screenshotAsset);
 
-const heroStats = [
-  { label: "Programs", value: "4 built in" },
-  { label: "Logging", value: "Fast + focused" },
-  { label: "Setup", value: "No account" },
-];
-
-const benefitCards = [
-  {
-    title: "Build strength with structure",
-    body: "Follow a clear Workout A / Workout B flow, run classic main lifts and stay locked into progressive overload without fluff.",
-  },
-  {
-    title: "Track every training detail",
-    body: "Log sets, reps, weights, notes, rest time and workout duration, then resume active sessions without losing momentum.",
-  },
-  {
-    title: "See progress in real numbers",
-    body: "Watch weight progression, estimated 1RM, volume, weekly trends and body-fat changes in one focused analytics view.",
-  },
-  {
-    title: "Stay consistent",
-    body: "Use reminders, badges, auto deload rules and workout history to keep training steady when motivation drops.",
-  },
-];
-
 const builtInPrograms = [
   "Classic 5x5 Method",
   "Starting Strength",
@@ -49,131 +25,374 @@ const builtInPrograms = [
   "Texas Method",
 ];
 
-const featureGroups = [
-  {
-    eyebrow: "Programs",
-    title: "Classic barbell progression, ready on day one",
-    copy:
-      "Lift Log Pro is built around 5x5-style strength work. Run Workout A / Workout B, follow a linear progression mindset and stay focused on the lifts that matter.",
-    bullets: [
-      "Squat, Bench Press, Barbell Row, Overhead Press and Deadlift",
-      "Standard 5x5 logic, with Deadlift commonly handled as 1x5",
-      "Built-in options for Classic 5x5 Method, Starting Strength, Madcow 5x5 and Texas Method",
+const copyByLang = {
+  en: {
+    heroBadge: "Strength training app for focused lifters",
+    heroTitle: "Follow your 5x5 progression with less friction and more signal.",
+    heroBody:
+      "Lift Log Pro is a strength training app built for lifters who want to follow 5x5-style progression, track workouts, monitor performance and stay consistent without unnecessary complexity.",
+    heroPrimaryCta: "Download on the App Store",
+    heroSecondaryCta: "Explore Features",
+    chips: ["Free", "No account required", "Local-first", "Ad-supported"],
+    heroStats: [
+      { label: "Programs", value: "4 built in" },
+      { label: "Logging", value: "Fast + focused" },
+      { label: "Setup", value: "No account" },
     ],
-  },
-  {
-    eyebrow: "Workout Tracking",
-    title: "Fast logging that stays out of the way",
-    copy:
-      "Move through training sessions without friction. The app is made to keep your attention on the lift, not on bloated setup screens.",
-    bullets: [
-      "Log sets, reps and weights with workout notes",
-      "Track rest time and full workout duration",
-      "Resume active workout sessions when you come back",
-      "Finish with a workout summary that shows duration, total rest, estimated 1RM, PR-related signals, notes and exercise breakdowns",
+    builtInProgramsTitle: "Built-in programs",
+    builtInPrograms,
+    progressSignalsTitle: "Progress signals",
+    progressSignalsHeadline: "1RM, volume, weekly trends",
+    progressSignalsBody: "See strength progression, body-fat changes and session quality without clutter.",
+    benefitCards: [
+      {
+        title: "Build strength with structure",
+        body: "Follow a clear Workout A / Workout B flow, run classic main lifts and stay locked into progressive overload without fluff.",
+      },
+      {
+        title: "Track every training detail",
+        body: "Log sets, reps, weights, notes, rest time and workout duration, then resume active sessions without losing momentum.",
+      },
+      {
+        title: "See progress in real numbers",
+        body: "Watch weight progression, estimated 1RM, volume, weekly trends and body-fat changes in one focused analytics view.",
+      },
+      {
+        title: "Stay consistent",
+        body: "Use reminders, badges, auto deload rules and workout history to keep training steady when motivation drops.",
+      },
     ],
-  },
-  {
-    eyebrow: "Analytics",
-    title: "Progress you can actually use",
-    copy:
-      "The progress view turns your training into clear signals instead of noise. See where strength is moving and where consistency needs work.",
-    bullets: [
-      "Charts and statistics for weight progression over time",
-      "Estimated 1RM tracking, volume tracking and weekly trends",
-      "Advanced progress signals and performance patterns",
-      "Body fat logging with time-based visual change tracking",
+    screensEyebrow: "App Screens",
+    screensTitle: "The actual app, shown in full",
+    screensBody: "Every uploaded screen is included here so lifters can see the real flow before they hit the App Store.",
+    featuresEyebrow: "Features",
+    featuresTitle: "Everything active in the app, clearly explained",
+    featuresBody: "No inflated claims. No invented features. Just the training tools that are currently part of Lift Log Pro.",
+    featureGroups: [
+      {
+        eyebrow: "Programs",
+        title: "Classic barbell progression, ready on day one",
+        copy:
+          "Lift Log Pro is built around 5x5-style strength work. Run Workout A / Workout B, follow a linear progression mindset and stay focused on the lifts that matter.",
+        bullets: [
+          "Squat, Bench Press, Barbell Row, Overhead Press and Deadlift",
+          "Standard 5x5 logic, with Deadlift commonly handled as 1x5",
+          "Built-in options for Classic 5x5 Method, Starting Strength, Madcow 5x5 and Texas Method",
+        ],
+      },
+      {
+        eyebrow: "Workout Tracking",
+        title: "Fast logging that stays out of the way",
+        copy:
+          "Move through training sessions without friction. The app is made to keep your attention on the lift, not on bloated setup screens.",
+        bullets: [
+          "Log sets, reps and weights with workout notes",
+          "Track rest time and full workout duration",
+          "Resume active workout sessions when you come back",
+          "Finish with a workout summary that shows duration, total rest, estimated 1RM, PR-related signals, notes and exercise breakdowns",
+        ],
+      },
+      {
+        eyebrow: "Analytics",
+        title: "Progress you can actually use",
+        copy:
+          "The progress view turns your training into clear signals instead of noise. See where strength is moving and where consistency needs work.",
+        bullets: [
+          "Charts and statistics for weight progression over time",
+          "Estimated 1RM tracking, volume tracking and weekly trends",
+          "Advanced progress signals and performance patterns",
+          "Body fat logging with time-based visual change tracking",
+        ],
+      },
+      {
+        eyebrow: "History",
+        title: "Look back without digging around",
+        copy:
+          "Every past session stays easy to review, whether you want the last workout or a longer trend across weeks of training.",
+        bullets: [
+          "Workout history list view and calendar-based history view",
+          "Open past workout details with logged weights, duration, total rest, notes and exercise data",
+          "CSV export for workout and body-fat related data",
+        ],
+      },
     ],
-  },
-  {
-    eyebrow: "History",
-    title: "Look back without digging around",
-    copy:
-      "Every past session stays easy to review, whether you want the last workout or a longer trend across weeks of training.",
-    bullets: [
-      "Workout history list view and calendar-based history view",
-      "Open past workout details with logged weights, duration, total rest, notes and exercise data",
-      "CSV export for workout and body-fat related data",
+    utilityCards: [
+      {
+        title: "Custom workouts",
+        body: "Create your own workouts, add custom exercises and save personal templates that fit your exact training split.",
+      },
+      {
+        title: "Smart warm-up",
+        body: "Automatic warm-up set calculations help you ramp cleanly into your working weight.",
+      },
+      {
+        title: "Plate calculator",
+        body: "Load the bar correctly without second-guessing the math between sets.",
+      },
+      {
+        title: "Auto deload",
+        body: "Enable automatic deload rules with percentage-based or kg-based behavior tied to failure and training difficulty logic.",
+      },
+      {
+        title: "Reminders + motivation",
+        body: "Use workout reminders, rest reminders, progress badges and milestone notifications to stay on schedule.",
+      },
+      {
+        title: "Personalization",
+        body: "Switch between light, dark or system theme, choose your language and train in kg or lb.",
+      },
     ],
+    philosophyEyebrow: "Built for Lifters",
+    philosophyTitle: "Simple and effective beats hype",
+    philosophyBody:
+      "Lift Log Pro is made for disciplined training. It keeps structure, progression and usable data in front of you without turning the app into a project of its own.",
+    philosophyPoints: [
+      "No fluff",
+      "No account required",
+      "Focused on progression",
+      "Free and straightforward",
+      "Built for consistent training",
+      "Local-first workflow",
+    ],
+    freeEyebrow: "Free App",
+    freeTitle: "Start training without account setup or unnecessary friction",
+    freeBody:
+      "Lift Log Pro is free, ad-supported and built to work as a straightforward training tracker. Open the app, choose a program or build your own, then get to work.",
+    freeBullets: ["No account required", "Free to use", "Focused on training, not complexity"],
+    faqEyebrow: "FAQ",
+    faqTitle: "Answers before the App Store tap",
+    faqItems: [
+      {
+        q: "Is Lift Log Pro free?",
+        a: "Yes. The app is free to use and currently ad-supported. It is not positioned as a subscription product.",
+      },
+      {
+        q: "Do I need to create an account?",
+        a: "No. Lift Log Pro works as a simple, local-first training tracker with no account required.",
+      },
+      {
+        q: "Which programs are built in?",
+        a: "The app includes Classic 5x5 Method, Starting Strength, Madcow 5x5 and Texas Method as built-in strength program options.",
+      },
+      {
+        q: "Can I build my own workouts too?",
+        a: "Yes. You can create custom workouts, add custom exercises and save your own workout templates.",
+      },
+      {
+        q: "What can I track after a workout?",
+        a: "You can review workout duration, total rest, estimated 1RM, PR-related insights, notes and a full exercise breakdown.",
+      },
+      {
+        q: "Does it show long-term progress?",
+        a: "Yes. Lift Log Pro includes charts and statistics for weight progression, estimated 1RM, volume, weekly trends and body-fat tracking.",
+      },
+    ],
+    finalEyebrow: "Final CTA",
+    finalTitle: "Lift with structure. Log with clarity. Keep progressing.",
+    finalBody:
+      "Lift Log Pro is built for lifters who want a straightforward way to train, review progress and stay consistent week after week.",
+    finalPrimary: "Download on the App Store",
+    finalSecondary: "Review Every Feature",
+    navFeatures: "Features",
+    navPrivacy: "Privacy",
+    navWhy: "Why It Works",
+    navFaq: "FAQ",
+    mockToday: "Today",
+    mockWorkout: "Workout A",
+    mockRest: "Rest",
+    mockWarmup: "Warm-up",
   },
-];
-
-const utilityCards = [
-  {
-    title: "Custom workouts",
-    body: "Create your own workouts, add custom exercises and save personal templates that fit your exact training split.",
+  tr: {
+    heroBadge: "Odaklı sporcular için güç antrenmanı uygulaması",
+    heroTitle: "5x5 ilerlemeni daha az sürtünme ve daha çok sinyalle takip et.",
+    heroBody:
+      "Lift Log Pro; 5x5 tarzı ilerlemeyi takip etmek, antrenmanları kaydetmek, performansı izlemek ve gereksiz karmaşaya girmeden istikrarlı kalmak isteyen sporcular için tasarlanmış bir güç antrenmanı uygulamasıdır.",
+    heroPrimaryCta: "App Store'dan İndir",
+    heroSecondaryCta: "Özellikleri İncele",
+    chips: ["Ücretsiz", "Hesap gerektirmez", "Local-first", "Reklam destekli"],
+    heroStats: [
+      { label: "Programlar", value: "4 yerleşik" },
+      { label: "Kayıt", value: "Hızlı + odaklı" },
+      { label: "Kurulum", value: "Hesap yok" },
+    ],
+    builtInProgramsTitle: "Yerleşik programlar",
+    builtInPrograms,
+    progressSignalsTitle: "Gelişim sinyalleri",
+    progressSignalsHeadline: "1RM, hacim, haftalık trendler",
+    progressSignalsBody: "Güç ilerlemesi, yağ oranı değişimi ve seans kalitesini kalabalık olmadan gör.",
+    benefitCards: [
+      {
+        title: "Düzenli bir yapı ile güçlen",
+        body: "Workout A / Workout B akışını takip et, klasik ana liftleri yap ve gereksiz detaylar olmadan progresif overload'a odaklan.",
+      },
+      {
+        title: "Her antrenman detayını kaydet",
+        body: "Set, tekrar, ağırlık, notlar, dinlenme süresi ve antrenman süresini kaydet; kaldığın yerden devam et.",
+      },
+      {
+        title: "Gerçek ilerlemeyi görün",
+        body: "Ağırlık progresyonu, tahmini 1RM, hacim, haftalık trendler ve yağ oranı değişimlerini tek bir odaklı analizde izle.",
+      },
+      {
+        title: "İstikrarlı kal",
+        body: "Hatırlatıcılar, rozetler, otomatik deload kuralları ve geçmiş antrenmanlar ile motivasyon düşünce bile düzeni koru.",
+      },
+    ],
+    screensEyebrow: "Uygulama Ekranları",
+    screensTitle: "Gerçek uygulama, tamamı burada",
+    screensBody: "Yüklenen tüm ekranlar burada; kullanıcılar App Store'a gitmeden önce akışı net görür.",
+    featuresEyebrow: "Özellikler",
+    featuresTitle: "Uygulamada aktif olan her şey net biçimde anlatıldı",
+    featuresBody: "Abartı yok. Uydurma özellik yok. Lift Log Pro’da gerçekten olan araçlar var.",
+    featureGroups: [
+      {
+        eyebrow: "Programlar",
+        title: "Klasik barbell progresyonu, ilk günden hazır",
+        copy:
+          "Lift Log Pro 5x5 tarzı güç antrenmanı etrafında kurulu. Workout A / Workout B akışıyla ilerle, lineer progresyona odaklan ve önemli liftlerde kal.",
+        bullets: [
+          "Squat, Bench Press, Barbell Row, Overhead Press ve Deadlift",
+          "Standart 5x5 mantığı; Deadlift çoğunlukla 1x5",
+          "Classic 5x5 Method, Starting Strength, Madcow 5x5 ve Texas Method hazır gelir",
+        ],
+      },
+      {
+        eyebrow: "Antrenman Kaydı",
+        title: "Araya girmeyen hızlı loglama",
+        copy:
+          "Seansları sürtünmesiz tamamla. Uygulama dikkatini lifte odaklar, gereksiz ayarlarda kaybolmazsın.",
+        bullets: [
+          "Set, tekrar, ağırlık ve notları kaydet",
+          "Dinlenme süresi ve toplam antrenman süresini takip et",
+          "Ara verip döndüğünde aktif seansı sürdür",
+          "Süre, toplam dinlenme, 1RM, PR sinyalleri ve detaylı özet gör",
+        ],
+      },
+      {
+        eyebrow: "Analitik",
+        title: "Gerçekten kullanacağın ilerleme",
+        copy:
+          "Progress ekranı antrenmanı gürültüden arındırıp net sinyallere dönüştürür. Gücün nereye gittiğini gör.",
+        bullets: [
+          "Zamana göre ağırlık progresyon grafikleri",
+          "Tahmini 1RM, hacim ve haftalık trendler",
+          "Gelişmiş performans sinyalleri ve örüntüler",
+          "Zamana bağlı yağ oranı takibi",
+        ],
+      },
+      {
+        eyebrow: "Geçmiş",
+        title: "Aramadan geriye dön",
+        copy:
+          "Geçmiş seanslar hep erişilebilir; son antrenmanı da, haftalara yayılan trendleri de kolayca aç.",
+        bullets: [
+          "Liste ve takvim tabanlı geçmiş görünümü",
+          "Kayıtlı ağırlıklar, süre, dinlenme ve notlarla geçmiş seanslar",
+          "Antrenman ve yağ oranı verilerini CSV olarak dışa aktar",
+        ],
+      },
+    ],
+    utilityCards: [
+      {
+        title: "Özel antrenmanlar",
+        body: "Kendi antrenmanlarını oluştur, özel egzersizler ekle ve kişisel şablonlarını kaydet.",
+      },
+      {
+        title: "Akıllı ısınma",
+        body: "Otomatik ısınma set hesaplamalarıyla çalışma ağırlığına temiz geç.",
+      },
+      {
+        title: "Plaka hesaplayıcı",
+        body: "Set aralarında matematiğe takılmadan barı doğru yükle.",
+      },
+      {
+        title: "Otomatik deload",
+        body: "Hata ve zorluk verisine bağlı yüzde veya kg bazlı deload kuralları etkinleştir.",
+      },
+      {
+        title: "Hatırlatıcı + motivasyon",
+        body: "Antrenman ve dinlenme hatırlatıcıları, rozetler ve kilometre taşı bildirimleriyle çizgiyi koru.",
+      },
+      {
+        title: "Kişiselleştirme",
+        body: "Açık, koyu veya sistem temasına geç; dilini seç; kg veya lb ile çalış.",
+      },
+    ],
+    philosophyEyebrow: "Sporcular için",
+    philosophyTitle: "Basit ve etkili, hype'tan iyidir",
+    philosophyBody:
+      "Lift Log Pro disiplinli antrenman için tasarlandı. Yapı, progresyon ve kullanılabilir veriyi öne alır; uygulamayı proje haline getirmez.",
+    philosophyPoints: [
+      "Gereksiz yok",
+      "Hesap gerektirmez",
+      "Progresyona odaklı",
+      "Ücretsiz ve net",
+      "Düzenli antrenman için",
+      "Local-first akış",
+    ],
+    freeEyebrow: "Ücretsiz Uygulama",
+    freeTitle: "Hesap kurmadan, sürtünmesiz başla",
+    freeBody:
+      "Lift Log Pro ücretsiz, reklam destekli ve düz bir antrenman takipçisi olarak çalışacak şekilde tasarlanmıştır. Uygulamayı aç, program seç veya kendi programını kur, sonra devam et.",
+    freeBullets: ["Hesap gerektirmez", "Ücretsiz", "Karmaşıklık yerine antrenmana odaklı"],
+    faqEyebrow: "SSS",
+    faqTitle: "App Store dokunuşundan önce cevaplar",
+    faqItems: [
+      {
+        q: "Lift Log Pro ücretsiz mi?",
+        a: "Evet. Uygulama ücretsizdir ve şu anda reklam desteklidir. Abonelik ürünü değildir.",
+      },
+      {
+        q: "Hesap oluşturmam gerekiyor mu?",
+        a: "Hayır. Lift Log Pro yerel çalışan, basit bir antrenman takipçisidir ve hesap gerektirmez.",
+      },
+      {
+        q: "Hangi programlar hazır geliyor?",
+        a: "Classic 5x5 Method, Starting Strength, Madcow 5x5 ve Texas Method yerleşik olarak gelir.",
+      },
+      {
+        q: "Kendi antrenmanımı da oluşturabilir miyim?",
+        a: "Evet. Kendi antrenmanlarını oluşturabilir, özel egzersizler ekleyebilir ve şablonlarını kaydedebilirsin.",
+      },
+      {
+        q: "Antrenman sonrası neleri takip edebilirim?",
+        a: "Süre, toplam dinlenme, tahmini 1RM, PR sinyalleri, notlar ve detaylı egzersiz dökümü görülebilir.",
+      },
+      {
+        q: "Uzun vadeli progresyonu gösteriyor mu?",
+        a: "Evet. Ağırlık progresyonu, tahmini 1RM, hacim, haftalık trendler ve yağ oranı takibi bulunur.",
+      },
+    ],
+    finalEyebrow: "Son Çağrı",
+    finalTitle: "Yapıyla çalış. Netlikle kaydet. İlerle.",
+    finalBody:
+      "Lift Log Pro, haftalar boyunca istikrarlı kalmak ve net veriyle ilerlemek isteyen sporcular için tasarlandı.",
+    finalPrimary: "App Store'dan İndir",
+    finalSecondary: "Tüm Özellikleri İncele",
+    navFeatures: "Özellikler",
+    navPrivacy: "Gizlilik",
+    navWhy: "Neden İşler",
+    navFaq: "SSS",
+    mockToday: "Bugün",
+    mockWorkout: "Antrenman A",
+    mockRest: "Dinlenme",
+    mockWarmup: "Isınma",
   },
-  {
-    title: "Smart warm-up",
-    body: "Automatic warm-up set calculations help you ramp cleanly into your working weight.",
-  },
-  {
-    title: "Plate calculator",
-    body: "Load the bar correctly without second-guessing the math between sets.",
-  },
-  {
-    title: "Auto deload",
-    body: "Enable automatic deload rules with percentage-based or kg-based behavior tied to failure and training difficulty logic.",
-  },
-  {
-    title: "Reminders + motivation",
-    body: "Use workout reminders, rest reminders, progress badges and milestone notifications to stay on schedule.",
-  },
-  {
-    title: "Personalization",
-    body: "Switch between light, dark or system theme, choose your language and train in kg or lb.",
-  },
-];
-
-const philosophyPoints = [
-  "No fluff",
-  "No account required",
-  "Focused on progression",
-  "Free and straightforward",
-  "Built for consistent training",
-  "Local-first workflow",
-];
-
-const faqItems = [
-  {
-    q: "Is Lift Log Pro free?",
-    a: "Yes. The app is free to use and currently ad-supported. It is not positioned as a subscription product.",
-  },
-  {
-    q: "Do I need to create an account?",
-    a: "No. Lift Log Pro works as a simple, local-first training tracker with no account required.",
-  },
-  {
-    q: "Which programs are built in?",
-    a: "The app includes Classic 5x5 Method, Starting Strength, Madcow 5x5 and Texas Method as built-in strength program options.",
-  },
-  {
-    q: "Can I build my own workouts too?",
-    a: "Yes. You can create custom workouts, add custom exercises and save your own workout templates.",
-  },
-  {
-    q: "What can I track after a workout?",
-    a: "You can review workout duration, total rest, estimated 1RM, PR-related insights, notes and a full exercise breakdown.",
-  },
-  {
-    q: "Does it show long-term progress?",
-    a: "Yes. Lift Log Pro includes charts and statistics for weight progression, estimated 1RM, volume, weekly trends and body-fat tracking.",
-  },
-];
+};
 
 function SectionHeader({ eyebrow, title, body, align = "left" }) {
   const alignClass = align === "center" ? "mx-auto max-w-3xl text-center" : "max-w-3xl";
 
   return (
     <div className={alignClass}>
-      <p className="text-xs font-black uppercase tracking-[0.22em] text-[#FF8A3D]">{eyebrow}</p>
-      <h2 className="mt-3 text-3xl font-black tracking-[-0.03em] text-ink md:text-5xl">{title}</h2>
+      <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#FF8A3D]">{eyebrow}</p>
+      <h2 className="mt-3 text-3xl font-semibold tracking-[-0.03em] text-ink md:text-5xl">{title}</h2>
       {body ? <p className="mt-4 text-base leading-8 text-ink/70 md:text-lg">{body}</p> : null}
     </div>
   );
 }
 
-function MockPhone() {
+function MockPhone({ labels }) {
   return (
     <div className="relative mx-auto w-full max-w-[360px]">
       <div className="absolute inset-x-10 top-8 h-56 rounded-full bg-[#FF8A3D]/30 blur-3xl" />
@@ -181,8 +400,8 @@ function MockPhone() {
         <div className="rounded-[34px] border border-white/10 bg-[#171b22] p-5">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-xs font-bold uppercase tracking-[0.18em] text-slate-500">Today</p>
-              <p className="mt-2 text-2xl font-black text-white">Workout A</p>
+              <p className="text-xs font-bold uppercase tracking-[0.18em] text-slate-500">{labels.today}</p>
+              <p className="mt-2 text-2xl font-black text-white">{labels.workout}</p>
             </div>
             <div className="rounded-2xl bg-[#FF5A28] px-4 py-2 text-sm font-black text-white">5x5</div>
           </div>
@@ -207,11 +426,11 @@ function MockPhone() {
 
           <div className="mt-5 grid grid-cols-2 gap-3">
             <div className="rounded-[22px] border border-white/8 bg-[#151A22] p-4">
-              <p className="text-xs uppercase tracking-[0.16em] text-slate-500">Rest</p>
+              <p className="text-xs uppercase tracking-[0.16em] text-slate-500">{labels.rest}</p>
               <p className="mt-2 text-2xl font-black text-white">02:30</p>
             </div>
             <div className="rounded-[22px] border border-white/8 bg-[#151A22] p-4">
-              <p className="text-xs uppercase tracking-[0.16em] text-slate-500">Warm-up</p>
+              <p className="text-xs uppercase tracking-[0.16em] text-slate-500">{labels.warmup}</p>
               <p className="mt-2 text-lg font-black text-white">Bar • 40 • 60</p>
             </div>
           </div>
@@ -222,94 +441,110 @@ function MockPhone() {
 }
 
 export function LiftLogPage() {
+  const { lang } = useLanguage();
+  const copy = copyByLang[lang] || copyByLang.en;
+
   return (
     <SiteFrame>
       <div className="min-h-screen text-ink">
-        <div className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(circle_at_top,rgba(255,138,61,0.16),transparent_26%),radial-gradient(circle_at_85%_12%,rgba(255,220,203,0.7),transparent_18%)]" />
+        <div className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(circle_at_top,rgba(255,138,61,0.16),transparent_26%),radial-gradient(circle_at_85%_12%,rgba(255,220,203,0.7),transparent_18%)] dark:bg-[radial-gradient(circle_at_top,rgba(255,138,61,0.22),transparent_30%),radial-gradient(circle_at_85%_12%,rgba(99,102,241,0.22),transparent_22%)]" />
         <Header
           title="Lift Log Pro"
           links={[
-            { href: "#features", label: "Features" },
-            { href: "/lift-log-pro/privacy.html", label: "Privacy" },
-            { href: "#philosophy", label: "Why It Works" },
-            { href: "#faq", label: "FAQ" },
+            { href: "#features", label: copy.navFeatures },
+            { href: "/lift-log-pro/privacy.html", label: copy.navPrivacy },
+            { href: "#philosophy", label: copy.navWhy },
+            { href: "#faq", label: copy.navFaq },
           ]}
           action={
             <a
               href="https://apps.apple.com/tr/app/liftlog5x5pro/id6760855317?l=tr"
-              className="rounded-full bg-ink px-5 py-2 text-sm font-bold text-white shadow-card transition hover:bg-[#1f2634]"
+              className="squircle rounded-full bg-ink px-5 py-2 text-sm font-semibold text-white shadow-card transition hover:bg-[#1f2634]"
             >
-              Download on the App Store
+              {copy.heroPrimaryCta}
             </a>
           }
         />
 
         <main>
           <section className="mx-auto grid w-full max-w-7xl gap-14 px-5 pb-20 pt-10 md:px-8 md:pb-28 md:pt-16 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
-            <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.65, ease: "easeOut" }}>
-              <div className="inline-flex items-center gap-3 rounded-full border border-peach/70 bg-white/80 px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-ink/75 shadow-card">
+            <motion.div
+              initial={{ opacity: 0, y: 18 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ type: "spring", stiffness: 120, damping: 18 }}
+            >
+              <div className="surface-card squircle inline-flex items-center gap-3 rounded-full px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-ink/75">
                 <span className="h-2 w-2 rounded-full bg-[#FF5A28]" />
-                Strength training app for focused lifters
+                {copy.heroBadge}
               </div>
-              <h1 className="mt-6 max-w-3xl text-5xl font-black tracking-[-0.05em] text-ink md:text-7xl">
-                Follow your 5x5 progression with less friction and more signal.
-              </h1>
-              <p className="mt-6 max-w-2xl text-lg leading-8 text-ink/70 md:text-xl">
-                Lift Log Pro is a strength training app built for lifters who want to follow 5x5-style progression,
-                track workouts, monitor performance and stay consistent without unnecessary complexity.
-              </p>
+              <h1 className="mt-6 max-w-3xl text-5xl font-semibold tracking-[-0.05em] text-ink md:text-7xl">{copy.heroTitle}</h1>
+              <p className="mt-6 max-w-2xl text-lg leading-8 text-ink/70 md:text-xl">{copy.heroBody}</p>
 
               <div className="mt-8 flex flex-wrap gap-3">
                 <a
                   href="https://apps.apple.com/tr/app/liftlog5x5pro/id6760855317?l=tr"
-                  className="inline-flex items-center rounded-2xl bg-ink px-7 py-4 text-base font-black text-white shadow-soft transition hover:-translate-y-0.5"
+                  className="squircle inline-flex items-center rounded-2xl bg-ink px-7 py-4 text-base font-semibold text-white shadow-soft transition hover:-translate-y-0.5"
                 >
-                  Download on the App Store
+                  {copy.heroPrimaryCta}
                 </a>
                 <a
                   href="#features"
-                  className="inline-flex items-center rounded-2xl border border-white/80 bg-white/80 px-7 py-4 text-base font-bold text-ink shadow-card transition hover:bg-white"
+                  className="surface-card squircle inline-flex items-center rounded-2xl px-7 py-4 text-base font-semibold text-ink transition hover:bg-white/90"
                 >
-                  Explore Features
+                  {copy.heroSecondaryCta}
                 </a>
               </div>
 
               <div className="mt-8 flex flex-wrap gap-3">
-                {["Free", "No account required", "Local-first", "Ad-supported"].map((chip) => (
-                  <span key={chip} className="rounded-full border border-peach/70 bg-white/75 px-4 py-2 text-sm font-semibold text-ink/75 shadow-card">
+                {copy.chips.map((chip) => (
+                  <span
+                    key={chip}
+                    className="squircle rounded-full border border-peach/70 bg-white/70 px-4 py-2 text-sm font-semibold text-ink/75 shadow-card dark:bg-white/10 dark:text-white/70"
+                  >
                     {chip}
                   </span>
                 ))}
               </div>
 
               <div className="mt-10 grid gap-4 sm:grid-cols-3">
-                {heroStats.map((item) => (
-                  <div key={item.label} className="rounded-[26px] border border-white/85 bg-white/75 p-5 shadow-card backdrop-blur-sm">
-                    <p className="text-xs font-bold uppercase tracking-[0.18em] text-ink/45">{item.label}</p>
-                    <p className="mt-3 text-2xl font-black text-ink">{item.value}</p>
+                {copy.heroStats.map((item) => (
+                  <div key={item.label} className="surface-card squircle rounded-[26px] p-5">
+                    <p className="text-xs font-semibold uppercase tracking-[0.18em] text-ink/45">{item.label}</p>
+                    <p className="mt-3 text-2xl font-semibold text-ink">{item.value}</p>
                   </div>
                 ))}
               </div>
             </motion.div>
 
-            <motion.div initial={{ opacity: 0, scale: 0.97, y: 26 }} animate={{ opacity: 1, scale: 1, y: 0 }} transition={{ duration: 0.75, ease: "easeOut", delay: 0.12 }}>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.97, y: 26 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              transition={{ type: "spring", stiffness: 120, damping: 18, delay: 0.12 }}
+            >
               <div className="grid gap-4 lg:grid-cols-[1fr_180px]">
-                <MockPhone />
+                <MockPhone
+                  labels={{
+                    today: copy.mockToday,
+                    workout: copy.mockWorkout,
+                    rest: copy.mockRest,
+                    warmup: copy.mockWarmup,
+                  }}
+                />
                 <div className="grid gap-4">
-                  <div className="rounded-[28px] border border-white/85 bg-white/75 p-5 shadow-card">
-                    <p className="text-xs font-bold uppercase tracking-[0.18em] text-ink/45">Built-in programs</p>
+                  <div className="surface-card squircle rounded-[28px] p-5">
+                    <p className="text-xs font-semibold uppercase tracking-[0.18em] text-ink/45">{copy.builtInProgramsTitle}</p>
                     <div className="mt-4 space-y-3">
-                      {builtInPrograms.map((program) => (
-                        <div key={program} className="rounded-2xl border border-peach/60 bg-[#fff5ef] px-4 py-3 text-sm font-bold text-ink">
+                      {copy.builtInPrograms.map((program) => (
+                        <div key={program} className="squircle rounded-2xl border border-peach/60 bg-[#fff5ef] px-4 py-3 text-sm font-semibold text-ink">
                           {program}
                         </div>
                       ))}
                     </div>
                   </div>
-                  <div className="rounded-[28px] border border-white/85 bg-gradient-to-br from-[#fff6ee] via-white to-[#fff0e6] p-5 shadow-card">
-                    <p className="text-xs font-bold uppercase tracking-[0.18em] text-ink/45">Progress signals</p>
-                    <p className="mt-4 text-3xl font-black text-ink">1RM, volume, weekly trends</p>
-                    <p className="mt-3 text-sm leading-7 text-ink/70">See strength progression, body-fat changes and session quality without clutter.</p>
+                  <div className="surface-card squircle rounded-[28px] bg-gradient-to-br from-[#fff6ee] via-white to-[#fff0e6] p-5">
+                    <p className="text-xs font-semibold uppercase tracking-[0.18em] text-ink/45">{copy.progressSignalsTitle}</p>
+                    <p className="mt-4 text-3xl font-semibold text-ink">{copy.progressSignalsHeadline}</p>
+                    <p className="mt-3 text-sm leading-7 text-ink/70">{copy.progressSignalsBody}</p>
                   </div>
                 </div>
               </div>
@@ -318,16 +553,16 @@ export function LiftLogPage() {
 
           <section className="mx-auto w-full max-w-7xl px-5 py-6 md:px-8">
             <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
-              {benefitCards.map((card, index) => (
+              {copy.benefitCards.map((card, index) => (
                 <motion.article
                   key={card.title}
                   initial={{ opacity: 0, y: 22 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.25 }}
-                  transition={{ duration: 0.5, delay: index * 0.04 }}
-                  className="rounded-[30px] border border-white/85 bg-white/75 p-6 shadow-card"
+                  transition={{ type: "spring", stiffness: 140, damping: 18, delay: index * 0.04 }}
+                  className="surface-card squircle rounded-[30px] p-6"
                 >
-                  <h2 className="text-2xl font-black tracking-[-0.03em] text-ink">{card.title}</h2>
+                  <h2 className="text-2xl font-semibold tracking-[-0.03em] text-ink">{card.title}</h2>
                   <p className="mt-4 text-base leading-8 text-ink/70">{card.body}</p>
                 </motion.article>
               ))}
@@ -336,9 +571,9 @@ export function LiftLogPage() {
 
           <section className="mx-auto w-full max-w-7xl px-5 py-8 md:px-8 md:py-12">
             <SectionHeader
-              eyebrow="App Screens"
-              title="The actual app, shown in full"
-              body="Every uploaded screen is included here so lifters can see the real flow before they hit the App Store."
+              eyebrow={copy.screensEyebrow}
+              title={copy.screensTitle}
+              body={copy.screensBody}
             />
             <div className="mt-10 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
               {screenshots.map((screen, index) => (
@@ -347,13 +582,13 @@ export function LiftLogPage() {
                   initial={{ opacity: 0, y: 18 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.18 }}
-                  transition={{ duration: 0.45, delay: index * 0.03 }}
-                  className="rounded-[30px] border border-white/80 bg-white/90 p-3 shadow-card"
+                  transition={{ type: "spring", stiffness: 150, damping: 20, delay: index * 0.02 }}
+                  className="surface-card squircle rounded-[30px] p-3"
                 >
                   <img
                     src={screen}
                     alt={`Lift Log Pro screenshot ${index + 1}`}
-                    className="h-auto w-full rounded-[24px] border border-white/70 bg-[#0F1217]"
+                    className="squircle h-auto w-full rounded-[24px] border border-white/20 bg-[#0F1217]"
                     loading="lazy"
                   />
                 </motion.figure>
@@ -363,27 +598,27 @@ export function LiftLogPage() {
 
           <section id="features" className="mx-auto w-full max-w-7xl px-5 py-20 md:px-8">
             <SectionHeader
-              eyebrow="Features"
-              title="Everything active in the app, clearly explained"
-              body="No inflated claims. No invented features. Just the training tools that are currently part of Lift Log Pro."
+              eyebrow={copy.featuresEyebrow}
+              title={copy.featuresTitle}
+              body={copy.featuresBody}
             />
 
             <div className="mt-12 grid gap-5 xl:grid-cols-2">
-              {featureGroups.map((group, index) => (
+              {copy.featureGroups.map((group, index) => (
                 <motion.article
                   key={group.title}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.2 }}
-                  transition={{ duration: 0.55, delay: index * 0.05 }}
-                  className="rounded-[34px] border border-white/85 bg-white/78 p-7 shadow-soft md:p-8"
+                  transition={{ type: "spring", stiffness: 140, damping: 18, delay: index * 0.04 }}
+                  className="surface-card squircle rounded-[34px] p-7 md:p-8"
                 >
-                  <p className="text-xs font-black uppercase tracking-[0.2em] text-[#FF8A3D]">{group.eyebrow}</p>
-                  <h3 className="mt-3 text-3xl font-black tracking-[-0.03em] text-ink">{group.title}</h3>
+                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#FF8A3D]">{group.eyebrow}</p>
+                  <h3 className="mt-3 text-3xl font-semibold tracking-[-0.03em] text-ink">{group.title}</h3>
                   <p className="mt-4 text-base leading-8 text-ink/70">{group.copy}</p>
                   <div className="mt-6 space-y-3">
                     {group.bullets.map((bullet) => (
-                      <div key={bullet} className="flex gap-3 rounded-2xl border border-peach/60 bg-[#fff7f0] px-4 py-4">
+                      <div key={bullet} className="squircle flex gap-3 rounded-2xl border border-peach/60 bg-[#fff7f0] px-4 py-4">
                         <span className="mt-1 h-2.5 w-2.5 flex-none rounded-full bg-[#FF5A28]" />
                         <p className="text-sm leading-7 text-ink/80">{bullet}</p>
                       </div>
@@ -396,16 +631,16 @@ export function LiftLogPage() {
 
           <section className="mx-auto w-full max-w-7xl px-5 py-4 md:px-8">
             <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-              {utilityCards.map((card, index) => (
+              {copy.utilityCards.map((card, index) => (
                 <motion.article
                   key={card.title}
                   initial={{ opacity: 0, y: 18 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.2 }}
-                  transition={{ duration: 0.48, delay: index * 0.03 }}
-                  className="rounded-[30px] border border-white/85 bg-white/75 p-6 shadow-card"
+                  transition={{ type: "spring", stiffness: 140, damping: 18, delay: index * 0.03 }}
+                  className="surface-card squircle rounded-[30px] p-6"
                 >
-                  <h3 className="text-2xl font-black tracking-[-0.03em] text-ink">{card.title}</h3>
+                  <h3 className="text-2xl font-semibold tracking-[-0.03em] text-ink">{card.title}</h3>
                   <p className="mt-4 text-base leading-8 text-ink/70">{card.body}</p>
                 </motion.article>
               ))}
@@ -416,14 +651,14 @@ export function LiftLogPage() {
             <div className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
               <div>
                 <SectionHeader
-                  eyebrow="Built for Lifters"
-                  title="Simple and effective beats hype"
-                  body="Lift Log Pro is made for disciplined training. It keeps structure, progression and usable data in front of you without turning the app into a project of its own."
+                  eyebrow={copy.philosophyEyebrow}
+                  title={copy.philosophyTitle}
+                  body={copy.philosophyBody}
                 />
               </div>
               <div className="grid gap-4 sm:grid-cols-2">
-                {philosophyPoints.map((point) => (
-                  <div key={point} className="rounded-[28px] border border-white/85 bg-white/75 px-5 py-5 text-lg font-bold text-ink shadow-card">
+                {copy.philosophyPoints.map((point) => (
+                  <div key={point} className="surface-card squircle rounded-[28px] px-5 py-5 text-lg font-semibold text-ink">
                     {point}
                   </div>
                 ))}
@@ -432,19 +667,15 @@ export function LiftLogPage() {
           </section>
 
           <section className="mx-auto w-full max-w-7xl px-5 py-4 md:px-8">
-            <div className="rounded-[38px] border border-white/85 bg-[linear-gradient(135deg,rgba(255,138,61,0.12),rgba(255,255,255,0.7))] p-8 shadow-soft md:p-10">
+            <div className="surface-card squircle rounded-[38px] bg-[linear-gradient(135deg,rgba(255,138,61,0.12),rgba(255,255,255,0.7))] p-8 md:p-10">
               <SectionHeader
-                eyebrow="Free App"
-                title="Start training without account setup or unnecessary friction"
-                body="Lift Log Pro is free, ad-supported and built to work as a straightforward training tracker. Open the app, choose a program or build your own, then get to work."
+                eyebrow={copy.freeEyebrow}
+                title={copy.freeTitle}
+                body={copy.freeBody}
               />
               <div className="mt-8 grid gap-4 md:grid-cols-3">
-                {[
-                  "No account required",
-                  "Free to use",
-                  "Focused on training, not complexity",
-                ].map((item) => (
-                  <div key={item} className="rounded-[24px] border border-peach/60 bg-[#fff6ee] px-5 py-5 text-base font-bold text-ink">
+                {copy.freeBullets.map((item) => (
+                  <div key={item} className="squircle rounded-[24px] border border-peach/60 bg-[#fff6ee] px-5 py-5 text-base font-semibold text-ink">
                     {item}
                   </div>
                 ))}
@@ -453,18 +684,18 @@ export function LiftLogPage() {
           </section>
 
           <section id="faq" className="mx-auto w-full max-w-7xl px-5 py-20 md:px-8">
-            <SectionHeader eyebrow="FAQ" title="Answers before the App Store tap" align="center" />
+            <SectionHeader eyebrow={copy.faqEyebrow} title={copy.faqTitle} align="center" />
             <div className="mx-auto mt-12 grid max-w-5xl gap-4">
-              {faqItems.map((item, index) => (
+              {copy.faqItems.map((item, index) => (
                 <motion.article
                   key={item.q}
                   initial={{ opacity: 0, y: 18 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.2 }}
-                  transition={{ duration: 0.45, delay: index * 0.03 }}
-                  className="rounded-[28px] border border-white/85 bg-white/78 p-6 shadow-card"
+                  transition={{ type: "spring", stiffness: 150, damping: 20, delay: index * 0.02 }}
+                  className="surface-card squircle rounded-[28px] p-6"
                 >
-                  <h3 className="text-xl font-black tracking-[-0.02em] text-ink">{item.q}</h3>
+                  <h3 className="text-xl font-semibold tracking-[-0.02em] text-ink">{item.q}</h3>
                   <p className="mt-3 text-base leading-8 text-ink/70">{item.a}</p>
                 </motion.article>
               ))}
@@ -472,26 +703,22 @@ export function LiftLogPage() {
           </section>
 
           <section id="download" className="mx-auto w-full max-w-7xl px-5 pb-24 pt-4 md:px-8 md:pb-32">
-            <div className="rounded-[42px] border border-white/85 bg-gradient-to-r from-white via-[#fff6ef] to-[#fff0e7] p-8 text-center shadow-soft md:p-12">
-              <p className="text-xs font-black uppercase tracking-[0.22em] text-[#FF8A3D]">Final CTA</p>
-              <h2 className="mx-auto mt-4 max-w-4xl text-4xl font-black tracking-[-0.04em] text-ink md:text-6xl">
-                Lift with structure. Log with clarity. Keep progressing.
-              </h2>
-              <p className="mx-auto mt-5 max-w-2xl text-base leading-8 text-ink/70 md:text-lg">
-                Lift Log Pro is built for lifters who want a straightforward way to train, review progress and stay consistent week after week.
-              </p>
+            <div className="surface-card squircle rounded-[42px] bg-gradient-to-r from-white via-[#fff6ef] to-[#fff0e7] p-8 text-center md:p-12">
+              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#FF8A3D]">{copy.finalEyebrow}</p>
+              <h2 className="mx-auto mt-4 max-w-4xl text-4xl font-semibold tracking-[-0.04em] text-ink md:text-6xl">{copy.finalTitle}</h2>
+              <p className="mx-auto mt-5 max-w-2xl text-base leading-8 text-ink/70 md:text-lg">{copy.finalBody}</p>
               <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
                 <a
                   href="https://apps.apple.com/tr/app/liftlog5x5pro/id6760855317?l=tr"
-                  className="inline-flex items-center rounded-2xl bg-ink px-7 py-4 text-base font-black text-white shadow-soft transition hover:-translate-y-0.5"
+                  className="squircle inline-flex items-center rounded-2xl bg-ink px-7 py-4 text-base font-semibold text-white shadow-soft transition hover:-translate-y-0.5"
                 >
-                  Download on the App Store
+                  {copy.finalPrimary}
                 </a>
                 <a
                   href="#features"
-                  className="inline-flex items-center rounded-2xl border border-white/80 bg-white/80 px-7 py-4 text-base font-bold text-ink shadow-card transition hover:bg-white"
+                  className="surface-card squircle inline-flex items-center rounded-2xl px-7 py-4 text-base font-semibold text-ink transition hover:bg-white/90"
                 >
-                  Review Every Feature
+                  {copy.finalSecondary}
                 </a>
               </div>
             </div>

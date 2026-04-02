@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  darkMode: "class",
   content: [
     "./index.html",
     "./hanimcilik/index.html",
@@ -12,18 +13,27 @@ export default {
   theme: {
     extend: {
       colors: {
-        cream: "#FCFBF8",
-        peach: "#FFDCCB",
-        sky: "#DDEEFF",
-        lilac: "#EAE1FF",
-        ink: "#27303F",
+        cream: "rgb(var(--cream) / <alpha-value>)",
+        peach: "rgb(var(--peach) / <alpha-value>)",
+        sky: "rgb(var(--sky) / <alpha-value>)",
+        lilac: "rgb(var(--lilac) / <alpha-value>)",
+        ink: "rgb(var(--ink) / <alpha-value>)",
       },
       fontFamily: {
-        rounded: ["Nunito", "ui-sans-serif", "system-ui", "sans-serif"],
+        rounded: [
+          "-apple-system",
+          "BlinkMacSystemFont",
+          "\"SF Pro Text\"",
+          "\"SF Pro Display\"",
+          "system-ui",
+          "Segoe UI",
+          "sans-serif",
+        ],
       },
       boxShadow: {
-        soft: "0 24px 55px rgba(39, 48, 63, 0.08)",
-        card: "0 14px 35px rgba(39, 48, 63, 0.06)",
+        soft: "var(--shadow-soft)",
+        card: "var(--shadow-card)",
+        glass: "var(--shadow-glass)",
       },
       borderRadius: {
         "4xl": "2rem",
