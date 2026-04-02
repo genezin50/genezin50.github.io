@@ -124,6 +124,113 @@ const copyByLang = {
       email: "[support@email.placeholder]",
     },
   },
+  es: {
+    nav: {
+      how: "Cómo funciona",
+      features: "Funciones",
+      bosses: "Jefes y Recompensas",
+      faq: "FAQ",
+    },
+    hero: {
+      badge: "Juego arcade para iPhone · Cámara frontal + mirada",
+      headline: "Juegas con tu cara.",
+      subhead:
+        "Laser Eyes: Ghost Rescue convierte tu cámara frontal en un bucle arcade premium. Apunta con la mirada, parpadea o toca para disparar, elimina fantasmas y protege a los gatos.",
+      ctaPrimary: "App Store — Próximamente",
+      ctaSecondary: "Cómo funciona",
+      note: "Portrait-first · Sesiones rápidas · Reacciones virales",
+    },
+    slogan: {
+      kicker: "Energía arcade premium",
+      title: "Rápido, divertido y pensado para repetir.",
+      body:
+        "Cada partida es un bucle corto: entra, fija objetivos con la mirada, limpia oleadas, toma power-ups y busca una mejor puntuación en menos de dos minutos.",
+    },
+    how: {
+      title: "Cómo funciona",
+      steps: [
+        {
+          title: "Vista facial en vivo",
+          body: "La cámara frontal te mantiene en cuadro para que el juego sea personal y fácil de compartir.",
+        },
+        {
+          title: "Puntería con la mirada",
+          body: "Tu mirada marca el objetivo. Parpadea o toca para disparar: manos libres o taps rápidos.",
+        },
+        {
+          title: "Oleadas de fantasmas",
+          body: "Limpia oleadas, sobrevive mini jefes y protege a los gatos antes de que entren en pánico.",
+        },
+      ],
+    },
+    features: {
+      title: "Funciones clave",
+      items: [
+        "Juego en vivo con cámara frontal en formato portrait",
+        "Sistema híbrido de puntería con parpadeo o toque",
+        "Oleadas de fantasmas + mini jefes",
+        "Power-ups que cambian tu ritmo de juego",
+        "Monedas, desbloqueos y cosméticos",
+        "Bucle de rejuego rápido para otro intento más",
+      ],
+    },
+    bosses: {
+      title: "Jefes, recompensas y cosméticos",
+      body:
+        "Derrota mini jefes para desbloquear máscaras neón, colores de láser y guardianes felinos. Cada partida alimenta la progresión.",
+      cards: [
+        {
+          title: "Eventos de mini jefes",
+          body: "Picos de caos que ponen a prueba tu puntería y timing.",
+        },
+        {
+          title: "Cadena de power-ups",
+          body: "Potencia láseres, ralentiza el tiempo o despliega un escudo de rescate.",
+        },
+        {
+          title: "Desbloqueos cosméticos",
+          body: "Consigue monedas para skins, efectos y variantes neón que destacan en cámara.",
+        },
+      ],
+    },
+    showcase: {
+      title: "Capturas y mockups",
+      body: "Las capturas se añadirán pronto. Los placeholders muestran el layout final.",
+    },
+    faq: {
+      title: "FAQ",
+      items: [
+        {
+          q: "¿El juego guarda mis videos de cámara?",
+          a: "No. La cámara se usa solo para gameplay y no se sube ni se guarda por defecto.",
+        },
+        {
+          q: "¿Necesito parpadear para jugar?",
+          a: "No. Puedes parpadear o tocar; el sistema híbrido soporta ambos.",
+        },
+        {
+          q: "¿Está optimizado para iPhone?",
+          a: "Sí. Está diseñado para iPhone en portrait con un bucle rápido mobile-first.",
+        },
+        {
+          q: "¿Cuándo estará en App Store?",
+          a: "Pronto. El botón se actualizará en cuanto esté disponible.",
+        },
+      ],
+    },
+    cta: {
+      title: "¿Listo para apuntar con la mirada?",
+      body: "Laser Eyes: Ghost Rescue está hecho para diversión instantánea y partidas rápidas.",
+      primary: "App Store — Próximamente",
+      secondary: "Contactar soporte",
+    },
+    footer: {
+      support: "Soporte",
+      privacy: "Privacidad",
+      company: "[Company Name Placeholder]",
+      email: "[support@email.placeholder]",
+    },
+  },
   tr: {
     nav: {
       how: "Nasıl Çalışır",

@@ -1,5 +1,7 @@
 import React from "react";
 
+const SUPPORTED_LANGS = ["tr", "en", "es"];
+
 const LanguageContext = React.createContext({
   lang: "tr",
   setLang: () => {},
@@ -12,9 +14,11 @@ export function LanguageProvider({ children }) {
   const [lang, setLang] = React.useState(() => {
     if (typeof window === "undefined") return "tr";
     const stored = window.localStorage.getItem(STORAGE_KEY);
-    if (stored === "tr" || stored === "en") return stored;
-    const prefersEn = window.navigator.language?.toLowerCase().startsWith("en");
-    return prefersEn ? "en" : "tr";
+    if (SUPPORTED_LANGS.includes(stored)) return stored;
+    const locale = window.navigator.language?.toLowerCase() || "tr";
+    if (locale.startsWith("es")) return "es";
+    if (locale.startsWith("en")) return "en";
+    return "tr";
   });
 
   React.useEffect(() => {
@@ -27,7 +31,11 @@ export function LanguageProvider({ children }) {
   }, [lang]);
 
   const toggle = React.useCallback(() => {
-    setLang((prev) => (prev === "tr" ? "en" : "tr"));
+    setLang((prev) => {
+      const index = SUPPORTED_LANGS.indexOf(prev);
+      const nextIndex = index === -1 ? 0 : (index + 1) % SUPPORTED_LANGS.length;
+      return SUPPORTED_LANGS[nextIndex];
+    });
   }, []);
 
   const value = React.useMemo(() => ({ lang, setLang, toggle }), [lang, toggle]);

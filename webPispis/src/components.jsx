@@ -88,15 +88,52 @@ const ui = {
     appPageCta: "App Page",
     privacyLink: "Privacy",
   },
+  es: {
+    navHome: "Inicio",
+    navPrivacy: "Privacidad",
+    navSupport: "Soporte / Legal",
+    navApps: "Apps",
+    navAbout: "Sobre mí",
+    navContact: "Contacto",
+    actionContact: "Contáctame",
+    heroEyebrow: "Desarrollador iOS Indie",
+    heroTitle: "Un desarrollador iOS curioso que convierte ideas en productos.",
+    heroBody:
+      "Sigo de cerca nuevas tecnologías, convierto ideas en productos rápidamente y publico cada app con una landing limpia y con carácter propio.",
+    heroCtaPrimary: "Ver Apps",
+    heroCtaSecondary: "Contacto",
+    approachTitle: "Enfoque",
+    approachBody: "Mantengo el camino de la idea al lanzamiento simple, rápido y centrado en el producto.",
+    focusTitle: "Foco",
+    focusBody: "Desarrollo apps para iPhone en lifestyle, planificación, salud y utilidades.",
+    showcaseTitle: "Vitrina",
+    showcaseBody: "Cada app tiene su propia URL, pantallas y páginas legales.",
+    appsEyebrow: "Apps",
+    appsTitle: "Un escaparate de productos con un lenguaje visual consistente",
+    aboutEyebrow: "Sobre mí",
+    aboutTitle: "Curiosidad, estética y disciplina de lanzamiento",
+    aboutBody:
+      "Mi objetivo es crear apps de iPhone que resuelvan necesidades reales y se sientan cuidadas. Por eso diseño también el lado web con la misma seriedad.",
+    contactEyebrow: "Contacto",
+    contactTitle: "Escríbeme para nuevas apps, colaboraciones o ideas de producto.",
+    appPrivacyCta: "Política de Privacidad",
+    highlightsEyebrow: "Destacados",
+    highlightsTitle: "Módulos que explican el valor central a primera vista",
+    featureLabel: "Función",
+    screensEyebrow: "Pantallas Reales",
+    screensTitle: "Explora todas las pantallas en una galería coherente",
+    appPageCta: "Página de la App",
+    privacyLink: "Privacidad",
+  },
 };
 
 function useCopy() {
   const { lang } = useLanguage();
-  return ui[lang] || ui.tr;
+  return ui[lang] || ui.en || ui.tr;
 }
 
 function getAppCopy(app, lang) {
-  const localized = app.locales?.[lang] || {};
+  const localized = app.locales?.[lang] || app.locales?.en || {};
   return {
     ...app,
     ...localized,
@@ -107,6 +144,8 @@ function getAppCopy(app, lang) {
 
 export function Header({ title = "Genezin Kepekci", links = [], action }) {
   const { lang, toggle } = useLanguage();
+  const nextLangMap = { tr: "en", en: "es", es: "tr" };
+  const nextLang = nextLangMap[lang] || "en";
   return (
     <header className="sticky top-0 z-30 glass-surface">
       <div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-4 px-5 py-4 md:px-8">
@@ -128,9 +167,9 @@ export function Header({ title = "Genezin Kepekci", links = [], action }) {
             type="button"
             onClick={toggle}
             className="squircle rounded-full border border-white/70 bg-white/70 px-3 py-1.5 text-xs font-semibold text-ink shadow-card transition hover:-translate-y-0.5 dark:bg-white/10 dark:text-white"
-            aria-label={lang === "tr" ? "Switch to English" : "Türkçeye geç"}
+            aria-label={nextLang === "tr" ? "Türkçeye geç" : nextLang === "es" ? "Cambiar a español" : "Switch to English"}
           >
-            {lang === "tr" ? "EN" : "TR"}
+            {lang.toUpperCase()}
           </button>
           {action || null}
         </div>
