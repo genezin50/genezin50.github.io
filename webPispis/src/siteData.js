@@ -144,6 +144,41 @@ export const apps = {
     storeUrl: "https://apps.apple.com/tr/app/p%C4%B1%C5%9Fp%C4%B1%C5%9F-bebek/id6760834342?l=tr",
     medicalNote: null,
   },
+  "dualshot-recoder": {
+    slug: "dualshot-recoder",
+    eyebrow: "Creator Camera App",
+    title: "DualShot Recoder",
+    heroTitle: "Record once. Publish everywhere.",
+    heroSubtitle:
+      "Capture a single take and instantly create portrait and landscape outputs for TikTok, Instagram Reels, and YouTube.",
+    description:
+      "DualShot Recoder streamlines creator workflows with live framing guides, smart framing assist, quick trim tools, and a fast export pipeline for every major format.",
+    icon: appAsset("dualshot-recoder", "icon.svg"),
+    heroScreen: appAsset("dualshot-recoder", "screenshot-01.svg"),
+    gallery: [
+      appAsset("dualshot-recoder", "screenshot-02.svg"),
+      appAsset("dualshot-recoder", "screenshot-03.svg"),
+      appAsset("dualshot-recoder", "screenshot-04.svg"),
+      appAsset("dualshot-recoder", "screenshot-05.svg"),
+      appAsset("dualshot-recoder", "screenshot-06.svg"),
+    ],
+    chips: ["Creator Workflow", "Dual Format", "Framing Assist", "iPhone"],
+    features: [
+      "Record once, export portrait and landscape outputs",
+      "Live framing guides while you shoot",
+      "Smart framing assist for extra confidence",
+      "Quick trim tools right after capture",
+      "Cover frame picker for stronger thumbnails",
+      "Save All and Share All actions in seconds",
+      "Built-in gallery for reopening past sessions",
+      "Designed for speed across creator workflows",
+    ],
+    privacyUrl: `${base}dualshot-recoder/privacy.html`,
+    supportUrl: `${base}dualshot-recoder/support.html`,
+    ctaLabel: "Download on the App Store",
+    storeUrl: "https://apps.apple.com",
+    medicalNote: null,
+  },
   "lift-log-pro": {
     slug: "lift-log-pro",
     eyebrow: "Strength Training App",
@@ -168,5 +203,6 @@ export const developerApps = [
   apps["dugun-ajandasi"],
   apps["pitpit-gebelik"],
   apps["pispis-bebek"],
+  apps["dualshot-recoder"],
   apps["lift-log-pro"],
 ];
