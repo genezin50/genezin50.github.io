@@ -153,7 +153,7 @@ export const apps = {
       "Capture a single take and instantly create portrait and landscape outputs for TikTok, Instagram Reels, and YouTube.",
     description:
       "DualShot Recoder streamlines creator workflows with live framing guides, smart framing assist, quick trim tools, and a fast export pipeline for every major format.",
-    icon: appAsset("dualshot-recoder", "icon.svg"),
+    icon: appAsset("dualshot-recoder", "appicon.png"),
     heroScreen: appAsset("dualshot-recoder", "screenshot-01.svg"),
     gallery: [
       appAsset("dualshot-recoder", "screenshot-02.svg"),
