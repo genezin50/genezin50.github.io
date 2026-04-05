@@ -15,6 +15,30 @@
     rel="stylesheet"
   >
   <link rel="stylesheet" href="../styles.css">
+  <style>
+    .lang-switch {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 16px;
+    }
+    .lang-button {
+      border: 1px solid rgba(15, 23, 42, 0.15);
+      background: #ffffff;
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+    .lang-button.active {
+      background: #0f172a;
+      border-color: #0f172a;
+      color: #ffffff;
+    }
+  </style>
 </head>
 <body>
   <div class="ambient ambient-one"></div>
@@ -36,13 +60,21 @@
       <section class="section policy-page">
         <div class="section-heading">
           <p class="eyebrow">Order of Colors</p>
-          <h1>Destek</h1>
-          <p class="lead">
-            Soru, öneri veya teknik destek talepleriniz için her zaman iletişime geçebilirsiniz.
-          </p>
+          <div class="lang-switch" aria-label="Dil seçimi">
+            <button class="lang-button" data-lang-btn="tr" type="button">TR</button>
+            <button class="lang-button" data-lang-btn="en" type="button">EN</button>
+            <button class="lang-button" data-lang-btn="es" type="button">ES</button>
+            <button class="lang-button" data-lang-btn="pt" type="button">PT</button>
+          </div>
         </div>
 
-        <div class="policy-card">
+        <div class="policy-card lang-block" data-lang="tr">
+          <div class="policy-block">
+            <h1>Destek</h1>
+            <p class="lead">
+              Soru, öneri veya teknik destek talepleriniz için her zaman iletişime geçebilirsiniz.
+            </p>
+          </div>
           <div class="policy-block">
             <h3>E-posta</h3>
             <p>
@@ -50,7 +82,6 @@
               <a href="mailto:genezinsalih@gmail.com">genezinsalih@gmail.com</a>
             </p>
           </div>
-
           <div class="policy-block">
             <h3>Sık Sorulan Konular</h3>
             <div class="faq-list">
@@ -69,8 +100,136 @@
             </div>
           </div>
         </div>
+
+        <div class="policy-card lang-block" data-lang="en">
+          <div class="policy-block">
+            <h1>Support</h1>
+            <p class="lead">
+              For questions, feedback, or technical support, reach out any time.
+            </p>
+          </div>
+          <div class="policy-block">
+            <h3>Email</h3>
+            <p>
+              Contact support at:
+              <a href="mailto:genezinsalih@gmail.com">genezinsalih@gmail.com</a>
+            </p>
+          </div>
+          <div class="policy-block">
+            <h3>Common Topics</h3>
+            <div class="faq-list">
+              <article class="faq-item">
+                <strong>Is the game free to play?</strong>
+                <p>Yes. Order of Colors is free with optional purchases for themes and tube styles.</p>
+              </article>
+              <article class="faq-item">
+                <strong>How do daily challenges work?</strong>
+                <p>Daily challenges refresh every day and reward coins for completing the target puzzle.</p>
+              </article>
+              <article class="faq-item">
+                <strong>Can I play with color-blind mode?</strong>
+                <p>Yes. Color-blind mode adds alternative markers for better color separation.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+
+        <div class="policy-card lang-block" data-lang="es">
+          <div class="policy-block">
+            <h1>Soporte</h1>
+            <p class="lead">
+              Para preguntas, comentarios o soporte técnico, escríbenos cuando quieras.
+            </p>
+          </div>
+          <div class="policy-block">
+            <h3>Correo</h3>
+            <p>
+              Contacta soporte en:
+              <a href="mailto:genezinsalih@gmail.com">genezinsalih@gmail.com</a>
+            </p>
+          </div>
+          <div class="policy-block">
+            <h3>Temas comunes</h3>
+            <div class="faq-list">
+              <article class="faq-item">
+                <strong>¿El juego es gratuito?</strong>
+                <p>Sí. Order of Colors es gratuito con compras opcionales de temas y estilos de tubos.</p>
+              </article>
+              <article class="faq-item">
+                <strong>¿Cómo funcionan los desafíos diarios?</strong>
+                <p>Los desafíos diarios se renuevan cada día y dan monedas al completar el puzzle objetivo.</p>
+              </article>
+              <article class="faq-item">
+                <strong>¿Hay modo para daltónicos?</strong>
+                <p>Sí. El modo daltónico agrega marcadores alternativos para separar mejor los colores.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+
+        <div class="policy-card lang-block" data-lang="pt">
+          <div class="policy-block">
+            <h1>Suporte</h1>
+            <p class="lead">
+              Para dúvidas, feedback ou suporte técnico, fale conosco a qualquer momento.
+            </p>
+          </div>
+          <div class="policy-block">
+            <h3>Email</h3>
+            <p>
+              Contato de suporte:
+              <a href="mailto:genezinsalih@gmail.com">genezinsalih@gmail.com</a>
+            </p>
+          </div>
+          <div class="policy-block">
+            <h3>Tópicos comuns</h3>
+            <div class="faq-list">
+              <article class="faq-item">
+                <strong>O jogo é gratuito?</strong>
+                <p>Sim. Order of Colors é gratuito com compras opcionais de temas e estilos de tubos.</p>
+              </article>
+              <article class="faq-item">
+                <strong>Como funcionam os desafios diários?</strong>
+                <p>Os desafios diários são atualizados todos os dias e dão moedas ao concluir o puzzle alvo.</p>
+              </article>
+              <article class="faq-item">
+                <strong>Existe modo daltônico?</strong>
+                <p>Sim. O modo daltônico adiciona marcadores alternativos para separar melhor as cores.</p>
+              </article>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
   </div>
+
+  <script>
+    const buttons = Array.from(document.querySelectorAll("[data-lang-btn]"));
+    const blocks = Array.from(document.querySelectorAll(".lang-block"));
+    const supported = buttons.map((btn) => btn.dataset.langBtn);
+
+    const setLang = (lang) => {
+      const next = supported.includes(lang) ? lang : "tr";
+      blocks.forEach((block) => {
+        block.style.display = block.dataset.lang === next ? "block" : "none";
+      });
+      buttons.forEach((btn) => {
+        if (btn.dataset.langBtn === next) {
+          btn.classList.add("active");
+        } else {
+          btn.classList.remove("active");
+        }
+      });
+      document.documentElement.lang = next;
+      window.history.replaceState(null, "", `#${next}`);
+    };
+
+    const initial = window.location.hash.replace("#", "").toLowerCase();
+    setLang(initial || "tr");
+
+    buttons.forEach((btn) => {
+      btn.addEventListener("click", () => setLang(btn.dataset.langBtn));
+    });
+  </script>
 </body>
 </html>

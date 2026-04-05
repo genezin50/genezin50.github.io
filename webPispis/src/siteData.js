@@ -392,7 +392,7 @@ export const apps = {
           "Undo, Hint, Restart, Shuffle, Extra Tube gibi akıllı araçlar",
           "Açılabilir temalar, tüp stilleri ve color-blind modu",
         ],
-        ctaLabel: "App Store — Yakında",
+        ctaLabel: "App Store'dan İndir",
       },
       en: {
         eyebrow: "Water Sort Puzzle",
@@ -408,7 +408,7 @@ export const apps = {
           "Smart tools: Undo, Hint, Restart, Shuffle, Extra Tube",
           "Unlockable themes, tube styles, and color-blind mode",
         ],
-        ctaLabel: "App Store — Coming Soon",
+        ctaLabel: "Download on the App Store",
       },
       es: {
         eyebrow: "Puzzle de clasificación de colores",
@@ -424,7 +424,7 @@ export const apps = {
           "Herramientas inteligentes: Deshacer, Pista, Reiniciar, Mezclar, Tubo extra",
           "Temas y estilos de tubos desbloqueables, modo daltónico",
         ],
-        ctaLabel: "App Store — Próximamente",
+        ctaLabel: "Descargar en App Store",
       },
       pt: {
         eyebrow: "Puzzle de ordenar cores",
@@ -440,7 +440,7 @@ export const apps = {
           "Ferramentas inteligentes: Desfazer, Dica, Reiniciar, Embaralhar, Tubo extra",
           "Temas e estilos de tubos desbloqueáveis, modo daltônico",
         ],
-        ctaLabel: "App Store — Em breve",
+        ctaLabel: "Baixar na App Store",
       },
     },
     icon: appAsset("order-of-colors", "icon.png"),
@@ -465,8 +465,8 @@ export const apps = {
     ],
     privacyUrl: `${base}order-of-colors/privacy.html`,
     supportUrl: "mailto:genezinsalih@gmail.com",
-    ctaLabel: "App Store — Coming Soon",
-    storeUrl: "#",
+    ctaLabel: "Download on the App Store",
+    storeUrl: "https://apps.apple.com/tr/app/id6761677641?l=tr",
     medicalNote: null,
   },
   "laser-eyes-ghost-rescue": {

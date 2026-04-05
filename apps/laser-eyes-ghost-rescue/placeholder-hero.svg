@@ -1,0 +1,25 @@
+<svg width="1200" height="1600" viewBox="0 0 1200 1600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#05060a" />
+      <stop offset="50%" stop-color="#0b1020" />
+      <stop offset="100%" stop-color="#120a1f" />
+    </linearGradient>
+    <linearGradient id="neon" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#6df4ff" />
+      <stop offset="50%" stop-color="#8b5cff" />
+      <stop offset="100%" stop-color="#ff4fd8" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="1600" rx="96" fill="url(#bg)" />
+  <rect x="80" y="120" width="1040" height="1360" rx="72" stroke="url(#neon)" stroke-width="4" opacity="0.85" />
+  <circle cx="240" cy="320" r="120" fill="#10f2ff" opacity="0.18" />
+  <circle cx="920" cy="380" r="160" fill="#ff4fd8" opacity="0.14" />
+  <circle cx="780" cy="1080" r="220" fill="#7c5cff" opacity="0.16" />
+  <text x="120" y="720" fill="#E5E7EB" font-size="44" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', system-ui, sans-serif" letter-spacing="2">
+    Screenshot Placeholder
+  </text>
+  <text x="120" y="780" fill="#94A3B8" font-size="26" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', system-ui, sans-serif">
+    Laser Eyes: Ghost Rescue
+  </text>
+</svg>
