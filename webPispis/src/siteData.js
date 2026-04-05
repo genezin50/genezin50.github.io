@@ -492,7 +492,7 @@ export const apps = {
           "Kombo odaklı skor artışları",
           "Minimal arayüz ve hızlı öğrenme",
         ],
-        ctaLabel: "App Store — Yakında",
+        ctaLabel: "App Store'dan İndir",
       },
       en: {
         eyebrow: "Block Puzzle Game",
@@ -508,7 +508,7 @@ export const apps = {
           "Combo-driven score boosts",
           "Minimal, readable interface",
         ],
-        ctaLabel: "App Store — Coming Soon",
+        ctaLabel: "Download on the App Store",
       },
       es: {
         eyebrow: "Puzzle de bloques",
@@ -524,7 +524,7 @@ export const apps = {
           "Combos que suben la puntuación",
           "Interfaz mínima y legible",
         ],
-        ctaLabel: "App Store — Próximamente",
+        ctaLabel: "Descargar en App Store",
       },
       pt: {
         eyebrow: "Puzzle de blocos",
@@ -540,7 +540,7 @@ export const apps = {
           "Combos que aumentam o placar",
           "Interface mínima e legível",
         ],
-        ctaLabel: "App Store — Em breve",
+        ctaLabel: "Baixar na App Store",
       },
     },
     icon: appAsset("blok-blast-flow", "icon.svg"),
@@ -558,8 +558,8 @@ export const apps = {
     ],
     privacyUrl: `${base}blok-blast-flow/privacy.html`,
     supportUrl: `${base}blok-blast-flow/support.html`,
-    ctaLabel: "App Store — Coming Soon",
-    storeUrl: "#",
+    ctaLabel: "Download on the App Store",
+    storeUrl: "https://apps.apple.com/tr/app/id6761686602?l=tr",
     medicalNote: null,
   },
   "laser-eyes-ghost-rescue": {
