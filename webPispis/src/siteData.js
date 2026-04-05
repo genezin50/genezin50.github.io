@@ -69,7 +69,7 @@ export const apps = {
       "Seyahat ve mekan planlama",
     ],
     privacyUrl: `${base}hanimcilik/privacy.html`,
-    supportUrl: "mailto:genezinsalih@gmail.com",
+    supportUrl: `${base}order-of-colors/support.html`,
     ctaLabel: "App Store'dan İndir",
     storeUrl: "https://apps.apple.com/tr/app/han%C4%B1mc%C4%B1l%C4%B1k/id6760728408?l=tr",
     medicalNote: null,
