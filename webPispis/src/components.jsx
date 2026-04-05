@@ -125,6 +125,43 @@ const ui = {
     appPageCta: "Página de la App",
     privacyLink: "Privacidad",
   },
+  pt: {
+    navHome: "Início",
+    navPrivacy: "Privacidade",
+    navSupport: "Suporte / Legal",
+    navApps: "Apps",
+    navAbout: "Sobre",
+    navContact: "Contato",
+    actionContact: "Fale comigo",
+    heroEyebrow: "Desenvolvedor iOS Indie",
+    heroTitle: "Um desenvolvedor iOS curioso que lança produtos com cuidado.",
+    heroBody:
+      "Acompanho novas tecnologias de perto, transformo ideias em produtos rapidamente e publico cada app com uma landing limpa que reflete sua personalidade.",
+    heroCtaPrimary: "Ver Apps",
+    heroCtaSecondary: "Contato",
+    approachTitle: "Abordagem",
+    approachBody: "Mantenho o caminho da ideia ao lançamento simples, rápido e focado no produto.",
+    focusTitle: "Foco",
+    focusBody: "Crio apps para iPhone nas categorias lifestyle, planejamento, saúde e utilidades.",
+    showcaseTitle: "Vitrine",
+    showcaseBody: "Cada app tem sua própria URL, telas e páginas legais.",
+    appsEyebrow: "Apps",
+    appsTitle: "Um portfólio de produtos com linguagem visual consistente",
+    aboutEyebrow: "Sobre",
+    aboutTitle: "Curiosidade, estética e disciplina de lançamento",
+    aboutBody:
+      "Meu objetivo é criar apps de iPhone que resolvam necessidades reais e tenham um cuidado visual evidente. Por isso também projeto o lado web com a mesma seriedade.",
+    contactEyebrow: "Contato",
+    contactTitle: "Entre em contato para novos apps, colaborações ou ideias de produto.",
+    appPrivacyCta: "Política de Privacidade",
+    highlightsEyebrow: "Destaques",
+    highlightsTitle: "Módulos que mostram o valor central de cara",
+    featureLabel: "Recurso",
+    screensEyebrow: "Telas Reais",
+    screensTitle: "Explore todas as telas em uma única galeria coesa",
+    appPageCta: "Página do App",
+    privacyLink: "Privacidade",
+  },
 };
 
 function useCopy() {
@@ -144,7 +181,7 @@ function getAppCopy(app, lang) {
 
 export function Header({ title = "Genezin Kepekci", links = [], action }) {
   const { lang, toggle } = useLanguage();
-  const nextLangMap = { tr: "en", en: "es", es: "tr" };
+  const nextLangMap = { tr: "en", en: "es", es: "pt", pt: "tr" };
   const nextLang = nextLangMap[lang] || "en";
   return (
     <header className="sticky top-0 z-30 glass-surface">
@@ -167,7 +204,15 @@ export function Header({ title = "Genezin Kepekci", links = [], action }) {
             type="button"
             onClick={toggle}
             className="squircle rounded-full border border-white/70 bg-white/70 px-3 py-1.5 text-xs font-semibold text-ink shadow-card transition hover:-translate-y-0.5 dark:bg-white/10 dark:text-white"
-            aria-label={nextLang === "tr" ? "Türkçeye geç" : nextLang === "es" ? "Cambiar a español" : "Switch to English"}
+            aria-label={
+              nextLang === "tr"
+                ? "Türkçeye geç"
+                : nextLang === "es"
+                  ? "Cambiar a español"
+                  : nextLang === "pt"
+                    ? "Mudar para português"
+                    : "Switch to English"
+            }
           >
             {lang.toUpperCase()}
           </button>
