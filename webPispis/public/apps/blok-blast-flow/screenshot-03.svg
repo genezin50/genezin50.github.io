@@ -1,0 +1,17 @@
+<svg width="1320" height="2868" viewBox="0 0 1320 2868" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1320" height="2868" rx="160" fill="#0B1220"/>
+  <rect x="140" y="260" width="1040" height="1400" rx="80" fill="#0F172A" stroke="#253045" stroke-width="6"/>
+  <text x="160" y="1880" fill="#E2E8F0" font-family="Space Grotesk, Arial" font-size="60" font-weight="700">Minimal, focused play</text>
+  <text x="160" y="1978" fill="#94A3B8" font-family="Space Grotesk, Arial" font-size="34" font-weight="500">Placeholder screenshot · gameplay coming soon</text>
+  <g transform="translate(220 340)">
+    <rect width="880" height="1200" rx="56" fill="#111827"/>
+    <rect x="70" y="90" width="140" height="140" rx="26" fill="#22D3EE"/>
+    <rect x="230" y="90" width="140" height="140" rx="26" fill="#F472B6"/>
+    <rect x="390" y="90" width="140" height="140" rx="26" fill="#FACC15"/>
+    <rect x="550" y="90" width="140" height="140" rx="26" fill="#4ADE80"/>
+    <rect x="70" y="250" width="140" height="140" rx="26" fill="#A855F7"/>
+    <rect x="230" y="250" width="140" height="140" rx="26" fill="#F97316"/>
+    <rect x="390" y="250" width="140" height="140" rx="26" fill="#38BDF8"/>
+    <rect x="550" y="250" width="140" height="140" rx="26" fill="#FB7185"/>
+  </g>
+</svg>

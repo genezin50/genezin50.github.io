@@ -469,6 +469,99 @@ export const apps = {
     storeUrl: "https://apps.apple.com/tr/app/id6761677641?l=tr",
     medicalNote: null,
   },
+  "blok-blast-flow": {
+    slug: "blok-blast-flow",
+    eyebrow: "Block Puzzle Game",
+    title: "Blok Blast Flow",
+    heroTitle: "Calm blocks. Clean clears. Endless flow.",
+    heroSubtitle: "Place pieces on the grid, clear lines, and keep the board breathing.",
+    description:
+      "Blok Blast Flow is a clean, relaxing block puzzle built for short sessions and satisfying combos. Place pieces, clear rows and columns, and chase your best score in a smooth, minimalist flow.",
+    locales: {
+      tr: {
+        eyebrow: "Blok Bulmaca Oyunu",
+        title: "Blok Blast Flow",
+        heroTitle: "Sakin bloklar, temiz temizlikler, sonsuz akış.",
+        heroSubtitle: "Parçaları yerleştir, satırları temizle, akışı bozmadan devam et.",
+        description:
+          "Blok Blast Flow; kısa oturumlar ve tatmin edici kombinasyonlar için tasarlanmış sade bir blok bulmaca. Parçaları yerleştir, satır ve sütunları temizle, en yüksek skoruna ulaş.",
+        chips: ["Rahatlatıcı", "Blok Puzzle", "Skor Takibi", "iPhone"],
+        features: [
+          "Klasik 8x8 blok bulmaca akışı",
+          "Satır ve sütun temizleme sistemi",
+          "Kombo odaklı skor artışları",
+          "Minimal arayüz ve hızlı öğrenme",
+        ],
+        ctaLabel: "App Store — Yakında",
+      },
+      en: {
+        eyebrow: "Block Puzzle Game",
+        title: "Blok Blast Flow",
+        heroTitle: "Calm blocks. Clean clears. Endless flow.",
+        heroSubtitle: "Place pieces on the grid, clear lines, and keep the board breathing.",
+        description:
+          "Blok Blast Flow is a clean, relaxing block puzzle built for short sessions and satisfying combos. Place pieces, clear rows and columns, and chase your best score in a smooth, minimalist flow.",
+        chips: ["Relaxing", "Block Puzzle", "Score Chase", "iPhone"],
+        features: [
+          "Classic 8x8 block puzzle loop",
+          "Row and column clears",
+          "Combo-driven score boosts",
+          "Minimal, readable interface",
+        ],
+        ctaLabel: "App Store — Coming Soon",
+      },
+      es: {
+        eyebrow: "Puzzle de bloques",
+        title: "Blok Blast Flow",
+        heroTitle: "Bloques tranquilos. Limpiezas limpias. Flujo infinito.",
+        heroSubtitle: "Coloca piezas, limpia líneas y mantén el tablero vivo.",
+        description:
+          "Blok Blast Flow es un puzzle de bloques limpio y relajante para sesiones cortas y combos satisfactorios. Coloca piezas, limpia filas y columnas y persigue tu mejor puntuación.",
+        chips: ["Relajante", "Puzzle de bloques", "Puntuación", "iPhone"],
+        features: [
+          "Bucle clásico de puzzle 8x8",
+          "Limpieza de filas y columnas",
+          "Combos que suben la puntuación",
+          "Interfaz mínima y legible",
+        ],
+        ctaLabel: "App Store — Próximamente",
+      },
+      pt: {
+        eyebrow: "Puzzle de blocos",
+        title: "Blok Blast Flow",
+        heroTitle: "Blocos calmos. Limpezas precisas. Fluxo infinito.",
+        heroSubtitle: "Posicione peças, limpe linhas e mantenha o tabuleiro fluindo.",
+        description:
+          "Blok Blast Flow é um puzzle de blocos limpo e relaxante para sessões rápidas e combos satisfatórios. Posicione peças, limpe linhas e colunas e busque seu melhor placar.",
+        chips: ["Relaxante", "Puzzle de blocos", "Pontuação", "iPhone"],
+        features: [
+          "Loop clássico de puzzle 8x8",
+          "Limpeza de linhas e colunas",
+          "Combos que aumentam o placar",
+          "Interface mínima e legível",
+        ],
+        ctaLabel: "App Store — Em breve",
+      },
+    },
+    icon: appAsset("blok-blast-flow", "icon.svg"),
+    heroScreen: appAsset("blok-blast-flow", "screenshot-01.svg"),
+    gallery: [
+      appAsset("blok-blast-flow", "screenshot-02.svg"),
+      appAsset("blok-blast-flow", "screenshot-03.svg"),
+    ],
+    chips: ["Relaxing", "Block Puzzle", "Score Chase", "iPhone"],
+    features: [
+      "Classic 8x8 block puzzle loop",
+      "Row and column clears",
+      "Combo-driven score boosts",
+      "Minimal, readable interface",
+    ],
+    privacyUrl: `${base}blok-blast-flow/privacy.html`,
+    supportUrl: `${base}blok-blast-flow/support.html`,
+    ctaLabel: "App Store — Coming Soon",
+    storeUrl: "#",
+    medicalNote: null,
+  },
   "laser-eyes-ghost-rescue": {
     slug: "laser-eyes-ghost-rescue",
     eyebrow: "Face-Tracked Arcade Game",
@@ -583,6 +676,7 @@ export const developerApps = [
   apps["pispis-bebek"],
   apps["dualshot-recorder"],
   apps["order-of-colors"],
+  apps["blok-blast-flow"],
   apps["laser-eyes-ghost-rescue"],
   apps["lift-log-pro"],
 ];
