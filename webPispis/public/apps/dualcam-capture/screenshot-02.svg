@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1242" height="2688" viewBox="0 0 1242 2688" role="img" aria-label="DualCam Capture screenshot">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fef9c3" />
+      <stop offset="100%" stop-color="#e0f2fe" />
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.7" />
+    </linearGradient>
+  </defs>
+  <rect width="1242" height="2688" fill="url(#bg)" />
+  <rect x="96" y="220" width="1050" height="2248" rx="140" fill="#0f172a" opacity="0.25" />
+  <rect x="130" y="260" width="980" height="2168" rx="120" fill="#0b0f19" opacity="0.65" />
+  <rect x="210" y="460" width="820" height="520" rx="64" fill="url(#card)" />
+  <rect x="210" y="1040" width="820" height="520" rx="64" fill="url(#card)" opacity="0.85" />
+  <rect x="210" y="1620" width="820" height="520" rx="64" fill="url(#card)" opacity="0.75" />
+  <g fill="#0f172a">
+    <text x="621" y="560" font-family="Arial, sans-serif" font-size="56" font-weight="700" text-anchor="middle">DualCam Capture</text>
+    <text x="621" y="630" font-family="Arial, sans-serif" font-size="28" text-anchor="middle" letter-spacing="0.08em">SCREEN 2</text>
+  </g>
+  <g fill="#ffffff" opacity="0.85">
+    <text x="621" y="1990" font-family="Arial, sans-serif" font-size="30" text-anchor="middle">Screenshots coming soon</text>
+  </g>
+</svg>

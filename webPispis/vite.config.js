@@ -19,6 +19,7 @@ export default defineConfig({
         liftLogPro: resolve(__dirname, "lift-log-pro/index.html"),
         laserEyes: resolve(__dirname, "laser-eyes-ghost-rescue/index.html"),
         swipeCleanPhoto: resolve(__dirname, "swipe-clean-photo/index.html"),
+        dualcamCapture: resolve(__dirname, "dualcam-capture/index.html"),
       },
     },
   },
