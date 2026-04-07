@@ -722,6 +722,37 @@ export const apps = {
     privacyUrl: `${base}lift-log-pro/privacy.html`,
     storeUrl: "https://apps.apple.com/tr/app/liftlog5x5pro/id6760855317?l=tr",
   },
+  "swipe-clean-photo": {
+    slug: "swipe-clean-photo",
+    eyebrow: "Photo Cleanup App",
+    title: "Swipe Clean Photo",
+    heroTitle: "Clean your gallery with quick swipes.",
+    heroSubtitle: "Swipe to keep or delete media.",
+    description:
+      "Swipe Clean Photo helps you declutter your photo library with a fast, focused swipe experience. Clean up your gallery faster with simple swipe gestures. Review photos and videos one by one, keep what matters, and queue the rest for deletion, all on device.",
+    icon: appAsset("swipe-clean-photo", "icon.svg"),
+    heroScreen: appAsset("swipe-clean-photo", "screenshot-01.svg"),
+    gallery: [
+      appAsset("swipe-clean-photo", "screenshot-02.svg"),
+      appAsset("swipe-clean-photo", "screenshot-03.svg"),
+      appAsset("swipe-clean-photo", "screenshot-04.svg"),
+      appAsset("swipe-clean-photo", "screenshot-05.svg"),
+    ],
+    chips: ["Clean your gallery in seconds", "Fast photo and video cleanup", "Declutter your gallery offline", "On-device privacy"],
+    features: [
+      "Swipe right to keep, swipe left to delete",
+      "Undo your last action anytime",
+      "Batch delete queued items",
+      "Works fully on device with no cloud upload",
+    ],
+    privacyUrl: `${base}swipe-clean-photo/privacy.html`,
+    supportUrl: `${base}swipe-clean-photo/support.html`,
+    ctaLabel: "App Store — Coming Soon",
+    secondaryLabel: "Privacy",
+    secondaryUrl: `${base}swipe-clean-photo/privacy.html`,
+    storeUrl: "#",
+    medicalNote: null,
+  },
 };
 
 export const developerApps = [
@@ -734,4 +765,5 @@ export const developerApps = [
   apps["blok-blast-flow"],
   apps["laser-eyes-ghost-rescue"],
   apps["lift-log-pro"],
+  apps["swipe-clean-photo"],
 ];

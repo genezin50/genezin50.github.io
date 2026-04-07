@@ -18,6 +18,7 @@ export default defineConfig({
         blokBlastFlow: resolve(__dirname, "blok-blast-flow/index.html"),
         liftLogPro: resolve(__dirname, "lift-log-pro/index.html"),
         laserEyes: resolve(__dirname, "laser-eyes-ghost-rescue/index.html"),
+        swipeCleanPhoto: resolve(__dirname, "swipe-clean-photo/index.html"),
       },
     },
   },
