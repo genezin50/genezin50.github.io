@@ -839,10 +839,10 @@ export const apps = {
     ],
     privacyUrl: `${base}swipe-clean-photo/privacy.html`,
     supportUrl: `${base}swipe-clean-photo/support.html`,
-    ctaLabel: "App Store — Coming Soon",
+    ctaLabel: "Download on the App Store",
     secondaryLabel: "Privacy",
     secondaryUrl: `${base}swipe-clean-photo/privacy.html`,
-    storeUrl: "#",
+    storeUrl: "https://apps.apple.com/tr/app/id6761765265?l=tr",
     medicalNote: null,
   },
 };
