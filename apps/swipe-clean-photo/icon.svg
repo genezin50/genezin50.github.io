@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Swipe Clean Photo">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1f2937" />
+      <stop offset="100%" stop-color="#111827" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fbbf24" />
+      <stop offset="100%" stop-color="#38bdf8" />
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="120" fill="url(#bg)" />
+  <rect x="64" y="64" width="384" height="384" rx="96" fill="url(#accent)" opacity="0.18" />
+  <circle cx="170" cy="200" r="54" fill="#ffffff" opacity="0.15" />
+  <circle cx="342" cy="320" r="68" fill="#ffffff" opacity="0.12" />
+  <g fill="#ffffff">
+    <text x="256" y="250" font-family="Arial, sans-serif" font-size="78" font-weight="700" text-anchor="middle">SC</text>
+    <text x="256" y="312" font-family="Arial, sans-serif" font-size="28" letter-spacing="0.2em" text-anchor="middle">CLEAN</text>
+  </g>
+</svg>
