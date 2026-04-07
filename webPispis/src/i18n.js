@@ -1,6 +1,6 @@
 import React from "react";
 
-const SUPPORTED_LANGS = ["tr", "en", "es", "pt"];
+const SUPPORTED_LANGS = ["tr", "en", "es", "pt", "ptbr", "de", "fr", "hi"];
 
 const LanguageContext = React.createContext({
   lang: "tr",
@@ -16,8 +16,12 @@ export function LanguageProvider({ children }) {
     const stored = window.localStorage.getItem(STORAGE_KEY);
     if (SUPPORTED_LANGS.includes(stored)) return stored;
     const locale = window.navigator.language?.toLowerCase() || "tr";
+    if (locale.startsWith("pt-br")) return "ptbr";
     if (locale.startsWith("es")) return "es";
     if (locale.startsWith("pt")) return "pt";
+    if (locale.startsWith("de")) return "de";
+    if (locale.startsWith("fr")) return "fr";
+    if (locale.startsWith("hi")) return "hi";
     if (locale.startsWith("en")) return "en";
     return "tr";
   });

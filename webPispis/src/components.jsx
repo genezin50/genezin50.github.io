@@ -164,6 +164,11 @@ const ui = {
   },
 };
 
+const fallbackLangs = ["de", "fr", "hi", "ptbr"];
+fallbackLangs.forEach((lang) => {
+  ui[lang] = ui.en;
+});
+
 function useCopy() {
   const { lang } = useLanguage();
   return ui[lang] || ui.en || ui.tr;
@@ -181,8 +186,18 @@ function getAppCopy(app, lang) {
 
 export function Header({ title = "Genezin Kepekci", links = [], action }) {
   const { lang, toggle } = useLanguage();
-  const nextLangMap = { tr: "en", en: "es", es: "pt", pt: "tr" };
+  const nextLangMap = { tr: "en", en: "es", es: "pt", pt: "ptbr", ptbr: "de", de: "fr", fr: "hi", hi: "tr" };
   const nextLang = nextLangMap[lang] || "en";
+  const nextLangLabelMap = {
+    tr: "Türkçeye geç",
+    en: "Switch to English",
+    es: "Cambiar a español",
+    pt: "Mudar para português",
+    ptbr: "Mudar para português (BR)",
+    de: "Auf Deutsch wechseln",
+    fr: "Passer en français",
+    hi: "हिन्दी में बदलें",
+  };
   return (
     <header className="sticky top-0 z-30 glass-surface">
       <div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-4 px-5 py-4 md:px-8">
@@ -204,15 +219,7 @@ export function Header({ title = "Genezin Kepekci", links = [], action }) {
             type="button"
             onClick={toggle}
             className="squircle rounded-full border border-white/70 bg-white/70 px-3 py-1.5 text-xs font-semibold text-ink shadow-card transition hover:-translate-y-0.5 dark:bg-white/10 dark:text-white"
-            aria-label={
-              nextLang === "tr"
-                ? "Türkçeye geç"
-                : nextLang === "es"
-                  ? "Cambiar a español"
-                  : nextLang === "pt"
-                    ? "Mudar para português"
-                    : "Switch to English"
-            }
+            aria-label={nextLangLabelMap[nextLang] || "Switch language"}
           >
             {lang.toUpperCase()}
           </button>
