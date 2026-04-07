@@ -96,4 +96,9 @@ img {
     border: 1px solid rgba(148, 163, 184, 0.16);
     box-shadow: 0 14px 30px rgba(2, 6, 23, 0.6);
   }
+
+  .perf-visibility {
+    content-visibility: auto;
+    contain-intrinsic-size: 340px 720px;
+  }
 }

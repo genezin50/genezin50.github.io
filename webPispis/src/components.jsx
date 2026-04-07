@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import React from "react";
 import { useLanguage } from "./i18n";
 
@@ -198,6 +198,16 @@ export function Header({ title = "Genezin Kepekci", links = [], action }) {
     fr: "Passer en français",
     hi: "हिन्दी में बदलें",
   };
+  const currentLangLabelMap = {
+    tr: "TR",
+    en: "EN",
+    es: "ES",
+    pt: "PT",
+    ptbr: "PT-BR",
+    de: "DE",
+    fr: "FR",
+    hi: "HI",
+  };
   return (
     <header className="sticky top-0 z-30 glass-surface">
       <div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-4 px-5 py-4 md:px-8">
@@ -221,7 +231,7 @@ export function Header({ title = "Genezin Kepekci", links = [], action }) {
             className="squircle rounded-full border border-white/70 bg-white/70 px-3 py-1.5 text-xs font-semibold text-ink shadow-card transition hover:-translate-y-0.5 dark:bg-white/10 dark:text-white"
             aria-label={nextLangLabelMap[nextLang] || "Switch language"}
           >
-            {lang.toUpperCase()}
+            {currentLangLabelMap[lang] || lang.toUpperCase()}
           </button>
           {action || null}
         </div>
@@ -231,16 +241,26 @@ export function Header({ title = "Genezin Kepekci", links = [], action }) {
 }
 
 export function PhoneShot({ file, alt }) {
+  const shouldReduceMotion = useReducedMotion();
   return (
     <motion.div
-      initial={{ opacity: 0, y: 32, scale: 0.96 }}
-      animate={{ opacity: 1, y: 0, scale: 1 }}
-      transition={{ type: "spring", stiffness: 120, damping: 18, delay: 0.15 }}
+      initial={shouldReduceMotion ? false : { opacity: 0, y: 32, scale: 0.96 }}
+      animate={shouldReduceMotion ? false : { opacity: 1, y: 0, scale: 1 }}
+      transition={shouldReduceMotion ? { duration: 0 } : { type: "spring", stiffness: 120, damping: 18, delay: 0.15 }}
       className="relative mx-auto w-[300px] md:w-[340px]"
     >
       <div className="absolute inset-0 -z-10 rounded-[48px] bg-gradient-to-b from-lilac/70 via-peach/45 to-sky/55 blur-3xl" />
       <div className="squircle rounded-[44px] border border-white/40 bg-[#11151c] p-2 shadow-soft">
-        <img src={file} alt={alt} className="squircle h-auto w-full rounded-[36px] bg-[#ebe8e2] object-cover" loading="eager" />
+        <img
+          src={file}
+          alt={alt}
+          className="squircle h-auto w-full rounded-[36px] bg-[#ebe8e2] object-cover"
+          loading="eager"
+          decoding="async"
+          fetchpriority="high"
+          width="1242"
+          height="2688"
+        />
       </div>
     </motion.div>
   );
@@ -248,6 +268,7 @@ export function PhoneShot({ file, alt }) {
 
 export function AppLandingPage({ app }) {
   const { lang } = useLanguage();
+  const shouldReduceMotion = useReducedMotion();
   const copy = useCopy();
   const appCopy = getAppCopy(app, lang);
   const screens = [appCopy.heroScreen, ...appCopy.gallery];
@@ -275,9 +296,9 @@ export function AppLandingPage({ app }) {
       <main className="mx-auto w-full max-w-6xl px-5 pb-16 pt-8 md:px-8 md:pt-14">
         <section className="grid items-center gap-10 md:grid-cols-2">
           <motion.div
-            initial={{ opacity: 0, y: 22 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ type: "spring", stiffness: 120, damping: 18 }}
+            initial={shouldReduceMotion ? false : { opacity: 0, y: 22 }}
+            animate={shouldReduceMotion ? false : { opacity: 1, y: 0 }}
+            transition={shouldReduceMotion ? { duration: 0 } : { type: "spring", stiffness: 120, damping: 18 }}
           >
             <span className="squircle inline-flex rounded-full border border-sky/45 bg-white/70 px-4 py-1 text-xs font-semibold uppercase tracking-[0.12em] text-ink/75 dark:bg-white/10 dark:text-white/70">
               {appCopy.eyebrow}
@@ -334,10 +355,10 @@ export function AppLandingPage({ app }) {
             {appCopy.features.map((feature, index) => (
               <motion.article
                 key={feature}
-                initial={{ opacity: 0, y: 24 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={shouldReduceMotion ? false : { opacity: 0, y: 24 }}
+                whileInView={shouldReduceMotion ? undefined : { opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.24 }}
-                transition={{ type: "spring", stiffness: 140, damping: 18, delay: index * 0.05 }}
+                transition={shouldReduceMotion ? { duration: 0 } : { type: "spring", stiffness: 140, damping: 18, delay: index * 0.05 }}
                 className="surface-card squircle rounded-[30px] bg-gradient-to-br from-peach/35 via-white/70 to-lilac/30 p-6"
               >
                 <span className="text-xs font-semibold uppercase tracking-[0.16em] text-ink/45">
@@ -358,11 +379,11 @@ export function AppLandingPage({ app }) {
             {screens.map((screen, i) => (
               <motion.figure
                 key={screen}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={shouldReduceMotion ? false : { opacity: 0, y: 20 }}
+                whileInView={shouldReduceMotion ? undefined : { opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.15 }}
-                transition={{ type: "spring", stiffness: 150, damping: 20, delay: i * 0.02 }}
-                className="surface-card squircle rounded-[30px] p-3"
+                transition={shouldReduceMotion ? { duration: 0 } : { type: "spring", stiffness: 150, damping: 20, delay: i * 0.02 }}
+                className="surface-card squircle perf-visibility rounded-[30px] p-3"
               >
                 <div className="squircle rounded-[28px] border border-white/20 bg-[#11151c] p-2 shadow-soft">
                   <img
@@ -370,6 +391,9 @@ export function AppLandingPage({ app }) {
                     alt={`${appCopy.title} ekran görüntüsü ${i + 1}`}
                     className="squircle h-auto w-full rounded-[22px] bg-[#ebe8e2] object-cover"
                     loading="lazy"
+                    decoding="async"
+                    width="1242"
+                    height="2688"
                   />
                 </div>
               </motion.figure>
