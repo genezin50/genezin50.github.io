@@ -1,1 +1,0 @@
-import{R as t,j as e,a as o,H as r}from"./styles-DL1ZipeS.js";import{d as a}from"./siteData-Bu0eVWFg.js";t.createRoot(document.getElementById("root")).render(e.jsx(o.StrictMode,{children:e.jsx(r,{apps:a})}));

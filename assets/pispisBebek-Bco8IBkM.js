@@ -1,1 +1,0 @@
-import{s as a,R as s,j as e,a as t,L as r,A as o}from"./theme-C0m6FSJ_.js";import{a as p}from"./siteData-DOQ-7D3U.js";a();s.createRoot(document.getElementById("root")).render(e.jsx(t.StrictMode,{children:e.jsx(r,{children:e.jsx(o,{app:p["pispis-bebek"]})})}));

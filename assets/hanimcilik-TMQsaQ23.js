@@ -1,1 +1,0 @@
-import{R as e,j as a,a as t,A as o}from"./styles-mxHCcMaA.js";import{a as r}from"./siteData-BxVptag6.js";e.createRoot(document.getElementById("root")).render(a.jsx(t.StrictMode,{children:a.jsx(o,{app:r.hanimcilik})}));

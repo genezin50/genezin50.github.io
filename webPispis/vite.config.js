@@ -9,7 +9,6 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, "index.html"),
-        hanimcilik: resolve(__dirname, "hanimcilik/index.html"),
         dugunAjandasi: resolve(__dirname, "dugun-ajandasi/index.html"),
         pitpitGebelik: resolve(__dirname, "pitpit-gebelik/index.html"),
         pispisBebek: resolve(__dirname, "pispis-bebek/index.html"),

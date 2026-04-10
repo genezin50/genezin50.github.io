@@ -1,1 +1,0 @@
-import{s as a,R as t,j as e,a as s,L as r,A as o}from"./theme-D24Ftzny.js";import{a as p}from"./siteData-9g_zW4fK.js";a();t.createRoot(document.getElementById("root")).render(e.jsx(s.StrictMode,{children:e.jsx(r,{children:e.jsx(o,{app:p["pitpit-gebelik"]})})}));

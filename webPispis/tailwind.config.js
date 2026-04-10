@@ -3,7 +3,6 @@ export default {
   darkMode: "class",
   content: [
     "./index.html",
-    "./hanimcilik/index.html",
     "./dugun-ajandasi/index.html",
     "./pitpit-gebelik/index.html",
     "./pispis-bebek/index.html",

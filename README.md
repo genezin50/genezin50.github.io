@@ -22,14 +22,14 @@ Asagidaki yerleri duzenle:
 
 Ornek:
 
-- `assets/apps/hanimcilik/icon.png`
-- `assets/apps/hanimcilik/screenshot-01.png`
-- `assets/apps/hanimcilik/screenshot-02.png`
+- `apps/dugun-ajandasi/icon.png`
+- `apps/dugun-ajandasi/screenshot-01.png`
+- `apps/dugun-ajandasi/screenshot-02.png`
 
 Sonraki uygulamalarda da ayni yapiyi kullan:
 
-- `assets/apps/yeni-uygulama/icon.png`
-- `assets/apps/yeni-uygulama/screenshot-01.png`
+- `apps/yeni-uygulama/icon.png`
+- `apps/yeni-uygulama/screenshot-01.png`
 
 ## GitHub Pages ile yayinlama
 

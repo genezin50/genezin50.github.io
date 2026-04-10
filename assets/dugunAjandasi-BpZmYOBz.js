@@ -1,1 +1,0 @@
-import{s as e,R as s,j as a,a as t,L as r,A as o}from"./theme-DJUB6OkB.js";import{a as n}from"./siteData-rkiX6Azx.js";e();s.createRoot(document.getElementById("root")).render(a.jsx(t.StrictMode,{children:a.jsx(r,{children:a.jsx(o,{app:n["dugun-ajandasi"]})})}));

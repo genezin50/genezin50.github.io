@@ -1073,7 +1073,6 @@ export const apps = {
 };
 
 export const developerApps = [
-  apps.hanimcilik,
   apps["dugun-ajandasi"],
   apps["pitpit-gebelik"],
   apps["pispis-bebek"],
