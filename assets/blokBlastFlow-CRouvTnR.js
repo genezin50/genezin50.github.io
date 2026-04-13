@@ -1,0 +1,1 @@
+import{s as a,R as s,j as e,a as t,L as o,A as r}from"./theme-DJUB6OkB.js";import{a as p}from"./siteData-CkpXS7Jp.js";a();s.createRoot(document.getElementById("root")).render(e.jsx(t.StrictMode,{children:e.jsx(o,{children:e.jsx(r,{app:p["blok-blast-flow"]})})}));

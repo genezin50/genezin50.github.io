@@ -1076,7 +1076,6 @@ export const developerApps = [
   apps["dugun-ajandasi"],
   apps["pitpit-gebelik"],
   apps["pispis-bebek"],
-  apps["dualshot-recorder"],
   apps["order-of-colors"],
   apps["blok-blast-flow"],
   apps["laser-eyes-ghost-rescue"],
