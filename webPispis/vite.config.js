@@ -18,6 +18,7 @@ export default defineConfig({
         laserEyes: resolve(__dirname, "laser-eyes-ghost-rescue/index.html"),
         swipeCleanPhoto: resolve(__dirname, "swipe-clean-photo/index.html"),
         dualcamCapture: resolve(__dirname, "dualcam-capture/index.html"),
+        shotzinCam: resolve(__dirname, "shotzin-cam/index.html"),
       },
     },
   },

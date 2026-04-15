@@ -1,0 +1,31 @@
+<svg width="1290" height="2796" viewBox="0 0 1290 2796" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg1" x1="133" y1="126" x2="1178" y2="2674" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#131722"/>
+      <stop offset="0.54" stop-color="#1A1431"/>
+      <stop offset="1" stop-color="#30142D"/>
+    </linearGradient>
+    <linearGradient id="panel1" x1="192" y1="420" x2="1120" y2="2260" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FF8A5B"/>
+      <stop offset="0.52" stop-color="#FF4F87"/>
+      <stop offset="1" stop-color="#4A5DFF"/>
+    </linearGradient>
+  </defs>
+  <rect width="1290" height="2796" rx="140" fill="url(#bg1)"/>
+  <circle cx="980" cy="326" r="240" fill="#FF8A5B" fill-opacity="0.25"/>
+  <circle cx="274" cy="2388" r="300" fill="#4A5DFF" fill-opacity="0.22"/>
+  <rect x="120" y="186" width="1050" height="2424" rx="84" fill="white" fill-opacity="0.06" stroke="white" stroke-opacity="0.12" stroke-width="2"/>
+  <text x="160" y="380" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="92" font-weight="700">Record once</text>
+  <text x="160" y="486" fill="#FFD8C9" font-family="Arial, sans-serif" font-size="72" font-weight="600">Export for every platform</text>
+  <rect x="160" y="620" width="970" height="1520" rx="56" fill="url(#panel1)"/>
+  <rect x="228" y="716" width="364" height="1212" rx="44" fill="#11151C"/>
+  <rect x="638" y="864" width="392" height="768" rx="44" fill="#11151C" fill-opacity="0.86"/>
+  <rect x="270" y="820" width="280" height="980" rx="28" fill="#FFF3EA"/>
+  <rect x="680" y="930" width="308" height="610" rx="28" fill="#FFF3EA"/>
+  <path d="M410 820V1800" stroke="#FF4F87" stroke-width="12" stroke-dasharray="28 28" stroke-linecap="round"/>
+  <path d="M834 930V1540" stroke="#4A5DFF" stroke-width="12" stroke-dasharray="28 28" stroke-linecap="round"/>
+  <circle cx="410" cy="1220" r="116" fill="#FF8A5B"/>
+  <circle cx="834" cy="1236" r="116" fill="#4A5DFF"/>
+  <text x="160" y="2300" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="48" font-weight="700">Placeholder visual</text>
+  <text x="160" y="2372" fill="#D9DEFF" font-family="Arial, sans-serif" font-size="40">Replace with real App Store screenshot later</text>
+</svg>

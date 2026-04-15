@@ -1,0 +1,23 @@
+<svg width="1290" height="2796" viewBox="0 0 1290 2796" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg2" x1="110" y1="188" x2="1166" y2="2660" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#101521"/>
+      <stop offset="0.56" stop-color="#141C2E"/>
+      <stop offset="1" stop-color="#25103A"/>
+    </linearGradient>
+  </defs>
+  <rect width="1290" height="2796" rx="140" fill="url(#bg2)"/>
+  <rect x="118" y="182" width="1054" height="2432" rx="84" fill="white" fill-opacity="0.05" stroke="white" stroke-opacity="0.1" stroke-width="2"/>
+  <text x="158" y="378" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="92" font-weight="700">One take</text>
+  <text x="158" y="484" fill="#DADFFF" font-family="Arial, sans-serif" font-size="72" font-weight="600">Portrait + landscape outputs</text>
+  <rect x="160" y="640" width="970" height="1460" rx="56" fill="#0D1117"/>
+  <rect x="212" y="730" width="380" height="1180" rx="42" fill="#1B2230"/>
+  <rect x="640" y="950" width="420" height="740" rx="42" fill="#1B2230"/>
+  <rect x="260" y="790" width="284" height="1062" rx="28" fill="#FFF4ED"/>
+  <rect x="700" y="1008" width="300" height="624" rx="28" fill="#FFF4ED"/>
+  <rect x="306" y="870" width="192" height="56" rx="20" fill="#FF8A5B"/>
+  <rect x="744" y="1080" width="212" height="56" rx="20" fill="#4A5DFF"/>
+  <rect x="208" y="2214" width="874" height="228" rx="42" fill="#FFFFFF" fill-opacity="0.08"/>
+  <text x="260" y="2312" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="50" font-weight="700">9:16 for short-form posts</text>
+  <text x="260" y="2388" fill="#D6DBFF" font-family="Arial, sans-serif" font-size="42">16:9 for YouTube and landscape sharing</text>
+</svg>

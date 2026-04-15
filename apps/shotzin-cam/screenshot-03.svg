@@ -1,0 +1,23 @@
+<svg width="1290" height="2796" viewBox="0 0 1290 2796" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg3" x1="112" y1="184" x2="1162" y2="2670" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#17141E"/>
+      <stop offset="0.5" stop-color="#161C2F"/>
+      <stop offset="1" stop-color="#142C2A"/>
+    </linearGradient>
+  </defs>
+  <rect width="1290" height="2796" rx="140" fill="url(#bg3)"/>
+  <rect x="118" y="182" width="1054" height="2432" rx="84" fill="white" fill-opacity="0.05" stroke="white" stroke-opacity="0.1" stroke-width="2"/>
+  <text x="158" y="378" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="82" font-weight="700">Keep both formats in frame</text>
+  <text x="158" y="484" fill="#D8FFE8" font-family="Arial, sans-serif" font-size="72" font-weight="600">Dual framing guides</text>
+  <rect x="172" y="650" width="946" height="1550" rx="56" fill="#11151C"/>
+  <rect x="236" y="724" width="818" height="1404" rx="40" fill="#FFF3EA"/>
+  <path d="M510 724V2128" stroke="#FF4F87" stroke-width="14" stroke-dasharray="30 30" stroke-linecap="round"/>
+  <path d="M236 1050H1054" stroke="#4A5DFF" stroke-width="14" stroke-dasharray="30 30" stroke-linecap="round"/>
+  <rect x="302" y="824" width="220" height="1040" rx="32" stroke="#FF8A5B" stroke-width="14"/>
+  <rect x="300" y="1008" width="690" height="388" rx="32" stroke="#4A5DFF" stroke-width="14"/>
+  <circle cx="648" cy="1326" r="148" fill="#FF8A5B"/>
+  <circle cx="648" cy="1326" r="96" fill="#11151C"/>
+  <text x="172" y="2350" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="48" font-weight="700">Guide overlays help protect framing</text>
+  <text x="172" y="2422" fill="#D7FBE8" font-family="Arial, sans-serif" font-size="40">Useful when one take needs multiple platform crops</text>
+</svg>
