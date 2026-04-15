@@ -1,0 +1,1 @@
+import{s as a,R as s,j as e,a as t,L as r,A as o}from"./theme-DJUB6OkB.js";import{a as m}from"./siteData-stjz11bd.js";a();s.createRoot(document.getElementById("root")).render(e.jsx(t.StrictMode,{children:e.jsx(r,{children:e.jsx(o,{app:m["shotzin-cam"]})})}));

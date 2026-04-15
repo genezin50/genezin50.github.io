@@ -1088,13 +1088,12 @@ export const apps = {
           "Tek çekimle TikTok, Reels, WhatsApp Status, Kwai ve YouTube için dikey ve yatay çıktılar hazırla.",
         description:
           "Shotzin Cam, çoklu platform paylaşımı için tasarlanmış creator kamera uygulamasıdır. Çift framing kılavuzuyla tek seferde doğru kadrajı koru, çekim sonrası hızlıca trim yap, kapak karesini seç ve aynı oturumdan paylaşmaya hazır videolar üret.",
-        heroScreen: appAsset("shotzin-cam", "screenshot-01.svg"),
+        heroScreen: appAsset("shotzin-cam", "en/screenshot-01.png"),
         gallery: [
-          appAsset("shotzin-cam", "screenshot-02.svg"),
-          appAsset("shotzin-cam", "screenshot-03.svg"),
-          appAsset("shotzin-cam", "screenshot-04.svg"),
-          appAsset("shotzin-cam", "screenshot-05.svg"),
-          appAsset("shotzin-cam", "screenshot-06.svg"),
+          appAsset("shotzin-cam", "en/screenshot-02.png"),
+          appAsset("shotzin-cam", "en/screenshot-03.png"),
+          appAsset("shotzin-cam", "en/screenshot-04.png"),
+          appAsset("shotzin-cam", "en/screenshot-05.png"),
         ],
         chips: ["Creator workflow", "9:16 + 16:9", "4K + 60 FPS", "Gallery"],
         features: [
