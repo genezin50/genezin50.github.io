@@ -1118,13 +1118,12 @@ export const apps = {
           "Capture one take and prepare portrait plus landscape outputs for TikTok, Reels, WhatsApp Status, Kwai, and YouTube.",
         description:
           "Shotzin Cam is a creator camera app built for multi-platform posting. Frame once with dual guides, trim quickly after recording, choose a cover frame, and export social-ready versions from the same session.",
-        heroScreen: appAsset("shotzin-cam", "screenshot-01.svg"),
+        heroScreen: appAsset("shotzin-cam", "en/screenshot-01.png"),
         gallery: [
-          appAsset("shotzin-cam", "screenshot-02.svg"),
-          appAsset("shotzin-cam", "screenshot-03.svg"),
-          appAsset("shotzin-cam", "screenshot-04.svg"),
-          appAsset("shotzin-cam", "screenshot-05.svg"),
-          appAsset("shotzin-cam", "screenshot-06.svg"),
+          appAsset("shotzin-cam", "en/screenshot-02.png"),
+          appAsset("shotzin-cam", "en/screenshot-03.png"),
+          appAsset("shotzin-cam", "en/screenshot-04.png"),
+          appAsset("shotzin-cam", "en/screenshot-05.png"),
         ],
         chips: ["Creator workflow", "9:16 + 16:9", "4K + 60 FPS", "Gallery"],
         features: [
@@ -1148,13 +1147,12 @@ export const apps = {
           "Capture uma única tomada e prepare versões em retrato e paisagem para TikTok, Reels, WhatsApp Status, Kwai e YouTube.",
         description:
           "Shotzin Cam é uma câmera para criadores feita para publicação multiplataforma. Enquadre uma vez com guias duplas, corte rapidamente após a gravação, escolha a capa e exporte versões prontas para redes sociais da mesma sessão.",
-        heroScreen: appAsset("shotzin-cam", "screenshot-01.svg"),
+        heroScreen: appAsset("shotzin-cam", "ptbr/screenshot-01.png"),
         gallery: [
-          appAsset("shotzin-cam", "screenshot-02.svg"),
-          appAsset("shotzin-cam", "screenshot-03.svg"),
-          appAsset("shotzin-cam", "screenshot-04.svg"),
-          appAsset("shotzin-cam", "screenshot-05.svg"),
-          appAsset("shotzin-cam", "screenshot-06.svg"),
+          appAsset("shotzin-cam", "ptbr/screenshot-02.png"),
+          appAsset("shotzin-cam", "ptbr/screenshot-03.png"),
+          appAsset("shotzin-cam", "ptbr/screenshot-04.png"),
+          appAsset("shotzin-cam", "ptbr/screenshot-05.png"),
         ],
         chips: ["Fluxo creator", "9:16 + 16:9", "4K + 60 FPS", "Galeria"],
         features: [
@@ -1178,13 +1176,12 @@ export const apps = {
           "Capture uma única tomada e prepare versões em retrato e paisagem para TikTok, Reels, WhatsApp Status, Kwai e YouTube.",
         description:
           "Shotzin Cam é uma câmera para criadores feita para publicação multiplataforma. Enquadre uma vez com guias duplas, corte rapidamente após a gravação, escolha a capa e exporte versões prontas para redes sociais da mesma sessão.",
-        heroScreen: appAsset("shotzin-cam", "screenshot-01.svg"),
+        heroScreen: appAsset("shotzin-cam", "ptbr/screenshot-01.png"),
         gallery: [
-          appAsset("shotzin-cam", "screenshot-02.svg"),
-          appAsset("shotzin-cam", "screenshot-03.svg"),
-          appAsset("shotzin-cam", "screenshot-04.svg"),
-          appAsset("shotzin-cam", "screenshot-05.svg"),
-          appAsset("shotzin-cam", "screenshot-06.svg"),
+          appAsset("shotzin-cam", "ptbr/screenshot-02.png"),
+          appAsset("shotzin-cam", "ptbr/screenshot-03.png"),
+          appAsset("shotzin-cam", "ptbr/screenshot-04.png"),
+          appAsset("shotzin-cam", "ptbr/screenshot-05.png"),
         ],
         chips: ["Fluxo creator", "9:16 + 16:9", "4K + 60 FPS", "Galeria"],
         features: [
@@ -1201,14 +1198,13 @@ export const apps = {
         secondaryLabel: "Privacidade",
       },
     },
-    icon: appAsset("shotzin-cam", "icon.svg"),
-    heroScreen: appAsset("shotzin-cam", "screenshot-01.svg"),
+    icon: appAsset("shotzin-cam", "icon.png"),
+    heroScreen: appAsset("shotzin-cam", "en/screenshot-01.png"),
     gallery: [
-      appAsset("shotzin-cam", "screenshot-02.svg"),
-      appAsset("shotzin-cam", "screenshot-03.svg"),
-      appAsset("shotzin-cam", "screenshot-04.svg"),
-      appAsset("shotzin-cam", "screenshot-05.svg"),
-      appAsset("shotzin-cam", "screenshot-06.svg"),
+      appAsset("shotzin-cam", "en/screenshot-02.png"),
+      appAsset("shotzin-cam", "en/screenshot-03.png"),
+      appAsset("shotzin-cam", "en/screenshot-04.png"),
+      appAsset("shotzin-cam", "en/screenshot-05.png"),
     ],
     chips: ["Creator workflow", "9:16 + 16:9", "4K + 60 FPS", "Gallery"],
     features: [
