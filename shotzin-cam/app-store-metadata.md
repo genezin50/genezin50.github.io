@@ -1,4 +1,4 @@
-# DualShot: MultiAngle Recorder App Store Metadata
+# TwinFrame Cam App Store Metadata
 
 This file keeps launch-ready App Store metadata in Turkish, English, and Brazilian Portuguese for easy copy/paste into App Store Connect.
 
@@ -12,15 +12,15 @@ This file keeps launch-ready App Store metadata in Turkish, English, and Brazili
 
 ### App Name
 
-`DualShot: MultiAngle Recorder`
+`TwinFrame Cam`
 
 ### Subtitle
 
-`Bir Kez Kaydet, Her Yere Paylaş`
+`Portrait + Landscape Video`
 
 ### Promotional Text
 
-`Tek çekim yap, dakikalar içinde dikey ve yatay sürümler hazır olsun. DualShot: MultiAngle Recorder; tek kadrajla çekim yapmanı, hızlı trim uygulamanı, kapak karesi seçmeni ve TikTok, Reels, Status, Kwai ile YouTube için paylaşmanı kolaylaştırır.`
+`Tek çekim yap, dakikalar içinde dikey ve yatay sürümler hazır olsun. TwinFrame Cam; tek kadrajla çekim yapmanı, hızlı trim uygulamanı, kapak karesi seçmeni ve TikTok, Reels, Status, Kwai ile YouTube için paylaşmanı kolaylaştırır.`
 
 ### Keywords
 
@@ -28,11 +28,11 @@ This file keeps launch-ready App Store metadata in Turkish, English, and Brazili
 
 ### Description
 
-`DualShot: MultiAngle Recorder, tek bir kaydı birden fazla platforma uygun videolara dönüştürmene yardımcı olur.
+`TwinFrame Cam, tek bir kaydı birden fazla platforma uygun videolara dönüştürmene yardımcı olur.
 
 Her platform için ayrı ayrı çekim yapmak yerine, tek seferde kayıt alabilir ve aynı görüntüden hem 9:16 dikey hem de 16:9 yatay çıktılar hazırlayabilirsin. Bu da daha az kurulum, daha az tekrar çekim ve daha hızlı paylaşım demektir.
 
-DualShot: MultiAngle Recorder ile yapabileceklerin:
+TwinFrame Cam ile yapabileceklerin:
 
 - Tek çekimle 9:16 portre ve 16:9 yatay çıktı üret
 - Çift framing kılavuzuyla iki format için daha güvenli kadraj kur
@@ -52,7 +52,7 @@ Creator'lar için geliştirildi:
 - Ön ve arka kamera desteği
 - Pinch to zoom, torch ve AE/AF lock kontrolleri
 
-Aynı anı farklı platformlarda paylaşıyorsan, DualShot: MultiAngle Recorder tek çekimle daha hızlı yayınlamana yardımcı olur.`
+Aynı anı farklı platformlarda paylaşıyorsan, TwinFrame Cam tek çekimle daha hızlı yayınlamana yardımcı olur.`
 
 ### Screenshot Copy
 
@@ -74,15 +74,15 @@ Hesap oluşturma gerekmez.`
 
 ### App Name
 
-`DualShot: MultiAngle Recorder`
+`TwinFrame Cam`
 
 ### Subtitle
 
-`Record Once, Post Everywhere`
+`Portrait + Landscape Video`
 
 ### Promotional Text
 
-`Film one take and export portrait plus landscape versions in minutes. DualShot: MultiAngle Recorder helps creators frame once, trim fast, pick a cover, and share to TikTok, Reels, Status, Kwai, and YouTube.`
+`Film one take and export portrait plus landscape versions in minutes. TwinFrame Cam helps creators frame once, trim fast, pick a cover, and share to TikTok, Reels, Status, Kwai, and YouTube.`
 
 ### Keywords
 
@@ -90,11 +90,11 @@ Hesap oluşturma gerekmez.`
 
 ### Description
 
-`DualShot: MultiAngle Recorder helps you turn one recording into multiple social-ready videos.
+`TwinFrame Cam helps you turn one recording into multiple social-ready videos.
 
 Instead of filming separate versions for every platform, you can capture once and export both portrait and landscape outputs from the same take. That means less setup, less re-recording, and faster posting.
 
-What you can do with DualShot: MultiAngle Recorder:
+What you can do with TwinFrame Cam:
 
 - Record one take and generate portrait 9:16 and landscape 16:9 outputs
 - Use dual framing guides to keep your subject safe for multiple formats
@@ -114,7 +114,7 @@ Built for creators:
 - Front and back camera support
 - Pinch to zoom, torch, and AE/AF lock controls
 
-If you post the same moment across different platforms, DualShot: MultiAngle Recorder helps you capture once and publish faster.`
+If you post the same moment across different platforms, TwinFrame Cam helps you capture once and publish faster.`
 
 ### Screenshot Copy
 
@@ -136,15 +136,15 @@ No account creation is required.`
 
 ### App Name
 
-`DualShot: MultiAngle Recorder`
+`TwinFrame Cam`
 
 ### Subtitle
 
-`Grave Uma Vez, Poste em Todo Lugar`
+`Portrait + Landscape Video`
 
 ### Promotional Text
 
-`Filme uma única tomada e exporte versões em retrato e paisagem em minutos. DualShot: MultiAngle Recorder ajuda criadores a enquadrar uma vez, cortar rápido, escolher a capa e compartilhar no TikTok, Reels, Status, Kwai e YouTube.`
+`Filme uma única tomada e exporte versões em retrato e paisagem em minutos. TwinFrame Cam ajuda criadores a enquadrar uma vez, cortar rápido, escolher a capa e compartilhar no TikTok, Reels, Status, Kwai e YouTube.`
 
 ### Keywords
 
@@ -152,11 +152,11 @@ No account creation is required.`
 
 ### Description
 
-`DualShot: MultiAngle Recorder ajuda você a transformar uma gravação em vários vídeos prontos para redes sociais.
+`TwinFrame Cam ajuda você a transformar uma gravação em vários vídeos prontos para redes sociais.
 
 Em vez de gravar versões separadas para cada plataforma, você pode capturar uma vez e exportar saídas em retrato e paisagem a partir da mesma tomada. Isso significa menos preparação, menos regravações e publicação mais rápida.
 
-O que você pode fazer com DualShot: MultiAngle Recorder:
+O que você pode fazer com TwinFrame Cam:
 
 - Gravar uma única tomada e gerar saídas em retrato 9:16 e paisagem 16:9
 - Usar guias duplas de enquadramento para manter o assunto seguro em vários formatos
@@ -176,7 +176,7 @@ Feito para criadores:
 - Suporte às câmeras frontal e traseira
 - Pinch to zoom, lanterna e bloqueio AE/AF
 
-Se você publica o mesmo momento em plataformas diferentes, DualShot: MultiAngle Recorder ajuda a capturar uma vez e publicar mais rápido.`
+Se você publica o mesmo momento em plataformas diferentes, TwinFrame Cam ajuda a capturar uma vez e publicar mais rápido.`
 
 ### Screenshot Copy
 

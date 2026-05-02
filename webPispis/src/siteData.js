@@ -1073,21 +1073,20 @@ export const apps = {
   "shotzin-cam": {
     slug: "shotzin-cam",
     eyebrow: "Creator Camera for Every Platform",
-    title: "DualShot: MultiAngle Recorder",
+    title: "TwinFrame Cam",
     heroTitle: "Record once. Post everywhere.",
-    heroSubtitle:
-      "Capture one take and prepare portrait plus landscape outputs for TikTok, Reels, WhatsApp Status, Kwai, and YouTube.",
+    heroSubtitle: "Portrait + Landscape Video",
     description:
-      "DualShot: MultiAngle Recorder is a creator camera app built for multi-platform posting. Frame once with dual guides, trim quickly after recording, choose a cover frame, and export social-ready versions from the same session.",
+      "TwinFrame Cam is a creator camera app built for multi-platform posting. Frame once with dual guides, trim quickly after recording, choose a cover frame, and export social-ready versions from the same session.",
     locales: {
       tr: {
         eyebrow: "Her Platform İçin Creator Kamera",
-        title: "DualShot: MultiAngle Recorder",
+        title: "TwinFrame Cam",
         heroTitle: "Bir kez kaydet. Her yere paylaş.",
         heroSubtitle:
           "Tek çekimle TikTok, Reels, WhatsApp Status, Kwai ve YouTube için dikey ve yatay çıktılar hazırla.",
         description:
-          "DualShot: MultiAngle Recorder, çoklu platform paylaşımı için tasarlanmış creator kamera uygulamasıdır. Çift framing kılavuzuyla tek seferde doğru kadrajı koru, çekim sonrası hızlıca trim yap, kapak karesini seç ve aynı oturumdan paylaşmaya hazır videolar üret.",
+          "TwinFrame Cam, çoklu platform paylaşımı için tasarlanmış creator kamera uygulamasıdır. Çift framing kılavuzuyla tek seferde doğru kadrajı koru, çekim sonrası hızlıca trim yap, kapak karesini seç ve aynı oturumdan paylaşmaya hazır videolar üret.",
         heroScreen: appAsset("shotzin-cam", "en/screenshot-01.png"),
         gallery: [
           appAsset("shotzin-cam", "en/screenshot-02.png"),
@@ -1111,12 +1110,11 @@ export const apps = {
       },
       en: {
         eyebrow: "Creator Camera for Every Platform",
-        title: "DualShot: MultiAngle Recorder",
+        title: "TwinFrame Cam",
         heroTitle: "Record once. Post everywhere.",
-        heroSubtitle:
-          "Capture one take and prepare portrait plus landscape outputs for TikTok, Reels, WhatsApp Status, Kwai, and YouTube.",
+        heroSubtitle: "Portrait + Landscape Video",
         description:
-          "DualShot: MultiAngle Recorder is a creator camera app built for multi-platform posting. Frame once with dual guides, trim quickly after recording, choose a cover frame, and export social-ready versions from the same session.",
+          "TwinFrame Cam is a creator camera app built for multi-platform posting. Frame once with dual guides, trim quickly after recording, choose a cover frame, and export social-ready versions from the same session.",
         heroScreen: appAsset("shotzin-cam", "en/screenshot-01.png"),
         gallery: [
           appAsset("shotzin-cam", "en/screenshot-02.png"),
@@ -1140,12 +1138,12 @@ export const apps = {
       },
       pt: {
         eyebrow: "Câmera para Criadores em Todas as Plataformas",
-        title: "DualShot: MultiAngle Recorder",
+        title: "TwinFrame Cam",
         heroTitle: "Grave uma vez. Publique em todo lugar.",
         heroSubtitle:
           "Capture uma única tomada e prepare versões em retrato e paisagem para TikTok, Reels, WhatsApp Status, Kwai e YouTube.",
         description:
-          "DualShot: MultiAngle Recorder é uma câmera para criadores feita para publicação multiplataforma. Enquadre uma vez com guias duplas, corte rapidamente após a gravação, escolha a capa e exporte versões prontas para redes sociais da mesma sessão.",
+          "TwinFrame Cam é uma câmera para criadores feita para publicação multiplataforma. Enquadre uma vez com guias duplas, corte rapidamente após a gravação, escolha a capa e exporte versões prontas para redes sociais da mesma sessão.",
         heroScreen: appAsset("shotzin-cam", "ptbr/screenshot-01.png"),
         gallery: [
           appAsset("shotzin-cam", "ptbr/screenshot-02.png"),
@@ -1169,12 +1167,12 @@ export const apps = {
       },
       ptbr: {
         eyebrow: "Câmera para Criadores em Todas as Plataformas",
-        title: "DualShot: MultiAngle Recorder",
+        title: "TwinFrame Cam",
         heroTitle: "Grave uma vez. Publique em todo lugar.",
         heroSubtitle:
           "Capture uma única tomada e prepare versões em retrato e paisagem para TikTok, Reels, WhatsApp Status, Kwai e YouTube.",
         description:
-          "DualShot: MultiAngle Recorder é uma câmera para criadores feita para publicação multiplataforma. Enquadre uma vez com guias duplas, corte rapidamente após a gravação, escolha a capa e exporte versões prontas para redes sociais da mesma sessão.",
+          "TwinFrame Cam é uma câmera para criadores feita para publicação multiplataforma. Enquadre uma vez com guias duplas, corte rapidamente após a gravação, escolha a capa e exporte versões prontas para redes sociais da mesma sessão.",
         heroScreen: appAsset("shotzin-cam", "ptbr/screenshot-01.png"),
         gallery: [
           appAsset("shotzin-cam", "ptbr/screenshot-02.png"),
