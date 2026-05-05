@@ -10,6 +10,7 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, "index.html"),
         dugunAjandasi: resolve(__dirname, "dugun-ajandasi/index.html"),
+        dugunAjandasiUpdate: resolve(__dirname, "dugun-ajandasi/update.html"),
         pitpitGebelik: resolve(__dirname, "pitpit-gebelik/index.html"),
         pispisBebek: resolve(__dirname, "pispis-bebek/index.html"),
         orderOfColors: resolve(__dirname, "order-of-colors/index.html"),

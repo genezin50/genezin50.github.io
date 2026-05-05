@@ -165,6 +165,7 @@ export const apps = {
     ],
     privacyUrl: `${base}dugun-ajandasi/privacy.html`,
     supportUrl: `${base}dugun-ajandasi/support.html`,
+    updateUrl: `${base}dugun-ajandasi/update.html`,
     ctaLabel: "App Store'dan İndir",
     storeUrl: "https://apps.apple.com/tr/app/d%C3%BC%C4%9F%C3%BCn-ajandas%C4%B1/id6760776421?l=tr",
     medicalNote: null,
@@ -1281,8 +1282,64 @@ apps["swipe-clean-photo-update"] = {
   pageUrl: `${base}swipe-clean-photo/update.html`,
 };
 
+apps["dugun-ajandasi-update"] = {
+  ...apps["dugun-ajandasi"],
+  slug: "dugun-ajandasi-update",
+  eyebrow: "Wedding Planner Update",
+  title: "Düğün Ajandası",
+  heroTitle: "A fresh theme for calmer wedding planning.",
+  heroSubtitle: "Plan tasks, budget, guests, and shopping lists with a refreshed visual style.",
+  description:
+    "Düğün Ajandası now has a refreshed theme that makes wedding preparation feel cleaner, softer, and easier to scan. Keep managing your tasks, budget, dowry list, guests, and special days in the same focused planning flow.",
+  chips: ["New theme", "Wedding tasks", "Budget planning", "Guest lists"],
+  features: [
+    "Refreshed theme for a cleaner and softer planning experience",
+    "Track wedding tasks, budget, dowry items, guests, and special dates in one place",
+    "Use the same focused iPhone workflow with a more polished visual feel",
+    "Keep preparation organized from early planning to the final wedding day details",
+  ],
+  locales: {
+    ...apps["dugun-ajandasi"].locales,
+    tr: {
+      ...apps["dugun-ajandasi"].locales.tr,
+      eyebrow: "Düğün Planlama Güncellemesi",
+      title: "Düğün Ajandası",
+      heroTitle: "Yeni tema ile daha ferah düğün planlaması.",
+      heroSubtitle: "Görevleri, bütçeyi, davetlileri ve listeleri yenilenen görünümle yönetin.",
+      description:
+        "Düğün Ajandası yeni temasıyla hazırlık sürecini daha ferah, daha düzenli ve daha kolay takip edilir hale getirir. Görevler, bütçe, çeyiz listesi, davetliler ve özel günler aynı odaklı planlama akışında kalır.",
+      chips: ["Yeni tema", "Düğün görevleri", "Bütçe planlama", "Davetli listesi"],
+      features: [
+        "Daha ferah ve düzenli planlama deneyimi için yenilenen tema",
+        "Görevleri, bütçeyi, çeyiz listesini, davetlileri ve özel günleri tek yerde takip edin",
+        "Aynı odaklı iPhone iş akışını daha özenli bir görsel hisle kullanın",
+        "İlk hazırlıklardan düğün günü detaylarına kadar süreci düzenli tutun",
+      ],
+      ctaLabel: "App Store'dan İndir",
+    },
+    en: {
+      ...apps["dugun-ajandasi"].locales.en,
+      eyebrow: "Wedding Planner Update",
+      title: "Düğün Ajandası",
+      heroTitle: "A fresh theme for calmer wedding planning.",
+      heroSubtitle: "Plan tasks, budget, guests, and shopping lists with a refreshed visual style.",
+      description:
+        "Düğün Ajandası now has a refreshed theme that makes wedding preparation feel cleaner, softer, and easier to scan. Keep managing your tasks, budget, dowry list, guests, and special days in the same focused planning flow.",
+      chips: ["New theme", "Wedding tasks", "Budget planning", "Guest lists"],
+      features: [
+        "Refreshed theme for a cleaner and softer planning experience",
+        "Track wedding tasks, budget, dowry items, guests, and special dates in one place",
+        "Use the same focused iPhone workflow with a more polished visual feel",
+        "Keep preparation organized from early planning to the final wedding day details",
+      ],
+    },
+  },
+  pageUrl: `${base}dugun-ajandasi/update.html`,
+};
+
 export const developerApps = [
   apps["dugun-ajandasi"],
+  apps["dugun-ajandasi-update"],
   apps["pitpit-gebelik"],
   apps["pispis-bebek"],
   apps["order-of-colors"],
