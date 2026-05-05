@@ -18,6 +18,7 @@ const ui = {
     navHome: "Ana Sayfa",
     navPrivacy: "Gizlilik",
     navSupport: "Destek / Yasal",
+    navUpdate: "Güncelleme",
     navApps: "Uygulamalar",
     navAbout: "Hakkımda",
     navContact: "İletişim",
@@ -55,6 +56,7 @@ const ui = {
     navHome: "Home",
     navPrivacy: "Privacy",
     navSupport: "Support / Legal",
+    navUpdate: "Update",
     navApps: "Apps",
     navAbout: "About",
     navContact: "Contact",
@@ -92,6 +94,7 @@ const ui = {
     navHome: "Inicio",
     navPrivacy: "Privacidad",
     navSupport: "Soporte / Legal",
+    navUpdate: "Actualización",
     navApps: "Apps",
     navAbout: "Sobre mí",
     navContact: "Contacto",
@@ -129,6 +132,7 @@ const ui = {
     navHome: "Início",
     navPrivacy: "Privacidade",
     navSupport: "Suporte / Legal",
+    navUpdate: "Atualização",
     navApps: "Apps",
     navAbout: "Sobre",
     navContact: "Contato",
@@ -278,6 +282,7 @@ export function AppLandingPage({ app }) {
       <Header
         links={[
           { href: `${base}`, label: copy.navHome },
+          ...(appCopy.updateUrl ? [{ href: appCopy.updateUrl, label: copy.navUpdate }] : []),
           { href: appCopy.privacyUrl, label: copy.navPrivacy },
           { href: appCopy.supportUrl, label: copy.navSupport },
         ]}

@@ -839,6 +839,7 @@ export const apps = {
     ],
     privacyUrl: `${base}swipe-clean-photo/privacy.html`,
     supportUrl: `${base}swipe-clean-photo/support.html`,
+    updateUrl: `${base}swipe-clean-photo/update.html`,
     ctaLabel: "Download on the App Store",
     secondaryLabel: "Privacy",
     secondaryUrl: `${base}swipe-clean-photo/privacy.html`,

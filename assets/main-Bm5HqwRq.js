@@ -1,0 +1,1 @@
+import{s,R as t,j as e,a,L as r,H as o}from"./theme-nvilMkYs.js";import{d as m}from"./siteData-7jenR2FZ.js";s();t.createRoot(document.getElementById("root")).render(e.jsx(a.StrictMode,{children:e.jsx(r,{children:e.jsx(o,{apps:m})})}));

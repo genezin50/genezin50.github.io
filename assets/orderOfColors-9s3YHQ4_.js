@@ -1,0 +1,1 @@
+import{s as a,R as r,j as e,a as s,L as o,A as t}from"./theme-nvilMkYs.js";import{a as p}from"./siteData-7jenR2FZ.js";a();r.createRoot(document.getElementById("root")).render(e.jsx(s.StrictMode,{children:e.jsx(o,{children:e.jsx(t,{app:p["order-of-colors"]})})}));
