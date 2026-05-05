@@ -499,7 +499,7 @@ export function HomePage({ apps }) {
                   ))}
                 </div>
                 <div className="mt-5 flex flex-wrap gap-3">
-                  <a href={`${base}${app.slug}/`} className="squircle rounded-2xl bg-ink px-5 py-3 text-sm font-semibold text-white shadow-card">
+                  <a href={app.pageUrl || `${base}${app.slug}/`} className="squircle rounded-2xl bg-ink px-5 py-3 text-sm font-semibold text-white shadow-card">
                     {copy.appPageCta}
                   </a>
                   <a

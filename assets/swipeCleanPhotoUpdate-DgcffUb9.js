@@ -1,0 +1,1 @@
+import{s as a,R as t,j as e,a as s,L as o,A as r}from"./theme-B24Mp5jI.js";import{a as p}from"./siteData-DEQPffUy.js";a();t.createRoot(document.getElementById("root")).render(e.jsx(s.StrictMode,{children:e.jsx(o,{children:e.jsx(r,{app:p["swipe-clean-photo-update"]})})}));
