@@ -21,6 +21,7 @@ export default defineConfig({
         swipeCleanPhotoUpdate: resolve(__dirname, "swipe-clean-photo/update.html"),
         dualcamCapture: resolve(__dirname, "dualcam-capture/index.html"),
         shotzinCam: resolve(__dirname, "shotzin-cam/index.html"),
+        qrReaderCreator: resolve(__dirname, "qr-reader-creator/index.html"),
       },
     },
   },
