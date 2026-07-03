@@ -1266,11 +1266,14 @@ export const apps = {
         ctaLabel: "App Store'dan İndir",
       },
     },
-    icon: appAsset("qr-reader-creator", "icon.svg"),
-    heroScreen: appAsset("qr-reader-creator", "screenshot-01.svg"),
+    icon: appAsset("qr-reader-creator", "icon.png"),
+    heroScreen: appAsset("qr-reader-creator", "screenshot-01.png"),
     gallery: [
-      appAsset("qr-reader-creator", "screenshot-01.svg"),
-      appAsset("qr-reader-creator", "screenshot-02.svg"),
+      appAsset("qr-reader-creator", "screenshot-01.png"),
+      appAsset("qr-reader-creator", "screenshot-02.png"),
+      appAsset("qr-reader-creator", "screenshot-03.png"),
+      appAsset("qr-reader-creator", "screenshot-04.png"),
+      appAsset("qr-reader-creator", "screenshot-05.png"),
     ],
     chips: ["QR Scanner", "QR Creator", "Local History", "AdMob"],
     features: [
