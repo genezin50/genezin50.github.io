@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1242 2688" role="img" aria-label="QR Reader Creator create screen">
+  <rect width="1242" height="2688" fill="#fbfcff"/>
+  <rect x="90" y="120" width="1062" height="2448" rx="96" fill="#ffffff" stroke="#e4e9f2" stroke-width="8"/>
+  <text x="150" y="280" fill="#111827" font-family="Arial, sans-serif" font-size="76" font-weight="700">Create QR</text>
+  <text x="150" y="360" fill="#5f6b7a" font-family="Arial, sans-serif" font-size="42">Choose a type and share.</text>
+  <g font-family="Arial, sans-serif" font-size="44" font-weight="700">
+    <rect x="150" y="500" width="430" height="180" rx="42" fill="#f5f8ff" stroke="#d7e4ff" stroke-width="5"/>
+    <text x="210" y="610" fill="#111827">Website</text>
+    <rect x="662" y="500" width="430" height="180" rx="42" fill="#f5f8ff" stroke="#d7e4ff" stroke-width="5"/>
+    <text x="722" y="610" fill="#111827">Wi-Fi</text>
+    <rect x="150" y="740" width="430" height="180" rx="42" fill="#f5f8ff" stroke="#d7e4ff" stroke-width="5"/>
+    <text x="210" y="850" fill="#111827">Email</text>
+    <rect x="662" y="740" width="430" height="180" rx="42" fill="#f5f8ff" stroke="#d7e4ff" stroke-width="5"/>
+    <text x="722" y="850" fill="#111827">Phone</text>
+  </g>
+  <rect x="250" y="1110" width="742" height="742" rx="70" fill="#1565ff"/>
+  <rect x="338" y="1198" width="566" height="566" rx="44" fill="#ffffff"/>
+  <g fill="#111827">
+    <rect x="410" y="1270" width="118" height="118" rx="24"/>
+    <rect x="714" y="1270" width="118" height="118" rx="24"/>
+    <rect x="410" y="1574" width="118" height="118" rx="24"/>
+    <rect x="590" y="1270" width="54" height="54" rx="12"/>
+    <rect x="590" y="1384" width="54" height="54" rx="12"/>
+    <rect x="656" y="1450" width="54" height="54" rx="12"/>
+    <rect x="720" y="1514" width="54" height="54" rx="12"/>
+    <rect x="590" y="1580" width="54" height="54" rx="12"/>
+    <rect x="656" y="1646" width="54" height="54" rx="12"/>
+  </g>
+  <rect x="150" y="2020" width="942" height="170" rx="42" fill="#1565ff"/>
+  <text x="400" y="2125" fill="#ffffff" font-family="Arial, sans-serif" font-size="52" font-weight="700">Save and Share</text>
+</svg>

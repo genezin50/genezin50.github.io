@@ -1224,6 +1224,70 @@ export const apps = {
     storeUrl: "#",
     medicalNote: null,
   },
+  "qr-reader-creator": {
+    slug: "qr-reader-creator",
+    eyebrow: "QR Scanner and Creator",
+    title: "QR Reader Creator",
+    heroTitle: "Scan, read, and create QR codes on iPhone.",
+    heroSubtitle: "Scan QR codes, read from photos, and create your own QR codes.",
+    description:
+      "QR Reader Creator is a clean iOS utility for scanning QR codes with the camera, reading QR codes from selected photos, creating codes for everyday information, and keeping a local history.",
+    locales: {
+      en: {
+        eyebrow: "QR Scanner and Creator",
+        title: "QR Reader Creator",
+        heroTitle: "Scan, read, and create QR codes on iPhone.",
+        heroSubtitle: "Scan QR codes, read from photos, and create your own QR codes.",
+        description:
+          "QR Reader Creator is a clean iOS utility for scanning QR codes with the camera, reading QR codes from selected photos, creating codes for everyday information, and keeping a local history.",
+        chips: ["QR Scanner", "QR Creator", "Local History", "AdMob"],
+        features: [
+          "Scan QR codes with the camera",
+          "Read QR codes from photos",
+          "Create QR codes for text, websites, Wi-Fi, phone, email, social media, and more",
+          "Save scanned and created codes in history",
+        ],
+        ctaLabel: "Download on the App Store",
+      },
+      tr: {
+        eyebrow: "QR Okuyucu ve Oluşturucu",
+        title: "QR Reader Creator",
+        heroTitle: "iPhone'da QR kodları tarayın, okuyun ve oluşturun.",
+        heroSubtitle: "Kamerayla tarayın, fotoğraftan okuyun ve kendi QR kodlarınızı oluşturun.",
+        description:
+          "QR Reader Creator; kamerayla QR tarama, seçilen fotoğraflardan QR okuma, günlük bilgiler için QR oluşturma ve yerel geçmiş tutma özellikleri sunan sade bir iOS aracıdır.",
+        chips: ["QR Tarayıcı", "QR Oluşturucu", "Yerel Geçmiş", "AdMob"],
+        features: [
+          "Kamerayla QR kod tarama",
+          "Fotoğraflardan QR kod okuma",
+          "Metin, web sitesi, Wi-Fi, telefon, e-posta, sosyal medya ve daha fazlası için QR oluşturma",
+          "Taranan ve oluşturulan kodları geçmişte saklama",
+        ],
+        ctaLabel: "App Store'dan İndir",
+      },
+    },
+    icon: appAsset("qr-reader-creator", "icon.svg"),
+    heroScreen: appAsset("qr-reader-creator", "screenshot-01.svg"),
+    gallery: [
+      appAsset("qr-reader-creator", "screenshot-01.svg"),
+      appAsset("qr-reader-creator", "screenshot-02.svg"),
+    ],
+    chips: ["QR Scanner", "QR Creator", "Local History", "AdMob"],
+    features: [
+      "Scan QR codes with the camera",
+      "Read QR codes from photos",
+      "Create QR codes for text, websites, Wi-Fi, phone, email, social media, and more",
+      "Save scanned and created codes in history",
+    ],
+    privacyUrl: `${base}qr-reader-creator/#privacy`,
+    supportUrl: `${base}qr-reader-creator/#support`,
+    ctaLabel: "Download on the App Store",
+    secondaryLabel: "Privacy",
+    secondaryUrl: `${base}qr-reader-creator/#privacy`,
+    pageUrl: `${base}qr-reader-creator/`,
+    storeUrl: "#",
+    medicalNote: null,
+  },
 };
 
 apps["swipe-clean-photo-update"] = {
@@ -1338,8 +1402,8 @@ apps["dugun-ajandasi-update"] = {
 };
 
 export const developerApps = [
+  apps["qr-reader-creator"],
   apps["dugun-ajandasi"],
-  apps["dugun-ajandasi-update"],
   apps["pitpit-gebelik"],
   apps["pispis-bebek"],
   apps["order-of-colors"],
@@ -1347,7 +1411,6 @@ export const developerApps = [
   apps["laser-eyes-ghost-rescue"],
   apps["lift-log-pro"],
   apps["swipe-clean-photo"],
-  apps["swipe-clean-photo-update"],
   apps["dualcam-capture"],
   apps["shotzin-cam"],
 ];
