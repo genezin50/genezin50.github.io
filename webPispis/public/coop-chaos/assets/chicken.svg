@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Coop Chaos chicken">
+  <rect width="128" height="128" rx="28" fill="#f7c84c"/>
+  <path d="M25 111c0-29 15-47 39-47s39 18 39 47" fill="#fff8df"/>
+  <path d="M56 37c-13-18-2-30 7-19 8-21 24-9 17 5 18-4 21 13 5 20" fill="#d84c32"/>
+  <ellipse cx="66" cy="60" rx="29" ry="31" fill="#fff8df"/>
+  <path d="M69 70c-13 12-8 28 0 27 11-1 14-15 0-27" fill="#d84c32"/>
+  <path d="m66 56 23 11-23 9z" fill="#e3a12c"/>
+  <circle cx="53" cy="54" r="4" fill="#254735"/>
+</svg>

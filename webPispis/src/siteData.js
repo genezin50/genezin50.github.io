@@ -1404,7 +1404,37 @@ apps["dugun-ajandasi-update"] = {
   pageUrl: `${base}dugun-ajandasi/update.html`,
 };
 
+apps["coop-chaos"] = {
+  "slug": "coop-chaos",
+  "title": "Coop Chaos",
+  "eyebrow": "Offline Chicken Simulator",
+  "description": "Explore a sunny 3D farm, hunt for golden eggs and make a little chaos. An offline chicken simulator for iPhone and iPad.",
+  "icon": "/coop-chaos/assets/chicken.svg",
+  "gallery": [
+    "/coop-chaos/assets/en-02-explore.jpg",
+    "/coop-chaos/assets/en-04-frenzy.jpg"
+  ],
+  "privacyUrl": "/coop-chaos/privacy.html",
+  "supportUrl": "/coop-chaos/support.html",
+  "pageUrl": "/coop-chaos/",
+  "locales": {
+    "en": {},
+    "tr": {
+      "eyebrow": "Çevrimdışı Tavuk Simülatörü",
+      "description": "Güneşli 3D çiftliği keşfet, altın yumurtaları bul ve ortalığı biraz karıştır. iPhone ve iPad için çevrimdışı tavuk simülatörü.",
+      "gallery": [
+        "/coop-chaos/assets/tr-02-explore.jpg",
+        "/coop-chaos/assets/tr-04-frenzy.jpg"
+      ],
+      "privacyUrl": "/coop-chaos/privacy-tr.html",
+      "supportUrl": "/coop-chaos/support-tr.html",
+      "pageUrl": "/coop-chaos/index-tr.html"
+    }
+  }
+};
+
 export const developerApps = [
+  apps["coop-chaos"],
   apps["qr-reader-creator"],
   apps["dugun-ajandasi"],
   apps["pitpit-gebelik"],
