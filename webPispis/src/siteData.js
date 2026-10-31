@@ -1433,7 +1433,31 @@ apps["coop-chaos"] = {
   }
 };
 
+apps["scoop-street"] = {
+  slug: "scoop-street",
+  title: "Scoop Street",
+  eyebrow: "Offline Ice Cream Cart Puzzles",
+  description: "Clear the carts, match the colors and serve the crowd. A sunny offline puzzle game for iPhone and iPad.",
+  icon: `${base}scoop-street/assets/icon.png`,
+  gallery: [`${base}scoop-street/assets/game-en.png`, `${base}scoop-street/assets/game-tr.png`],
+  privacyUrl: `${base}scoop-street/privacy.html`,
+  supportUrl: `${base}scoop-street/support.html`,
+  pageUrl: `${base}scoop-street/`,
+  locales: {
+    en: {},
+    tr: {
+      eyebrow: "İnternetsiz Dondurma Arabası Bulmacaları",
+      description: "Arabaların yolunu aç, renkleri eşleştir, müşterilere dondurma servis et. iPhone ve iPad için güneşli, internetsiz bir bulmaca oyunu.",
+      gallery: [`${base}scoop-street/assets/game-tr.png`, `${base}scoop-street/assets/game-en.png`],
+      privacyUrl: `${base}scoop-street/privacy-tr.html`,
+      supportUrl: `${base}scoop-street/support-tr.html`,
+      pageUrl: `${base}scoop-street/index-tr.html`,
+    },
+  },
+};
+
 export const developerApps = [
+  apps["scoop-street"],
   apps["coop-chaos"],
   apps["qr-reader-creator"],
   apps["dugun-ajandasi"],
